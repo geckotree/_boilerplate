@@ -13,25 +13,25 @@ include_once('../snippets/nav.php');
 			<a href="index.php" class="logo">
 				<i class="icon--logo"></i>
 			</a>
-			<button class="button--primary toggle-main-nav" id="toggleMainNav">Menu</button>
+			<button class="button--primary toggle--nav--main" id="toggleMainNav">Menu</button>
 		</div> <!-- .page-header__inner -->
 
-		<nav class="main-nav" role="navigation">
-			<ul class="main-nav__list ls-none">
-				<li class="main-nav__item">
-					<a href="" class="main-nav__link">Services</a>
+		<nav class="nav nav--main" role="navigation">
+			<ul class="nav__list ls-none">
+				<li class="nav__item">
+					<a href="" class="nav__link">Services</a>
 				</li>
-				<li class="main-nav__item">
-					<a href="" class="main-nav__link">Work</a>
+				<li class="nav__item">
+					<a href="" class="nav__link">Work</a>
 				</li>
-				<li class="main-nav__item">
-					<a href="" class="main-nav__link">About</a>
+				<li class="nav__item">
+					<a href="" class="nav__link">About</a>
 				</li>
-				<li class="main-nav__item">
-					<a href="news.php" class="main-nav__link">Blog</a>
+				<li class="nav__item">
+					<a href="news.php" class="nav__link">Blog</a>
 				</li>
-				<li class="main-nav__item">
-					<a href="" class="main-nav__link">Contact</a>
+				<li class="nav__item">
+					<a href="" class="nav__link">Contact</a>
 				</li>
 			</ul>
 		</nav>

@@ -20,10 +20,10 @@
 	margin: 1rem;
 }
 
-.main-nav__list {
+.nav--main .nav__list {
 	padding: 1rem 0;
 }
-.main-nav__link {
+.nav--main .nav__link {
 	color: $white;
 	display: block;
 	padding: 1rem 0;
@@ -38,7 +38,7 @@
 
 .no-js {
 
-	.toggle-main-nav {
+	.toggle--nav--main {
 		display: none;
 	}
 
@@ -57,11 +57,11 @@
 		z-index: 1;
 	}
 
-	.toggle-main-nav {
+	.toggle--nav--main {
 		float: right;
 	}
 
-	.main-nav {
+	.nav--main {
 		background: $dark-1;
 		left: 0;
 		opacity: 0;
@@ -72,24 +72,24 @@
 		width: 100%;
 	}
 
-	&.main-nav-open .main-nav {
+	&.nav--main--open .nav--main {
 		opacity: 1;
 		transform: translateY(0);
 		visibility: visible;
 	}
 
-	.main-nav__link {
+	.nav--main .nav__link {
 		padding: 1rem 2rem;
 	}
 
 	//= DETACHED NAV =========================================
 
-	&.nav-detached .page-header {
+	&.nav--detached .page-header {
 		position: fixed;
 		top: 0;
 		z-index: 10;
 	}
-	&.nav-hidden .page-header {
+	&.nav--hidden .page-header {
 		transform: translateY( -7rem );
 	}
 
@@ -102,13 +102,13 @@
 		padding: 1rem 0;
 	}
 
-	.main-nav {
+	.nav--main {
 		float: right;
 	}
-	.main-nav__list {
+	.nav--main .nav__list {
 		padding: 0;
 	}
-	.main-nav__item {
+	.nav--main .nav__item {
 		display: inline-block;
 
 		&:last-child {
@@ -117,7 +117,7 @@
 			}
 		}
 	}
-	.main-nav__link {
+	.nav--main .nav__link {
 		padding: 2rem 1.5rem;
 	}
 
@@ -125,11 +125,11 @@
 
 	.js {
 
-		.toggle-main-nav {
+		.toggle--nav--main {
 			display: none;
 		}
 
-		.main-nav {
+		.nav--main {
 			float: right;
 			opacity: 1;
 			position: static;
@@ -137,7 +137,7 @@
 			visibility: visible;
 			width: auto;
 		}
-		.main-nav__link {
+		.nav--main .nav__link {
 			padding: 2rem 1.5rem;
 		}
 	}
