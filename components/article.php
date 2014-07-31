@@ -1,6 +1,10 @@
 <?php
 $pageTitle = 'Template File';
+$pageDescription = '';
+$currentPage = 'article-component';
+
 include_once('../snippets/head.php');
+include_once('../snippets/nav.php');
 ?>
 
 <div class="section-padding--tb section-padding--lr">
