@@ -1,0 +1,68 @@
+// ===========================================================
+//
+//	$IMAGES
+//
+// ===========================================================
+
+img {
+    border-radius: $border-radius;
+  	max-width: 100%;
+  	vertical-align: top;
+}
+
+.wrap__image,
+.wrap__image--alt {
+	margin: 4rem 0;
+	position: relative;
+}
+
+@include respond-min( $mq-medium ) {
+
+	.wrap__image {
+		margin: 8rem 0;
+	}
+
+}
+
+@include respond-min( $mq-xx-large ) {
+
+	.wrap__image--alt {
+		float: left;
+		margin: 1em 1em 0.5em -12em;
+		max-width: 48rem;
+	}
+
+	/*.wrap__image--alt + p {
+		margin-top: 1.5em;
+	}*/
+
+}
+
+// ===========================================================
+//
+//	$FIGCAPTION
+//
+// ===========================================================
+
+figcaption {
+	font-size: 1.6rem;
+	padding-top: $base-line-height;
+	text-align: center;
+}
+
+@include respond-min( $mq-xx-large ) {
+
+	figcaption {
+		color: $figcaption-colour;
+		line-height: 1.3;
+		padding: 0;
+		position: absolute;
+		text-align: right;
+		top: $base-line-height;
+		left: -18rem;
+		width: 15rem;
+	}
+
+}
+
+

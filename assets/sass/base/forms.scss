@@ -1,0 +1,129 @@
+// ===========================================================
+//
+//	$FORMS
+//
+// ===========================================================
+
+.input,
+.select,
+.textarea {
+	border: $border-width solid $input-border-colour;
+	border-radius: $border-radius;
+	padding: 1rem 1.5rem;
+	resize: none;
+	text-indent: 1px;
+	text-overflow: '';
+	transition: border $transition-speed ease;
+	margin: 0;
+	width: 100%;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+
+	&:focus {
+		border-color: $input-border-colour-focus;
+	}
+	&:disabled,
+	&:disabled:hover {
+		background: $input-bg-disabled;
+		cursor: auto;
+	}
+}
+
+// ===========================================================
+//
+//	$LABEL
+//
+// ===========================================================
+
+.label {
+	display: block;
+	padding-top: $base-line-height;
+	padding-bottom: $base-line-height / 2;
+
+	&:first-child {
+		padding-top: 0;
+	}
+}
+
+// ===========================================================
+//
+//	$INPUT
+//
+// ===========================================================
+
+.input + .input {
+	margin-top: $base-line-height / 2;
+}
+
+@include respond-min( $mq-medium ) {
+
+	.input + .input {
+		margin-top: 0;
+	}
+
+	.input--half {
+		@include column(6);
+	}
+
+}
+
+// ===========================================================
+//
+//	$SELECT
+//
+// ===========================================================
+
+.select {
+	background: none;
+	z-index: 1;
+
+	&:disabled {
+		z-index: 0;
+	}
+}
+.select,
+.select-wrap {
+	position: relative;
+}
+.select-wrap:after {
+	color: $input-border-colour;
+	content: '\25BE';
+	padding: 1.2rem 1.5rem;
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+
+// ===========================================================
+//
+//	$RADIO & CHECKBOX
+//
+// ===========================================================
+
+.input--radio,
+.input--checkbox {
+	width: auto;
+}
+.input--radio + .label,
+.input--checkbox + .label {
+	display: inline-block;
+}
+
+// ===========================================================
+//
+//	$PLACEHOLDER
+//
+// ===========================================================
+
+::-webkit-input-placeholder {
+   color: $input-placeholder-colour;
+}
+:-moz-placeholder { /* Firefox 18- */
+   color: $input-placeholder-colour;  
+}
+::-moz-placeholder {  /* Firefox 19+ */
+   color: $input-placeholder-colour;  
+}
+:-ms-input-placeholder {  
+   color: $input-placeholder-colour;  
+}

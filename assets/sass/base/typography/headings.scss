@@ -1,0 +1,84 @@
+// ===========================================================
+//
+//	$HEADINGS
+//
+// ===========================================================
+
+$type-scale: 1.333; // Perfect Fourth
+
+$beta: 	$base-font-size;				
+$gamma: $beta 	/ 	$type-scale;
+$alpha: $beta 	* 	$type-scale;
+$mega: 	$alpha 	* 	$type-scale;
+$giga: 	$mega 	* 	$type-scale;
+$tera: 	$giga 	* 	$type-scale;
+$intro: $alpha;
+
+.tera {
+	@include heading-font-size($tera);
+}
+h1,
+.giga {
+	@include heading-font-size($giga);
+}
+h2,
+.mega {
+	@include heading-font-size($mega);
+}
+h3,
+.alpha {
+	@include heading-font-size($alpha);
+}
+h4,
+.beta {
+	@include heading-font-size($beta);
+}
+h5,
+.gamma {
+	@include heading-font-size($gamma);
+}
+.intro {
+	font-size: $intro;
+	line-height: $base-line-height;
+}
+
+@include respond-min( $mq-medium ) {
+
+	$type-scale: 1.5; // Perfect Fifth
+
+	$beta: 	$base-font-size;				
+	$gamma: $beta 	/ 	$type-scale;
+	$alpha: $beta 	* 	$type-scale;
+	$mega: 	$alpha 	* 	$type-scale;
+	$giga: 	$mega 	* 	$type-scale;
+	$tera: 	$giga 	* 	$type-scale;
+	$intro: $alpha;
+
+	.tera {
+		@include heading-font-size($tera);
+	}
+	h1,
+	.giga {
+		@include heading-font-size($giga);
+	}
+	h2,
+	.mega {
+		@include heading-font-size($mega);
+	}
+	h3,
+	.alpha {
+		@include heading-font-size($alpha);
+	}
+	h4,
+	.beta {
+		@include heading-font-size($beta);
+	}
+	h5,
+	.gamma {
+		@include heading-font-size($gamma);
+	}
+	.intro {
+		font-size: $intro;
+	}
+
+}

@@ -1,0 +1,17 @@
+// ===========================================================
+//
+//	$ANCHOR
+//
+// ===========================================================
+
+a {
+	color: $anchor-colour;
+	transition: color $transition-speed ease;
+
+	&:hover {
+		color: $anchor-colour-hover;
+	}
+	&:focus {
+		text-decoration: underline;
+	}
+}

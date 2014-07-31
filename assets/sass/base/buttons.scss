@@ -1,0 +1,49 @@
+// ===========================================================
+//
+//	$BUTTONS
+//
+// ===========================================================
+
+.button {
+	border-radius: $border-radius--rounded;
+	display: inline-block;
+	line-height: 1;
+	padding: 2rem 3rem;
+	transition: background $transition-speed ease, border $transition-speed ease, color $transition-speed ease;
+}
+
+.button--primary {
+	border: $border-width solid $pri;
+	background: $pri;
+	color: $white;
+
+	&:hover,
+	&:focus {
+		background: $sec;
+		border-color: $sec;
+		color: $white;
+	}
+}
+
+.button--secondary {
+	border: $border-width solid $pri;
+	color: $pri;
+
+	&:hover,
+	&:focus {
+		background: $sec;
+		border-color: $sec;
+		color: $white;
+	}
+}
+
+@include respond-max( $mq-small ) {
+
+	.button {
+		width: 100%;
+	}
+	.button + .button {
+		margin-top: 1em;
+	}
+
+}

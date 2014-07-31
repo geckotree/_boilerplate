@@ -1,0 +1,20 @@
+// ===========================================================
+//
+//	$ARTICLE
+//
+// ===========================================================
+
+.article__header {
+	text-align: center;
+}
+.article__list--meta {
+	margin-bottom: $base-line-height * 2;
+}
+.article__item--meta {
+	display: inline-block;
+	padding-right: $base-line-height;
+
+	&:last-child {
+		padding-right: 0;
+	}
+}

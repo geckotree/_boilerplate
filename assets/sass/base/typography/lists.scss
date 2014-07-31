@@ -1,0 +1,25 @@
+// ===========================================================
+//
+//	$LISTS
+//
+// ===========================================================
+
+li {
+	margin: $base-line-height / 4 3rem;
+	margin-right: 0;
+
+	&:first-child {
+		margin-top: 0;
+	}
+	&:last-child {
+		margin-bottom: 0;
+	}
+}
+
+.ls-none {
+    list-style: none;
+
+    li {
+        margin: 0;
+    }
+}
