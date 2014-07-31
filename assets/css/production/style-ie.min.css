@@ -312,6 +312,35 @@ figure {
   right: 0;
 }
 
+body {
+  width: 100%;
+}
+
+body:after,
+body:before {
+  content: "";
+  display: table;
+}
+
+body:after {
+  clear: both;
+}
+
+.wrap,
+.wrap__inner {
+  margin: 0 auto;
+}
+
+.wrap {
+  max-width: 1200px;
+  max-width: 120rem;
+}
+
+.wrap__inner {
+  max-width: 670px;
+  max-width: 67rem;
+}
+
 img {
   border-radius: 4px;
   border-radius: .4rem;
@@ -511,41 +540,6 @@ th {
   width: 3rem;
 }
 
-body {
-  width: 100%;
-}
-
-body:after,
-body:before {
-  content: "";
-  display: table;
-}
-
-body:after {
-  clear: both;
-}
-
-.wrap,
-.wrap--large,
-.wrap__inner {
-  margin: 0 auto;
-}
-
-.wrap {
-  max-width: 1200px;
-  max-width: 120rem;
-}
-
-.wrap--large {
-  max-width: 1600px;
-  max-width: 160rem;
-}
-
-.wrap__inner {
-  max-width: 670px;
-  max-width: 67rem;
-}
-
 .page-header {
   background: #2d2d2d;
   position: relative;
@@ -553,6 +547,16 @@ body:after {
 
 .page-header__inner {
   position: relative;
+}
+
+.page-header__inner:after,
+.page-header__inner:before {
+  content: "";
+  display: table;
+}
+
+.page-header__inner:after {
+  clear: both;
 }
 
 .page-header .logo {
@@ -659,6 +663,51 @@ body:after {
 
 .news__item--meta:last-child {
   padding-right: 0;
+}
+
+.two-col .main-content {
+  display: inline;
+  float: left;
+  width: 64.58333%;
+  margin: 0 1.04167%;
+}
+
+.two-col .side-content {
+  display: inline;
+  float: left;
+  width: 22.91667%;
+  margin: 0 1.04167%;
+  margin-left: 9.375%;
+}
+
+.two-col .side-content__inner {
+  border-left: 3px solid #ebebeb;
+  border-left: .3rem solid #ebebeb;
+  padding: 40px 0;
+  padding: 4rem 0;
+}
+
+.side-content-detached .side-content__inner {
+  position: fixed;
+  top: 0;
+}
+
+.planner__list {
+  list-style: none;
+}
+
+.planner__item {
+  margin: 0;
+}
+
+.planner__item:after,
+.planner__item:before {
+  content: "";
+  display: table;
+}
+
+.planner__item:after {
+  clear: both;
 }
 
 .page-header__inner {
@@ -780,16 +829,27 @@ h5 {
   font-size: 3.3rem;
 }
 
-.wrap__image {
-  margin: 80px 0;
-  margin: 8rem 0;
-}
-
 .section-padding--lr {
   padding-left: 40px;
   padding-left: 4rem;
   padding-right: 40px;
   padding-right: 4rem;
+}
+
+.wrap__image {
+  margin: 80px 0;
+  margin: 8rem 0;
+}
+
+.input+.input {
+  margin-top: 0;
+}
+
+.input--half {
+  display: inline;
+  float: left;
+  width: 47.91667%;
+  margin: 0 1.04167%;
 }
 
 .section-padding--tb {

@@ -1,7 +1,7 @@
 var html = document.querySelector('html'),
 	body = document.querySelector('body'),
-	toggleMainNav = document.getElementById('toggleMainNav'),
-	navHeight = document.getElementById('pageHeader').offsetHeight,
+	//toggleMainNav = document.getElementById('toggleMainNav'),
+	//navHeight = document.getElementById('pageHeader').offsetHeight,
 	lastScroll = 0;
 
 //=helper: hasClass
@@ -40,7 +40,23 @@ window.onload = function() {
 	html.removeClass('preload');
 };
 
-toggleMainNav.onclick = function() {
+var sideContent = document.getElementById('sideContent');
+var sideContentInner = document.getElementById('sideContentInner');
+var sideContentTop = document.getElementById('sideContent').offsetTop;
+var sideContentWidth = document.getElementById('sideContent').offsetWidth;
+
+window.onscroll = function(e) {
+	var scrollTop = document.body.scrollTop;
+
+	if(scrollTop > sideContentTop) {
+		html.addClass('side-content-detached');
+		sideContentInner.style.width = sideContentWidth + 'px';
+	} else {
+		html.removeClass('side-content-detached');
+	}
+}
+
+/*toggleMainNav.onclick = function() {
 	toggleClass(html, 'main-nav');
 }
 
@@ -68,4 +84,4 @@ window.onscroll = function(e) {
 
 	//=Updates scroll position
 	lastScroll = scrollTop;
-}
+}*/
