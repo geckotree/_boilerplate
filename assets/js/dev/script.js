@@ -1,8 +1,13 @@
-var html = document.querySelector('html'),
-	body = document.querySelector('body'),
-	//toggleMainNav = document.getElementById('toggleMainNav'),
-	//navHeight = document.getElementById('pageHeader').offsetHeight,
-	lastScroll = 0;
+var html = document.querySelector('html');
+var	body = document.querySelector('body');
+var	toggleMainNav = document.getElementById('toggleMainNav');
+var	navHeight = document.getElementById('pageHeader').offsetHeight;
+var	lastScroll = 0;
+
+var sideContent = document.getElementById('sideContent');
+var sideContentInner = document.getElementById('sideContentInner');
+var sideContentTop = document.getElementById('sideContent').offsetTop;
+var sideContentWidth = document.getElementById('sideContent').offsetWidth;
 
 //=helper: hasClass
 Element.prototype.hasClass = function (className) {
@@ -40,29 +45,21 @@ window.onload = function() {
 	html.removeClass('preload');
 };
 
-var sideContent = document.getElementById('sideContent');
-var sideContentInner = document.getElementById('sideContentInner');
-var sideContentTop = document.getElementById('sideContent').offsetTop;
-var sideContentWidth = document.getElementById('sideContent').offsetWidth;
-
-window.onscroll = function(e) {
-	var scrollTop = document.body.scrollTop;
-
-	if(scrollTop > sideContentTop) {
-		html.addClass('side-content-detached');
-		sideContentInner.style.width = sideContentWidth + 'px';
-	} else {
-		html.removeClass('side-content-detached');
-	}
-}
-
-/*toggleMainNav.onclick = function() {
+toggleMainNav.onclick = function() {
 	toggleClass(html, 'main-nav');
 }
 
 window.onscroll = function(e) {
 	//=Sets the current scroll top position
 	var scrollTop = document.body.scrollTop;
+
+	//=Detach sidebar when reaches top of page
+	if(scrollTop > sideContentTop) {
+		html.addClass('side-content-detached');
+		sideContentInner.style.width = sideContentWidth + 'px';
+	} else {
+		html.removeClass('side-content-detached');
+	}
 
 	//=Detach nav and make it fixed to top of the page
 	if(scrollTop > 400) {
@@ -84,4 +81,4 @@ window.onscroll = function(e) {
 
 	//=Updates scroll position
 	lastScroll = scrollTop;
-}*/
+}

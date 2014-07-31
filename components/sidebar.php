@@ -1,7 +1,7 @@
 <?php
 $pageTitle = 'Template File';
 $pageDescription = '';
-$currentPage = 'sidebar-component';
+$currentPage = 'sidebar-componentc';
 
 include_once('../snippets/head.php');
 include_once('../snippets/nav.php');
