@@ -68,7 +68,7 @@ include_once('../snippets/nav.php');
 			</article>
 		</main>
 
-		<aside class="side-content" id="sideContent">
+		<aside class="side-content" id="sideContent" role="complementary">
 			<div class="side-content__inner section-padding--tb" id="sideContentInner">
 				<h1 class="alpha">Side Content</h1>
 				<ul>
