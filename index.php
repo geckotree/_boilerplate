@@ -13,7 +13,7 @@ include_once('snippets/head.php');
 		<div class="wrap">
 			<main class="main-content">
 				<div class="wrap__inner">
-					<h1>Components</h1>
+					<h1>Modules</h1>
 					<ul>
 						<li><a href="components/nav.php">Sticky Nav</a></li>
 						<li><a href="components/footer.php">Footer</a></li>
