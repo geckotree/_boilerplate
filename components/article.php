@@ -3,10 +3,10 @@ $pageTitle = 'Template File';
 include_once('../snippets/head.php');
 ?>
 
-<main class="main-content">
-	<article class="article" itemscope itemtype="http://schema.org/Article">
-		<div class="section-padding--tb section-padding--lr">
-			<div class="wrap">
+<div class="section-padding--tb section-padding--lr">
+	<div class="wrap">
+		<main class="main-content">
+			<article class="article" itemscope itemtype="http://schema.org/Article">
 				<header class="article__header">
 					<h1 class="article__heading tera" itemprop="name">Optimising for <a href="">60fps</a> everywhere</h1>
 					<ul class="article__list--meta ls-none">
@@ -70,9 +70,9 @@ include_once('../snippets/head.php');
 					</figure>
 					<p>What is happening here is that for every iteration of the loop, the browser has to make sure that all queued changes are applied in order to calculate the value of <code>someOtherElement.offsetWidth</code>, and then apply the updated <code>width</code> style to the next element in the array. This updated width attribute will then <em>invalidate</em> the <code>offsetWidth</code> property on <code>someOtherElement</code>, meaning that for the next iteration the browser will have to perform more expensive operations in order to calculate this value. What is happening here is that for every iteration of the loop, the browser has to make sure that all queued changes are applied in order to calculate the value of <code>someOtherElement.offsetWidth</code>, and then apply the updated <code>width</code> style to the next element in the array. This updated width attribute will then <em>invalidate</em> the <code>offsetWidth</code> property on <code>someOtherElement</code>, meaning that for the next iteration the browser will have to perform more expensive operations in order to calculate this value.</p>
 				</div> <!-- .wrap__inner -->
-			</div> <!-- .wrap -->
-		</div> <!-- .section-padding -->
-	</article>
-</main>
+			</article>
+		</main>
+	</div> <!-- .wrap -->
+</div> <!-- .section-padding -->
 
 <?php include_once('../snippets/foot.php'); ?>
