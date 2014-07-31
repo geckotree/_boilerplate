@@ -15,12 +15,12 @@ include_once('snippets/head.php');
 				<div class="wrap__inner">
 					<h1>Modules</h1>
 					<ul>
-						<li><a href="components/nav.php">Sticky Nav</a></li>
-						<li><a href="components/footer.php">Footer</a></li>
-						<li><a href="components/article.php">Article</a></li>
-						<li><a href="components/author.php">Author</a></li>
-						<li><a href="components/news.php">News</a></li>
-						<li><a href="components/sidebar.php">Sticky Sidebar</a></li>
+						<li><a href="modules/nav.php">Sticky Nav</a></li>
+						<li><a href="modules/footer.php">Footer</a></li>
+						<li><a href="modules/article.php">Article</a></li>
+						<li><a href="modules/author.php">Author</a></li>
+						<li><a href="modules/news.php">News</a></li>
+						<li><a href="modules/sidebar.php">Sticky Sidebar</a></li>
 					</ul>
 				</div> <!-- .wrap__inner -->
 			</main>
