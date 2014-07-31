@@ -54,11 +54,13 @@ window.onscroll = function(e) {
 	var scrollTop = document.body.scrollTop;
 
 	//=Detach sidebar when reaches top of page
-	if(scrollTop > sideContentTop) {
-		html.addClass('side-content-detached');
-		sideContentInner.style.width = sideContentWidth + 'px';
-	} else {
-		html.removeClass('side-content-detached');
+	if (window.matchMedia('(min-width: 1000px)').matches) {
+		if(scrollTop > sideContentTop) {
+			html.addClass('side-content-detached');
+			sideContentInner.style.width = sideContentWidth + 'px';
+		} else {
+			html.removeClass('side-content-detached');
+		}
 	}
 
 	//=Detach nav and make it fixed to top of the page
