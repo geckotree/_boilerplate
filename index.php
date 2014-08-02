@@ -21,7 +21,6 @@ include_once('snippets/head.php');
 						<li><a href="modules/author.php">Author</a></li>
 						<li><a href="modules/news.php">News</a></li>
 						<li><a href="modules/sidebar.php">Sticky Sidebar</a></li>
-
 						<li><a href="modules/toggle.php">Toggle</a></li>
 					</ul>
 				</div> <!-- .wrap__inner -->

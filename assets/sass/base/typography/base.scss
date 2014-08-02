@@ -54,10 +54,10 @@ em {
 }
 
 ::selection {
-	background: $highlight-colour;
+	background: $pri;
 }
 ::-moz-selection {
-	background: $highlight-colour;
+	background: $pri;
 }
 
 @include respond-min( $mq-medium ) {

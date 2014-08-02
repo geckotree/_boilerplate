@@ -5,11 +5,11 @@
 // ===========================================================
 
 a {
-	color: $anchor-colour;
+	color: $pri;
 	transition: color $transition-speed ease;
 
 	&:hover {
-		color: $anchor-colour-hover;
+		color: $sec;
 	}
 	&:focus {
 		text-decoration: underline;

@@ -7,7 +7,7 @@
 .input,
 .select,
 .textarea {
-	border: $border-width solid $input-border-colour;
+	border: $border-width solid $border-colour;
 	border-radius: $border-radius;
 	padding: 1rem 1.5rem;
 	resize: none;
@@ -20,11 +20,11 @@
 	-moz-appearance: none;
 
 	&:focus {
-		border-color: $input-border-colour-focus;
+		border-color: $pri;
 	}
 	&:disabled,
 	&:disabled:hover {
-		background: $input-bg-disabled;
+		background: $border-colour;
 		cursor: auto;
 	}
 }
@@ -86,7 +86,7 @@
 	position: relative;
 }
 .select-wrap:after {
-	color: $input-border-colour;
+	color: $border-colour;
 	content: '\25BE';
 	padding: 1.2rem 1.5rem;
 	position: absolute;
@@ -116,14 +116,14 @@
 // ===========================================================
 
 ::-webkit-input-placeholder {
-   color: $input-placeholder-colour;
+   color: $grey-1;
 }
 :-moz-placeholder { /* Firefox 18- */
-   color: $input-placeholder-colour;  
+   color: $grey-1;  
 }
 ::-moz-placeholder {  /* Firefox 19+ */
-   color: $input-placeholder-colour;  
+   color: $grey-1;  
 }
 :-ms-input-placeholder {  
-   color: $input-placeholder-colour;  
+   color: $grey-1;  
 }

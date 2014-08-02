@@ -13,13 +13,13 @@
 }
 
 .table {
-	border-bottom: $border-width solid $table-border-colour;
+	border-bottom: $border-width solid $border-colour;
 	border-collapse: collapse;
 	border-spacing: 0;
 	width: 100%;
 }
 th, td {
-	border-top: $border-width solid $table-border-colour;
+	border-top: $border-width solid $border-colour;
 	padding: 1.5rem 2rem;
 	text-align: left;
 	vertical-align: top;
