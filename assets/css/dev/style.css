@@ -489,6 +489,36 @@ th {
   width: 3rem;
 }
 
+.page-header {
+  background: #2d2d2d;
+  position: relative;
+}
+
+.page-header__inner {
+  padding-top: 1rem;
+  position: relative;
+}
+.page-header__inner:before, .page-header__inner:after {
+  content: "";
+  display: table;
+}
+.page-header__inner:after {
+  clear: both;
+}
+
+.page-header .logo {
+  float: left;
+  margin: 1rem;
+}
+
+html,
+body,
+#pageWrap,
+#pageWrapInner {
+  height: 100%;
+  position: relative;
+}
+
 .nav--main {
   background-color: #2d2d2d;
 }
@@ -509,47 +539,44 @@ th {
   margin: 0;
 }
 
+.no-js.no-touch .toggle--nav--main,
 .no-js .toggle--nav--main {
   display: none;
 }
 
-.js .wrap--outer {
-  overflow-x: hidden;
-}
-.js .nav--main {
+.js.touch .nav--main {
   width: 28rem;
   height: 100%;
   z-index: 1;
   position: fixed;
+  top: 0;
   left: 0;
   overflow-y: scroll;
   -webkit-overflow-scrolling: touch;
-  transition: -webkit-transform 0.3s ease, opacity 0.3s ease, visibility 0.3s ease;
-  transition: transform 0.3s ease, opacity 0.3s ease, visibility 0.3s ease;
-  -webkit-transform: translate(-100%, 0);
-  transform: translate(-100%, 0);
   -webkit-transform: translate3d(-100%, 0, 0);
   transform: translate3d(-100%, 0, 0);
-  opacity: 0;
-  visibility: hidden;
 }
-.js.csstransforms.nav--main-open .nav--main {
-  opacity: 1;
-  visibility: visible;
+.js.touch.csstransforms.no-csstransforms3d .nav--main {
+  transition: -webkit-transform 0.3s ease, opacity 0.3s ease, visibility 0.3s ease;
+  transition: transform 0.3s ease, opacity 0.3s ease, visibility 0.3s ease;
+}
+.js.touch.csstransforms.no-csstransforms3d.nav--main-open .nav--main {
   -webkit-transform: translate(0, 0);
   transform: translate(0, 0);
+}
+.js.touch.csstransforms3d #pageWrapInner {
+  left: 0 !important;
   -webkit-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
-}
-.js.csstransforms3d .wrap--page {
   transition: -webkit-transform 0.3s ease;
   transition: transform 0.3s ease;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
 }
-.js.csstransforms3d.nav--main-open .wrap--page {
+.js.touch.csstransforms3d.nav--main-open #pageWrapInner {
   -webkit-transform: translate3d(28rem, 0, 0);
   transform: translate3d(28rem, 0, 0);
 }
-
 .page-footer {
   background: #2d2d2d;
   color: white;
@@ -702,6 +729,45 @@ th {
   .section-padding--lr {
     padding-left: 2rem;
     padding-right: 2rem;
+  }
+  .page-header__inner {
+    float: left;
+    padding: 1rem 0;
+  }
+
+  .nav--main {
+    float: right;
+  }
+
+  .nav--main .nav__list {
+    padding: 0;
+  }
+
+  .nav--main .nav__item {
+    display: inline-block;
+  }
+  .nav--main .nav__item:last-child .main-nav__link {
+    padding-right: 0;
+  }
+
+  .nav--main .nav__link {
+    padding: 2rem 1.5rem;
+  }
+
+  .js .toggle--nav--main {
+    display: none;
+  }
+  .js .nav--main {
+    float: right;
+    opacity: 1;
+    position: static;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    visibility: visible;
+    width: auto;
+  }
+  .js .nav--main .nav__link {
+    padding: 2rem 1.5rem;
   }
   .foo {
     color: #f00;
