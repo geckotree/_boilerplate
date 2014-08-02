@@ -1,15 +1,14 @@
 document.addEventListener('DOMContentLoaded', function() {
 	var html = document.querySelector('html');
 	var	body = document.querySelector('body');
-	var	toggleMainNav = document.getElementById('toggleMainNav');
-	var	navHeight = document.getElementById('pageHeader').offsetHeight;
+//	var	navHeight = document.getElementById('pageHeader').offsetHeight;
 	var	lastScroll = 0;
-
+/*
 	var sideContent = document.getElementById('sideContent');
 	var sideContentInner = document.getElementById('sideContentInner');
 	var sideContentTop = document.getElementById('sideContent').offsetTop;
 	var sideContentWidth = document.getElementById('sideContent').offsetWidth;
-
+*/
 	//=helper: hasClass
 	Element.prototype.hasClass = function (className) {
 	    return new RegExp(' ' + className + ' ').test(' ' + this.className + ' ');
@@ -46,10 +45,6 @@ document.addEventListener('DOMContentLoaded', function() {
 		html.removeClass('preload');
 	};
 
-	toggleMainNav.onclick = function() {
-		toggleClass(html, 'main-nav');
-	}
-
 	// toggle via data attr
 	var dataToggle = document.querySelectorAll('[data-toggle]');
 
@@ -60,7 +55,7 @@ document.addEventListener('DOMContentLoaded', function() {
 		});
 	}
 
-
+/*
 	window.onscroll = function(e) {
 		//=Sets the current scroll top position
 		var scrollTop = document.body.scrollTop;
@@ -96,4 +91,5 @@ document.addEventListener('DOMContentLoaded', function() {
 		//=Updates scroll position
 		lastScroll = scrollTop;
 	}
+*/	
 }, false);

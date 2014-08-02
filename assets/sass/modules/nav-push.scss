@@ -1,0 +1,87 @@
+// ===========================================================
+//
+//	$NAV - PUSH
+//
+// ===========================================================
+
+
+// no-js 
+// no-touch - assume desktop
+
+// js
+// touch
+
+.nav--main {
+	background-color: $dark-1;
+}
+
+.nav--main .nav__link {
+	display: block;
+	padding: 1rem 2rem;
+
+	&:hover,
+	&:focus {
+		color: $sec;
+	}
+}
+
+.nav__list {
+	list-style: none;
+}
+
+.nav__item {
+	margin: 0;
+}
+
+//= NO JS ================================================
+
+.no-js {
+
+	.toggle--nav--main {
+		display: none;
+	}
+
+}
+
+//= JS ===================================================
+
+
+.js {
+
+	.wrap--outer {
+		overflow-x: hidden; 
+	}
+
+	.nav--main {
+		width: 28rem;
+		height: 100%;
+		z-index: 1;
+		position: fixed;
+		left: 0;
+		overflow-y: scroll;
+		-webkit-overflow-scrolling: touch;
+		transition: transform $transition-speed ease, opacity $transition-speed ease, visibility $transition-speed ease;
+		transform: translate(-100%, 0);
+		transform: translate3d(-100%, 0, 0);
+
+		opacity: 0;
+		visibility: hidden;
+	}
+
+	&.csstransforms.nav--main-open .nav--main {
+		opacity: 1;
+		visibility: visible;
+
+		transform: translate(0, 0);
+		transform: translate3d(0, 0, 0);
+	}
+
+	&.csstransforms3d .wrap--page {
+		transition: transform $transition-speed ease;
+	}
+
+	&.csstransforms3d.nav--main-open .wrap--page {
+		transform: translate3d(28rem, 0, 0);
+	}
+
+}
