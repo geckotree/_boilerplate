@@ -39,11 +39,14 @@ body,
 
 .no-js {
 
-	&.no-touch .toggle--nav--main,
 	.toggle--nav--main {
 		display: none;
 	}
 
+}
+
+.no-touch .toggle--nav--main {
+	display: none;
 }
 
 //= JS ===================================================
@@ -66,7 +69,7 @@ body,
 		transition: transform $transition-speed ease, opacity $transition-speed ease, visibility $transition-speed ease;
 	}
 
-	&.csstransforms.no-csstransforms3d.nav--main-open .nav--main {
+	&.csstransforms.no-csstransforms3d.nav--main--open .nav--main {
 		transform: translate(0,0);
 	}
 
@@ -78,7 +81,7 @@ body,
 		backface-visibility: hidden;
 	}
 
-	&.csstransforms3d.nav--main-open #pageWrapInner {
+	&.csstransforms3d.nav--main--open #pageWrapInner {
 		transform: translate3d(28rem, 0, 0);
 	}
 
@@ -87,49 +90,41 @@ body,
 
 @include respond-min( $mq-small ) {
 
-	.page-header__inner {
-		float: left;
-		padding: 1rem 0;
-	}
+	.no-touch {
 
-	.nav--main {
-		float: right;
-	}
-	.nav--main .nav__list {
-		padding: 0;
-	}
-	.nav--main .nav__item {
-		display: inline-block;
+		.nav--main {
+			margin: 0px auto;
+			z-index: 1;
+			text-align: right;
+			position: relative;
+		}
 
-		&:last-child {
-			.main-nav__link {
-				padding-right: 0;
+		.page-header__inner {
+			float: left;
+			padding: 1rem 0;
+		}
+
+		.nav--main .nav__list {
+			padding: 0;
+		}
+		.nav--main .nav__item {
+			display: inline-block;
+
+			&:last-child {
+				.main-nav__link {
+					padding-right: 0;
+				}
 			}
 		}
-	}
-	.nav--main .nav__link {
-		padding: 2rem 1.5rem;
-	}
+		.nav--main .nav__link {
+			padding: 2rem 1.5rem;
+		}
 
-	//= JS ===================================================
-
-	.js {
 
 		.toggle--nav--main {
 			display: none;
 		}
 
-		.nav--main {
-			float: right;
-			opacity: 1;
-			position: static;
-			transform: translateY( 0 );
-			visibility: visible;
-			width: auto;
-		}
-		.nav--main .nav__link {
-			padding: 2rem 1.5rem;
-		}
 	}
 
 }

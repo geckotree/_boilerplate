@@ -34,10 +34,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
 	//=helper: toogleClass
 	var toggleClass = function (el, className) {
-	    if(el.hasClass(className + '-open')) {
-			el.removeClass(className + '-open');
+	    if(el.hasClass(className + '--open')) {
+			el.removeClass(className + '--open');
 		} else {
-			el.addClass(className + '-open');
+			el.addClass(className + '--open');
 	    }
 	}
 

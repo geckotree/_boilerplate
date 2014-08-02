@@ -539,8 +539,11 @@ body,
   margin: 0;
 }
 
-.no-js.no-touch .toggle--nav--main,
 .no-js .toggle--nav--main {
+  display: none;
+}
+
+.no-touch .toggle--nav--main {
   display: none;
 }
 
@@ -560,7 +563,7 @@ body,
   transition: -webkit-transform 0.3s ease, opacity 0.3s ease, visibility 0.3s ease;
   transition: transform 0.3s ease, opacity 0.3s ease, visibility 0.3s ease;
 }
-.js.touch.csstransforms.no-csstransforms3d.nav--main-open .nav--main {
+.js.touch.csstransforms.no-csstransforms3d.nav--main--open .nav--main {
   -webkit-transform: translate(0, 0);
   transform: translate(0, 0);
 }
@@ -573,7 +576,7 @@ body,
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
 }
-.js.touch.csstransforms3d.nav--main-open #pageWrapInner {
+.js.touch.csstransforms3d.nav--main--open #pageWrapInner {
   -webkit-transform: translate3d(28rem, 0, 0);
   transform: translate3d(28rem, 0, 0);
 }
@@ -730,44 +733,30 @@ body,
     padding-left: 2rem;
     padding-right: 2rem;
   }
-  .page-header__inner {
+  .no-touch .nav--main {
+    margin: 0px auto;
+    z-index: 1;
+    text-align: right;
+    position: relative;
+  }
+  .no-touch .page-header__inner {
     float: left;
     padding: 1rem 0;
   }
-
-  .nav--main {
-    float: right;
-  }
-
-  .nav--main .nav__list {
+  .no-touch .nav--main .nav__list {
     padding: 0;
   }
-
-  .nav--main .nav__item {
+  .no-touch .nav--main .nav__item {
     display: inline-block;
   }
-  .nav--main .nav__item:last-child .main-nav__link {
+  .no-touch .nav--main .nav__item:last-child .main-nav__link {
     padding-right: 0;
   }
-
-  .nav--main .nav__link {
+  .no-touch .nav--main .nav__link {
     padding: 2rem 1.5rem;
   }
-
-  .js .toggle--nav--main {
+  .no-touch .toggle--nav--main {
     display: none;
-  }
-  .js .nav--main {
-    float: right;
-    opacity: 1;
-    position: static;
-    -webkit-transform: translateY(0);
-    transform: translateY(0);
-    visibility: visible;
-    width: auto;
-  }
-  .js .nav--main .nav__link {
-    padding: 2rem 1.5rem;
   }
   .foo {
     color: #f00;

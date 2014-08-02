@@ -8,7 +8,7 @@
 <div id="pageWrap">
     <div id="pageWrapInner">
         <header class="page-header clearfix" role="banner">
-			<div class="page-header__inner clearfix">
+			<div class="wrap clearfix">
 				<a href="<?php echo $baseURL; ?>/index.php" class="logo">
 					<i class="icon--logo"></i>
 				</a>
