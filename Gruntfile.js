@@ -3,32 +3,32 @@ module.exports = function (grunt) {
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
 
-        //WATCH TASKS
+        /*
+         * WATCH
+         */
         watch: {
             css: {
                 files: ['assets/sass/*/*/*.scss', 'assets/sass/*/*.scss'],
-                tasks: ['sass', 'autoprefixer', 'css_mqpacker', 'stripmq', 'cssmin'],
-                options: {
-                    spawn: false,
-                }
+                tasks: ['sass', 'autoprefixer', 'css_mqpacker', 'stripmq', 'cssmin']
             },
             scripts: {
                 files: ['assets/js/*/*.js'],
-                tasks: ['concat', 'uglify'],
-                options: {
-                    spawn: false,
-                }
+                tasks: ['concat', 'uglify']
             },
             images: {
                 files: ['assets/img/photos/dev/*.{gif,jpeg,jpg,png}'],
-                tasks: ['responsive_images'],
-                options: {
-                    spawn: false,
-                }
+                tasks: ['responsive_images']
+            },
+            emails: {
+                files: ['emails/src/**/*'],
+                tasks: ['']
             }
         },
 
-        //SCSS TO CSS, AUTO PREFIXER, MEDIA QUERIES TO ONE, IE STYLESHEET & MINIFY
+
+        /*
+         * CSS
+         */
         sass: {
             dist: {
                 options: {
@@ -93,7 +93,10 @@ module.exports = function (grunt) {
             }
         },
 
-        //COMBINE JS & MINIFY
+
+        /*
+         * JS
+         */
         concat: {
             dist: {
                 src: ['assets/js/dev/*.js'],
@@ -107,7 +110,10 @@ module.exports = function (grunt) {
             }
         },
 
-        //RESPONSIVE IMAGE, IMAGEOPTIM & SVGMIN
+        
+        /*
+         * IMAGES
+         */
         responsive_images: {
             options: {
                 engine: 'gm',
@@ -178,25 +184,11 @@ module.exports = function (grunt) {
                 }]
             }
         },
-        /*iconizr: {
-            options: {
-                dims: true,
-                common: 'icon',
-                keep: false,
-                preview: 'preview',
-                padding: 1,
-                render: {
-                    css: false,
-                    less: 'assets/scss/components'
-                }
-            },
-            your_target: {
-                src: 'assets/img/icons/svg',
-                dest: 'assets/img/icons'
-            }
-        },*/
 
-        //BROWSER SYNC
+
+        /*
+         * MISC
+         */
         browserSync: {
             dev: {
                 bsFiles: {
@@ -208,6 +200,7 @@ module.exports = function (grunt) {
             }
         }
     });
+
 
     grunt.loadNpmTasks('grunt-contrib-sass');
     grunt.loadNpmTasks('grunt-autoprefixer');
@@ -222,12 +215,32 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-responsive-images');
     grunt.loadNpmTasks('grunt-imageoptim');
     grunt.loadNpmTasks('grunt-svgmin');
-    //grunt.loadNpmTasks('grunt-iconizr');
     
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-browser-sync');
 
-    grunt.registerTask('default', ['sass', 'autoprefixer', 'css_mqpacker', 'stripmq', 'remfallback', 'cssmin', 'concat', 'uglify', 'browserSync', 'watch']);
-    grunt.registerTask('images', ['responsive_images'], ['imageoptim'], ['svgmin']);
+
+    grunt.registerTask('dev', [
+        'css:dev',
+        'js:dev',
+        'images:dev',
+        'browserSync',
+        'watch'
+    ]);
+
+    grunt.registerTask('build', [
+        'css:build',
+        'js:build',
+        'images:build'
+    ]);
+
+    grunt.registerTask('css:dev', ['sass', 'autoprefixer', 'css_mqpacker', 'stripmq', 'remfallback']);
+    grunt.registerTask('css:build', ['sass', 'autoprefixer', 'css_mqpacker', 'stripmq', 'remfallback', 'cssmin']);
+
+    grunt.registerTask('js:dev', ['concat']);
+    grunt.registerTask('js:build', ['concat', 'uglify']);
+
+    grunt.registerTask('images:dev', ['responsive_images']);
+    grunt.registerTask('images:build', ['imageoptim', 'svgmin'])
 
 };

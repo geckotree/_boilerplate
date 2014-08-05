@@ -48,10 +48,12 @@ footer, header, hgroup, menu, nav, section {
 }
 
 .preload * {
+  -webkit-transition: none !important;
   transition: none !important;
 }
 
 * {
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
   outline: none;
 }
@@ -123,6 +125,14 @@ em {
 ::-moz-selection {
   background: #57b275;
 }
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
+  p {
+    letter-spacing: 0.01em;
+    /* Increase letter-spacing on high pixel density screens as they can appear too close */
+    word-spacing: 0.01em;
+    /* Word-spacing same as letter-spacing for consistency */
+  }
+}
 .tera {
   font-size: 6.94614rem;
   font-weight: bold;
@@ -176,6 +186,7 @@ h5,
 }
 a {
   color: #57b275;
+  -webkit-transition: color 0.3s ease;
   transition: color 0.3s ease;
 }
 a:hover {
@@ -339,6 +350,7 @@ figcaption {
   display: inline-block;
   line-height: 1;
   padding: 2rem 3rem;
+  -webkit-transition: background 0.3s ease, border 0.3s ease, color 0.3s ease;
   transition: background 0.3s ease, border 0.3s ease, color 0.3s ease;
 }
 
@@ -362,6 +374,16 @@ figcaption {
   border-color: #f05d71;
   color: white;
 }
+
+@media only screen and (max-width: 37.49em) {
+  .button {
+    width: 100%;
+  }
+
+  .button + .button {
+    margin-top: 1em;
+  }
+}
 .input,
 .select,
 .textarea {
@@ -371,6 +393,7 @@ figcaption {
   resize: none;
   text-indent: 1px;
   text-overflow: '';
+  -webkit-transition: border 0.3s ease;
   transition: border 0.3s ease;
   margin: 0;
   width: 100%;
@@ -524,7 +547,7 @@ th {
   left: 0;
   overflow-y: scroll;
   -webkit-overflow-scrolling: touch;
-  transition: -webkit-transform 0.3s ease, opacity 0.3s ease, visibility 0.3s ease;
+  -webkit-transition: -webkit-transform 0.3s ease, opacity 0.3s ease, visibility 0.3s ease;
   transition: transform 0.3s ease, opacity 0.3s ease, visibility 0.3s ease;
   -webkit-transform: translate(-100%, 0);
   transform: translate(-100%, 0);
@@ -542,7 +565,7 @@ th {
   transform: translate3d(0, 0, 0);
 }
 .js.csstransforms3d .wrap--page {
-  transition: -webkit-transform 0.3s ease;
+  -webkit-transition: -webkit-transform 0.3s ease;
   transition: transform 0.3s ease;
 }
 .js.csstransforms3d.nav--main-open .wrap--page {
@@ -605,6 +628,16 @@ th {
   clear: both;
 }
 
+@media only screen and (min-width: 37.5em) {
+  .section-padding--lr {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  .foo {
+    color: #f00;
+  }
+}
 @media only screen and (min-width: 50em) {
   body,
   input,
@@ -613,6 +646,7 @@ th {
   button {
     font-size: 2.2rem;
   }
+
   .tera {
     font-size: 11.1375rem;
     font-weight: bold;
@@ -663,6 +697,7 @@ th {
   .intro {
     font-size: 3.3rem;
   }
+
   .section-padding--tb {
     padding-bottom: 6rem;
     padding-top: 6rem;
@@ -672,9 +707,11 @@ th {
     padding-left: 4rem;
     padding-right: 4rem;
   }
+
   .wrap__image {
     margin: 8rem 0;
   }
+
   .input + .input {
     margin-top: 0;
   }
@@ -685,24 +722,7 @@ th {
     width: 47.91667%;
     margin: 0 1.04167%;
   }
-  .foo {
-    color: #f00;
-  }
-}
-@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
-  p {
-    letter-spacing: 0.01em;
-    /* Increase letter-spacing on high pixel density screens as they can appear too close */
-    word-spacing: 0.01em;
-    /* Word-spacing same as letter-spacing for consistency */
-  }
-}
 
-@media only screen and (min-width: 37.5em) {
-  .section-padding--lr {
-    padding-left: 2rem;
-    padding-right: 2rem;
-  }
   .foo {
     color: #f00;
   }
@@ -712,6 +732,7 @@ th {
     padding-bottom: 8rem;
     padding-top: 8rem;
   }
+
   .two-col .main-content {
     display: inline;
     float: left;
@@ -736,6 +757,20 @@ th {
     position: fixed;
     top: 0;
   }
+
+  .foo {
+    color: #f00;
+  }
+}
+@media only screen and (min-width: 80em) {
+  .two-col .side-content {
+    display: inline;
+    float: left;
+    width: 22.91667%;
+    margin: 0 1.04167%;
+    margin-left: 9.375%;
+  }
+
   .foo {
     color: #f00;
   }
@@ -750,6 +785,7 @@ th {
   /*.wrap__image--alt + p {
   	margin-top: 1.5em;
   }*/
+
   figcaption {
     color: #787878;
     line-height: 1.3;
@@ -760,28 +796,7 @@ th {
     left: -18rem;
     width: 15rem;
   }
-  .foo {
-    color: #f00;
-  }
-}
 
-@media only screen and (max-width: 37.49em) {
-  .button {
-    width: 100%;
-  }
-
-  .button + .button {
-    margin-top: 1em;
-  }
-}
-@media only screen and (min-width: 80em) {
-  .two-col .side-content {
-    display: inline;
-    float: left;
-    width: 22.91667%;
-    margin: 0 1.04167%;
-    margin-left: 9.375%;
-  }
   .foo {
     color: #f00;
   }
