@@ -4,7 +4,7 @@
 			<a href="<?php echo $baseURL; ?>/index.php" class="logo">
 				<i class="icon--logo"></i>
 			</a>
-			<button class="button--primary toggle--nav--main" id="toggleMainNav" data-toggle="main--nav">Menu</button>
+			<button class="button--primary toggle--nav--main" id="toggleMainNav" data-toggle="nav--main">Menu</button>
 		</div> <!-- .page-header__inner -->
 
 		<nav class="nav nav--main" role="navigation">
