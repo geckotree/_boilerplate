@@ -1,10 +1,6 @@
-<?php
-$pageTitle = 'Template File';
-$pageDescription = '';
-$currentPage = 'author-component';
-
+<?php 
 include_once('../snippets/head.php');
-include_once('../snippets/nav.php');
+include_once('../snippets/nav.php'); 
 ?>
 
 <footer class="article__footer section-padding--tb section-padding--lr" itemscope itemtype="http://schema.org/Person">

@@ -1,0 +1,119 @@
+/* ===========================================================
+                                              
+ ,---.   ,--.           ,--.            ,----.           ,--.   ,--.        
+'   .-',-'  '-.,--. ,--.|  | ,---.     '  .-./   ,--.,--.`--' ,-|  | ,---.  
+`.  `-.'-.  .-' \  '  / |  || .-. :    |  | .---.|  ||  |,--.' .-. || .-. : 
+.-'    | |  |    \   '  |  |\   --.    '  '--'  |'  ''  '|  |\ `-' |\   --. 
+`-----'  `--'  .-'  /   `--' `----'     `------'  `----' `--' `---'  `----' 
+               `---'                                                         
+
+Authors: Rob & Kev Simpson
+Boilerplate version: 1.0
+
+=========================================================== */
+
+@import "../../../assets/sass/helpers/variables.scss";
+@import "../../../assets/sass/helpers/mixins.scss";
+
+.sg-page-wrap {
+	padding-left: 6.8rem;
+}
+
+// ===========================================================
+//
+//	$NAV
+//
+// ===========================================================
+
+.sg-main-nav {
+	background: $sg-nav-colour;
+	height: 100%;
+	left: 0;
+	position: fixed;
+	top: 0;
+	width: 6.8rem;
+}
+.sg-main-nav__list {
+	list-style: none;
+}
+.sg-main-nav__item {
+	margin: 0;
+}
+.sg-main-nav__link {
+	display: block;
+	line-height: 1;
+	padding: 2.3rem 2rem;
+	position: relative;
+	text-align: center;
+	transition: background $transition-speed;
+
+	&--logo {
+		display: block;
+		padding: 3.9rem 4rem;
+		line-height: 1;
+	}
+
+	&:hover {
+		background: rgba(255, 255, 255, 0.05);
+	}
+}
+
+.sg-main-nav__label {
+	background: $sg-nav-colour;
+	border-radius: $border-radius;
+	left: 7.8rem;
+	margin-top: -2.6rem;
+	opacity: 0;
+	padding: 1.5rem 2rem;
+	position: absolute;
+	top: 50%;
+	transition: opacity $transition-speed, left $transition-speed, visibility $transition-speed;
+	visibility: hidden;
+
+	&:before {
+		border-style: solid;
+		border-width: 1rem 1rem 1rem 0;
+		border-color: transparent $sg-nav-colour transparent transparent;
+		content: '';
+		margin-top: -1rem;
+		position: absolute;
+		left: -1rem;
+		top: 50%;
+	}
+}
+.sg-main-nav__link:hover .sg-main-nav__label {
+	opacity: 1;
+	left: 8.8rem;
+	visibility: visible;
+}
+
+// ===========================================================
+//
+//	$HEADER
+//
+// ===========================================================
+
+.sg-page-header {
+	border-bottom: 0.1rem solid #ebebeb;
+}
+.sg-page-header__heading {
+	padding: 2rem 0;
+}
+
+// ===========================================================
+//
+//	$LISTS
+//
+// ===========================================================
+
+.sg-main-content__list {
+	li {
+		border-bottom: 0.1rem solid #ebebeb;
+		display: block;
+		margin: 0;
+	}
+	a {
+		display: block;
+		padding: 1.9rem 4rem;
+	}
+}

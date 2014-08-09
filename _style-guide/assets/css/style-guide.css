@@ -1,0 +1,105 @@
+/* ===========================================================
+                                              
+ ,---.   ,--.           ,--.            ,----.           ,--.   ,--.        
+'   .-',-'  '-.,--. ,--.|  | ,---.     '  .-./   ,--.,--.`--' ,-|  | ,---.  
+`.  `-.'-.  .-' \  '  / |  || .-. :    |  | .---.|  ||  |,--.' .-. || .-. : 
+.-'    | |  |    \   '  |  |\   --.    '  '--'  |'  ''  '|  |\ `-' |\   --. 
+`-----'  `--'  .-'  /   `--' `----'     `------'  `----' `--' `---'  `----' 
+               `---'                                                         
+
+Authors: Rob & Kev Simpson
+Boilerplate version: 1.0
+
+=========================================================== */
+.clearfix:before, .clearfix:after {
+  content: "";
+  display: table;
+}
+.clearfix:after {
+  clear: both;
+}
+
+.sg-page-wrap {
+  padding-left: 6.8rem;
+}
+
+.sg-main-nav {
+  background: #2d2d2d;
+  height: 100%;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 6.8rem;
+}
+
+.sg-main-nav__list {
+  list-style: none;
+}
+
+.sg-main-nav__item {
+  margin: 0;
+}
+
+.sg-main-nav__link {
+  display: block;
+  line-height: 1;
+  padding: 2.3rem 2rem;
+  position: relative;
+  text-align: center;
+  transition: background 0.3s;
+}
+.sg-main-nav__link--logo {
+  display: block;
+  padding: 3.9rem 4rem;
+  line-height: 1;
+}
+.sg-main-nav__link:hover {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.sg-main-nav__label {
+  background: #2d2d2d;
+  border-radius: 0.4rem;
+  left: 7.8rem;
+  margin-top: -2.6rem;
+  opacity: 0;
+  padding: 1.5rem 2rem;
+  position: absolute;
+  top: 50%;
+  transition: opacity 0.3s, left 0.3s, visibility 0.3s;
+  visibility: hidden;
+}
+.sg-main-nav__label:before {
+  border-style: solid;
+  border-width: 1rem 1rem 1rem 0;
+  border-color: transparent #2d2d2d transparent transparent;
+  content: '';
+  margin-top: -1rem;
+  position: absolute;
+  left: -1rem;
+  top: 50%;
+}
+
+.sg-main-nav__link:hover .sg-main-nav__label {
+  opacity: 1;
+  left: 8.8rem;
+  visibility: visible;
+}
+
+.sg-page-header {
+  border-bottom: 0.1rem solid #ebebeb;
+}
+
+.sg-page-header__heading {
+  padding: 2rem 0;
+}
+
+.sg-main-content__list li {
+  border-bottom: 0.1rem solid #ebebeb;
+  display: block;
+  margin: 0;
+}
+.sg-main-content__list a {
+  display: block;
+  padding: 1.9rem 4rem;
+}

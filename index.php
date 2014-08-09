@@ -13,17 +13,7 @@ include_once('snippets/head.php');
 		<div class="wrap">
 			<main class="main-content">
 				<div class="wrap__inner">
-					<h1>Modules</h1>
-					<ul>
-						<li><a href="modules/nav.php">Sticky Nav</a></li>
-						<li><a href="modules/footer.php">Footer</a></li>
-						<li><a href="modules/article.php">Article</a></li>
-						<li><a href="modules/author.php">Author</a></li>
-						<li><a href="modules/news.php">News</a></li>
-						<li><a href="modules/sidebar.php">Sticky Sidebar</a></li>
-						<li><a href="modules/toggle.php">Toggle</a></li>
-						<li><a href="modules/push-nav.php">Push nav</a></li>
-					</ul>
+					<h1>Index</h1>
 				</div> <!-- .wrap__inner -->
 			</main>
 		</div> <!-- .wrap -->

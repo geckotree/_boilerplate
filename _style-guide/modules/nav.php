@@ -1,10 +1,6 @@
-<?php
-$pageTitle = 'Template File';
-$pageDescription = '';
-$currentPage = 'nav-component';
-
+<?php 
 include_once('../snippets/head.php');
-include_once('../snippets/nav.php');
+include_once('../snippets/nav.php'); 
 ?>
 
 <header class="page-header" id="pageHeader" role="banner">

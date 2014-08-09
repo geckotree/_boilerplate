@@ -1,10 +1,6 @@
-<?php
-$pageTitle = 'Template File';
-$pageDescription = '';
-$currentPage = 'news-component';
-
+<?php 
 include_once('../snippets/head.php');
-include_once('../snippets/nav.php');
+include_once('../snippets/nav.php'); 
 ?>
 
 <main class="main-content">
