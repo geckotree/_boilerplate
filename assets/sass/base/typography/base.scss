@@ -53,6 +53,12 @@ em {
 	font-style: italic;
 }
 
+small,
+.small {
+	font-size: 65%;
+	line-height: 1.4;
+}
+
 ::selection {
 	background: $pri;
 }
@@ -62,7 +68,7 @@ em {
 
 @include respond-min( $mq-medium ) {
 
-	$base-font-size: 2.2rem;
+	$base-font-size: 2rem;
 
 	body,
 	input,

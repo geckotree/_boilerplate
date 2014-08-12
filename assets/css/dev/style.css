@@ -112,6 +112,12 @@ em {
   font-style: italic;
 }
 
+small,
+.small {
+  font-size: 65%;
+  line-height: 1.4;
+}
+
 ::-moz-selection {
   background: #57b275;
 }
@@ -124,77 +130,72 @@ em {
   background: #57b275;
 }
 .tera {
-  font-size: 9.4596rem;
+  font-size: 8.59963rem;
   font-weight: bold;
   line-height: 1.1;
-  padding-bottom: 4.7298rem;
+  padding-bottom: 4.29982rem;
 }
 
 .giga {
-  font-size: 7.883rem;
+  font-size: 7.16636rem;
   font-weight: bold;
   line-height: 1.1;
-  padding-bottom: 3.9415rem;
+  padding-bottom: 3.58318rem;
 }
 
 .mega {
-  font-size: 6.56916rem;
+  font-size: 5.97197rem;
   font-weight: bold;
   line-height: 1.1;
-  padding-bottom: 3.28458rem;
+  padding-bottom: 2.98598rem;
 }
 
 h1,
 .alpha {
-  font-size: 5.4743rem;
+  font-size: 4.97664rem;
   font-weight: bold;
   line-height: 1.1;
-  padding-bottom: 2.73715rem;
+  padding-bottom: 2.48832rem;
 }
 
 h2,
 .beta {
-  font-size: 4.56192rem;
+  font-size: 4.1472rem;
   font-weight: bold;
   line-height: 1.1;
-  padding-bottom: 2.28096rem;
+  padding-bottom: 2.0736rem;
 }
 
 h3,
 .gamma {
-  font-size: 3.8016rem;
+  font-size: 3.456rem;
   font-weight: bold;
   line-height: 1.1;
-  padding-bottom: 1.9008rem;
+  padding-bottom: 1.728rem;
 }
 
 h4,
 .delta {
-  font-size: 3.168rem;
+  font-size: 2.88rem;
   font-weight: bold;
   line-height: 1.1;
-  padding-bottom: 1.584rem;
+  padding-bottom: 1.44rem;
 }
 
 h5,
 .epsilon {
-  font-size: 2.64rem;
+  font-size: 2.4rem;
   font-weight: bold;
   line-height: 1.1;
-  padding-bottom: 1.32rem;
+  padding-bottom: 1.2rem;
 }
 
 h6,
 .zeta {
-  font-size: 2.2rem;
+  font-size: 2rem;
   font-weight: bold;
   line-height: 1.1;
-  padding-bottom: 1.1rem;
-}
-
-small,
-.small {
-  font-size: small;
+  padding-bottom: 1rem;
 }
 a {
   color: #57b275;
@@ -230,10 +231,6 @@ code {
   line-height: 1.4em;
   overflow-x: auto;
   word-break: break-word;
-}
-
-.small {
-  font-size: 0.8em;
 }
 
 .small-caps {
@@ -663,80 +660,75 @@ body,
   textarea,
   select,
   button {
-    font-size: 2.2rem;
+    font-size: 2rem;
   }
   .tera {
-    font-size: 9.4596rem;
+    font-size: 8.59963rem;
     font-weight: bold;
     line-height: 1.1;
-    padding-bottom: 4.7298rem;
+    padding-bottom: 4.29982rem;
   }
 
   .giga {
-    font-size: 7.883rem;
+    font-size: 7.16636rem;
     font-weight: bold;
     line-height: 1.1;
-    padding-bottom: 3.9415rem;
+    padding-bottom: 3.58318rem;
   }
 
   .mega {
-    font-size: 6.56916rem;
+    font-size: 5.97197rem;
     font-weight: bold;
     line-height: 1.1;
-    padding-bottom: 3.28458rem;
+    padding-bottom: 2.98598rem;
   }
 
   h1,
   .alpha {
-    font-size: 5.4743rem;
+    font-size: 4.97664rem;
     font-weight: bold;
     line-height: 1.1;
-    padding-bottom: 2.73715rem;
+    padding-bottom: 2.48832rem;
   }
 
   h2,
   .beta {
-    font-size: 4.56192rem;
+    font-size: 4.1472rem;
     font-weight: bold;
     line-height: 1.1;
-    padding-bottom: 2.28096rem;
+    padding-bottom: 2.0736rem;
   }
 
   h3,
   .gamma {
-    font-size: 3.8016rem;
+    font-size: 3.456rem;
     font-weight: bold;
     line-height: 1.1;
-    padding-bottom: 1.9008rem;
+    padding-bottom: 1.728rem;
   }
 
   h4,
   .delta {
-    font-size: 3.168rem;
+    font-size: 2.88rem;
     font-weight: bold;
     line-height: 1.1;
-    padding-bottom: 1.584rem;
+    padding-bottom: 1.44rem;
   }
 
   h5,
   .epsilon {
-    font-size: 2.64rem;
+    font-size: 2.4rem;
     font-weight: bold;
     line-height: 1.1;
-    padding-bottom: 1.32rem;
+    padding-bottom: 1.2rem;
   }
 
   h6,
   .zeta {
-    font-size: 2.2rem;
+    font-size: 2rem;
     font-weight: bold;
     line-height: 1.1;
-    padding-bottom: 1.1rem;
-  }
-
-  small,
-  .small {
-    font-size: small;
+    padding-bottom: 1rem;
   }
   .section-padding--tb {
     padding-bottom: 6rem;

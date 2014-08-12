@@ -12,8 +12,8 @@ include_once('../snippets/nav.php');
 		</figure>
 
 		<div class="article__footer__details">
-			<h1 class="article__footer__heading mega" itemprop="name">Rob Simpson</h1>
-			<h2 class="article__footer__sub-heading beta" itemprop="jobTitle">Front-End Developer <a href="#">@robbstylez</a></h2>
+			<h1 class="article__footer__heading alpha" itemprop="name">Rob Simpson</h1>
+			<h2 class="article__footer__sub-heading epsilon" itemprop="jobTitle">Front-End Developer <a href="#">@robbstylez</a></h2>
 			<p class="article__footer__description" itemprop="description">Rob is a creative front-end developer and co-founder of geckotree. He loves to design – always working on something different and looking to learn new things.</p>
 		</div> <!-- .article__footer__details -->
 	</div> <!-- .wrap__inner -->

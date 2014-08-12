@@ -6,7 +6,6 @@
 
 $type-scale: 1.200; // Perfect Fourth
 
-$small:		$base-font-size		/	$type-scale;
 $zeta: 		$base-font-size;
 $epsilon: 	$zeta		*	$type-scale;
 $delta: 	$epsilon	*	$type-scale;
@@ -61,16 +60,10 @@ h6,
 	@include heading-font-size($zeta);
 }
 
-small,
-.small {
-	font-size: small;
-}
-
 @include respond-min( $mq-medium ) {
 
 	$type-scale: 1.200; // Perfect Fifth
-
-	$small:		$base-font-size		/	$type-scale;
+	
 	$zeta: 		$base-font-size;
 	$epsilon: 	$zeta		*	$type-scale;
 	$delta: 	$epsilon	*	$type-scale;
@@ -123,10 +116,5 @@ small,
 	h6,
 	.zeta {
 		@include heading-font-size($zeta);
-	}
-
-	small,
-	.small {
-		font-size: small;
 	}
 }
