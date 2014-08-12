@@ -12,11 +12,16 @@ include_once('snippets/nav.php');
 <div class="section-padding--tb section-padding--lr">
 	<div class="wrap">
 		<main class="main-content">
+			<h1 class="tera">tera</h1>
+			<h1 class="giga">giga</h1>
+			<h1 class="mega">mega</h1>
 			<h1>h1 - This is a heading element</h1>
 			<h2>h2 - This is a heading element</h2>
 			<h3>h3 - This is a heading element</h3>
 			<h4>h4 - This is a heading element</h4>
 			<h5>h5 - This is a heading element</h5>
+			<h6>h6 - This is a heading element</h6>
+			<small>small - This is small copy</small>
 		</main>
 	</div> <!-- .wrap -->
 </div> <!-- .section-padding -->
