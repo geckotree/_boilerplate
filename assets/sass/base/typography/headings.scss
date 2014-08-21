@@ -4,81 +4,117 @@
 //
 // ===========================================================
 
-$type-scale: 1.333; // Perfect Fourth
+$type-scale: 1.200; // Perfect Fourth
 
-$beta: 	$base-font-size;				
-$gamma: $beta 	/ 	$type-scale;
-$alpha: $beta 	* 	$type-scale;
-$mega: 	$alpha 	* 	$type-scale;
-$giga: 	$mega 	* 	$type-scale;
-$tera: 	$giga 	* 	$type-scale;
+$zeta: 		$base-font-size;
+$epsilon: 	$zeta		*	$type-scale;
+$delta: 	$epsilon	*	$type-scale;
+$gamma: 	$delta	*	$type-scale;
+$beta: 		$gamma	*	$type-scale;
+$alpha: 	$beta	*	$type-scale;
+$mega:		$alpha	*	$type-scale;
+$giga:		$mega	*	$type-scale;
+$tera: 		$giga	*	$type-scale;
+
 $intro: $alpha;
 
 .tera {
 	@include heading-font-size($tera);
 }
-h1,
+
 .giga {
 	@include heading-font-size($giga);
 }
-h2,
+
 .mega {
 	@include heading-font-size($mega);
 }
-h3,
+
+h1,
 .alpha {
 	@include heading-font-size($alpha);
 }
-h4,
+
+h2,
 .beta {
 	@include heading-font-size($beta);
 }
-h5,
+
+h3,
 .gamma {
 	@include heading-font-size($gamma);
 }
-.intro {
-	font-size: $intro;
-	line-height: $base-line-height;
+
+h4,
+.delta {
+	@include heading-font-size($delta);
+}
+
+h5,
+.epsilon {
+	@include heading-font-size($epsilon);
+}
+
+h6,
+.zeta {
+	@include heading-font-size($zeta);
 }
 
 @include respond-min( $mq-medium ) {
 
-	$type-scale: 1.5; // Perfect Fifth
+	$type-scale: 1.200; // Perfect Fifth
+	
+	$zeta: 		$base-font-size;
+	$epsilon: 	$zeta		*	$type-scale;
+	$delta: 	$epsilon	*	$type-scale;
+	$gamma: 	$delta	*	$type-scale;
+	$beta: 		$gamma	*	$type-scale;
+	$alpha: 	$beta	*	$type-scale;
+	$mega:		$alpha	*	$type-scale;
+	$giga:		$mega	*	$type-scale;
+	$tera: 		$giga	*	$type-scale;
 
-	$beta: 	$base-font-size;				
-	$gamma: $beta 	/ 	$type-scale;
-	$alpha: $beta 	* 	$type-scale;
-	$mega: 	$alpha 	* 	$type-scale;
-	$giga: 	$mega 	* 	$type-scale;
-	$tera: 	$giga 	* 	$type-scale;
 	$intro: $alpha;
 
 	.tera {
 		@include heading-font-size($tera);
 	}
-	h1,
+
 	.giga {
 		@include heading-font-size($giga);
 	}
-	h2,
+
 	.mega {
 		@include heading-font-size($mega);
 	}
-	h3,
+
+	h1,
 	.alpha {
 		@include heading-font-size($alpha);
 	}
-	h4,
+
+	h2,
 	.beta {
 		@include heading-font-size($beta);
 	}
-	h5,
+
+	h3,
 	.gamma {
 		@include heading-font-size($gamma);
 	}
-	.intro {
-		font-size: $intro;
+
+	h4,
+	.delta {
+		@include heading-font-size($delta);
 	}
 
+	h5,
+	.epsilon {
+		@include heading-font-size($epsilon);
+	}
+
+	h6,
+	.zeta {
+		@include heading-font-size($zeta);
+	}
 }
