@@ -1,8 +1,3 @@
-<?php 
-include_once('../snippets/head.php');
-include_once('../snippets/nav.php'); 
-?>
-
 <header class="page-header" id="pageHeader" role="banner">
 	<div class="wrap clearfix">
 		<div class="page-header__inner clearfix">
@@ -33,5 +28,3 @@ include_once('../snippets/nav.php');
 		</nav>
 	</div> <!-- .wrap--large -->
 </header>
-
-<?php include_once('../snippets/foot.php'); ?>

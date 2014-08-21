@@ -115,15 +115,15 @@ em {
 }
 
 ::-moz-selection {
-  background: #57b275;
+  background: #dfe7e9;
 }
 
 ::selection {
-  background: #57b275;
+  background: #dfe7e9;
 }
 
 ::-moz-selection {
-  background: #57b275;
+  background: #dfe7e9;
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
   p {
@@ -297,6 +297,7 @@ figure {
 }
 
 body {
+  background: #2d2d2d;
   width: 100%;
 }
 body:before, body:after {
@@ -349,13 +350,17 @@ figcaption {
   border-radius: 4rem;
   display: inline-block;
   line-height: 1;
-  padding: 2rem 3rem;
+  padding: 1rem 1.5rem;
   -webkit-transition: background 0.3s ease, border 0.3s ease, color 0.3s ease;
   transition: background 0.3s ease, border 0.3s ease, color 0.3s ease;
 }
 
+.button--large {
+  padding: 2rem 3rem;
+}
+
 .button--primary {
-  border: 0.3rem solid #57b275;
+  border: 0.2rem solid #57b275;
   background: #57b275;
   color: white;
 }
@@ -366,15 +371,27 @@ figcaption {
 }
 
 .button--secondary {
-  border: 0.3rem solid #57b275;
-  color: #57b275;
+  border: 0.2rem solid #f2d044;
+  background: #f2d044;
+  color: white;
 }
 .button--secondary:hover, .button--secondary:focus {
-  background: #f05d71;
-  border-color: #f05d71;
+  background: #f2d044;
+  border-color: #f2d044;
   color: white;
 }
 
+/*.button--secondary {
+	border: $border-width solid $pri;
+	color: $pri;
+
+	&:hover,
+	&:focus {
+		background: $sec;
+		border-color: $sec;
+		color: $white;
+	}
+}*/
 @media only screen and (max-width: 37.49em) {
   .button {
     width: 100%;
@@ -387,7 +404,7 @@ figcaption {
 .input,
 .select,
 .textarea {
-  border: 0.3rem solid #ebebeb;
+  border: 0.2rem solid #ebebeb;
   border-radius: 0.4rem;
   padding: 1rem 1.5rem;
   resize: none;
@@ -485,14 +502,14 @@ figcaption {
 }
 
 .table {
-  border-bottom: 0.3rem solid #ebebeb;
+  border-bottom: 0.2rem solid #ebebeb;
   border-collapse: collapse;
   border-spacing: 0;
   width: 100%;
 }
 
 th, td {
-  border-top: 0.3rem solid #ebebeb;
+  border-top: 0.2rem solid #ebebeb;
   padding: 1.5rem 2rem;
   text-align: left;
   vertical-align: top;
@@ -643,19 +660,76 @@ body,
 .news__item--meta:last-child {
   padding-right: 0;
 }
-.planner__list {
-  list-style: none;
+.lab__tile {
+  border-radius: 0.4rem;
+  color: white;
+  padding: 4rem;
+  text-align: center;
 }
 
-.planner__item {
-  margin: 0;
+.lab__tile__wrap {
+  position: relative;
 }
-.planner__item:before, .planner__item:after {
-  content: "";
-  display: table;
+
+.lab__tile--small {
+  display: inline;
+  float: left;
+  width: 22.91667%;
+  margin: 0 1.04167%;
+  background: #07abca;
+  padding: 2rem;
 }
-.planner__item:after {
-  clear: both;
+
+.lab__tile--medium {
+  display: inline;
+  float: left;
+  width: 47.91667%;
+  margin: 0 1.04167%;
+  background: #ec4e50;
+  margin-top: 20px;
+}
+
+.lab__tile--featured {
+  display: inline;
+  float: left;
+  width: 47.91667%;
+  margin: 0 1.04167%;
+  height: 733px;
+  position: relative;
+}
+
+.lab__tile__label {
+  border-bottom: 0.2rem solid white;
+  display: inline-block;
+  margin-bottom: 3rem;
+  padding-bottom: .5rem;
+}
+
+.lab__tile__details {
+  bottom: 0;
+  left: 0;
+  padding: 4rem;
+  position: absolute;
+}
+
+.lab__tile__button {
+  margin-top: 2rem;
+}
+
+.lab__tile--purple {
+  background: #8682d7;
+}
+
+.lab__tile--blue {
+  background: #07abca;
+}
+
+.lab__tile--orange {
+  background: #f49e39;
+}
+
+.lab__tile--red {
+  background: #ec4e50;
 }
 
 @media only screen and (min-width: 37.5em) {

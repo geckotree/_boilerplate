@@ -16,7 +16,7 @@ Boilerplate version: 1.0
 @import "../../../assets/sass/helpers/mixins.scss";
 
 .sg-page-wrap {
-	padding-left: 6.8rem;
+	padding-left: 20rem;
 }
 
 // ===========================================================
@@ -31,7 +31,7 @@ Boilerplate version: 1.0
 	left: 0;
 	position: fixed;
 	top: 0;
-	width: 6.8rem;
+	width: 20rem;
 }
 .sg-main-nav__list {
 	list-style: none;
@@ -44,7 +44,7 @@ Boilerplate version: 1.0
 	line-height: 1;
 	padding: 2.3rem 2rem;
 	position: relative;
-	text-align: center;
+	//text-align: center;
 	transition: background $transition-speed;
 
 	&--logo {
@@ -57,7 +57,7 @@ Boilerplate version: 1.0
 		background: rgba(255, 255, 255, 0.05);
 	}
 }
-
+/*
 .sg-main-nav__label {
 	background: $sg-nav-colour;
 	border-radius: $border-radius;
@@ -86,6 +86,7 @@ Boilerplate version: 1.0
 	left: 8.8rem;
 	visibility: visible;
 }
+*/
 
 // ===========================================================
 //
@@ -106,6 +107,37 @@ Boilerplate version: 1.0
 //
 // ===========================================================
 
+.sg-section__header {
+	@include clearfix;
+	margin-bottom: 4rem;
+	padding: 3rem 0;
+	position: relative;
+
+	&:before,
+	&:after {
+		content: '';
+		left: 0;
+		position: absolute;
+		width: 5rem;
+	}
+	&:before {
+		border-top: .1rem solid $highlight-colour;
+		top: 0;
+	}
+	&:after {
+		border-bottom: .1rem solid $highlight-colour;
+		bottom: 0;
+	}
+}
+.sg-section__heading {
+	display: inline-block;
+	padding-bottom: 0!important;
+}
+.sg-section__button {
+	float: right;
+}
+
+/*
 .sg-main-content__list {
 	li {
 		border-bottom: 0.1rem solid #ebebeb;
@@ -117,3 +149,4 @@ Boilerplate version: 1.0
 		padding: 1.9rem 4rem;
 	}
 }
+*/

@@ -1,8 +1,3 @@
-<?php 
-include_once('../snippets/head.php');
-include_once('../snippets/nav.php'); 
-?>
-
 <div class="section-padding--tb section-padding--lr">
 	<div class="wrap">
 		<main class="main-content">
@@ -74,5 +69,3 @@ include_once('../snippets/nav.php');
 		</main>
 	</div> <!-- .wrap -->
 </div> <!-- .section-padding -->
-
-<?php include_once('../snippets/foot.php'); ?>
