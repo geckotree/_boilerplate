@@ -1,4 +1,7 @@
 <?php 
+$pageTitle = 'Colours';
+$currentPage = 'colours';
+
 include_once('snippets/head.php');
 include_once('snippets/nav.php'); 
 ?>
@@ -9,12 +12,6 @@ include_once('snippets/nav.php');
 	<p>Colour gives us personality. Our colour palette is bright and bold while remaining fresh and approachable. It is meant to evoke emotion within our brand as our users experience and build on our services. The boldness and strength of the palette allow for a unique but simple learning experience. While we rely primarily on three main values, the extended palette allows us room to grow and reach outside the standard usage.</p>
 
 	<p>The orange and blue slate are used about 75% of the time. They are supported by a foundation of greys and white, and complimented by some additional soft yellows and greens. When pairing colours, create a hieracy by using high-contrast colours in conjunction with softer less domoinate values.</p>
-
-	<!--<aside class="pull-quote">
-		<blockquote>
-			<p class="beta" style="">Green is the colour of <span style="color: #57B275;">peace</span>, <span style="color: #57B275;">growth</span> and geckos :)</p>
-		</blockquote>
-	</aside>-->
 </section>
 
 <main class="sg-main-content">
@@ -131,4 +128,4 @@ include_once('snippets/nav.php');
 	</section>
 </main>
 
-<?php include_once('../snippets/foot.php'); ?>
+<?php include_once('snippets/foot.php'); ?>

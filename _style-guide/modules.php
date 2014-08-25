@@ -1,4 +1,7 @@
 <?php 
+$pageTitle = 'Modules';
+$currentPage = 'modules';
+
 include_once('snippets/head.php');
 include_once('snippets/nav.php'); 
 ?>
