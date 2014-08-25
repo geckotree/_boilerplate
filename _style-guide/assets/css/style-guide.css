@@ -57,7 +57,7 @@ Boilerplate version: 1.0
 .sg-main-nav__link.active {
   color: #f2d044;
 }
-.sg-main-nav__link [class^="icon--"] {
+.sg-main-nav__link [class^="sg-icon--"] {
   font-size: 2.4rem;
 }
 .sg-main-nav__link:hover .sg-main-nav__label {
@@ -381,4 +381,64 @@ Boilerplate version: 1.0
 
 .sg-section__button {
   float: right;
+}
+
+@font-face {
+  font-family: 'sg-icon-font';
+  src: url("../fonts/sg-icon-font.eot?-40jj5h");
+  src: url("../fonts/sg-icon-font.eot?#iefix-40jj5h") format("embedded-opentype"), url("../fonts/sg-icon-font.woff?-40jj5h") format("woff"), url("../fonts/sg-icon-font.ttf?-40jj5h") format("truetype"), url("../fonts/sg-icon-font.svg?-40jj5h#sg-icon-font") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+[class^="sg-icon--"], [class*=" sg-icon--"] {
+  font-family: 'sg-icon-font';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.sg-icon--cross:before {
+  content: "\2421";
+}
+
+.sg-icon--check:before {
+  content: "\2713";
+}
+
+.sg-icon--help:before {
+  content: "\2753";
+}
+
+.sg-icon--crop:before {
+  content: "\e201";
+}
+
+.sg-icon--paintroller:before {
+  content: "\e225";
+}
+
+.sg-icon--stamp:before {
+  content: "\e226";
+}
+
+.sg-icon--text:before {
+  content: "\ed00";
+}
+
+.sg-icon--layout:before {
+  content: "\eda0";
+}
+
+.sg-icon--save:before {
+  content: "\1f4be";
+}
+
+.sg-icon--download:before {
+  content: "\1f4e5";
 }

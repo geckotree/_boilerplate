@@ -418,7 +418,7 @@ figcaption {
 .textarea {
   background: none;
   border: none;
-  border-bottom: 0.2rem solid #8e8e8e;
+  border-bottom: 0.2rem solid #dad5cd;
   padding: 1rem 1.5rem;
   resize: none;
   text-indent: 1px;
@@ -482,7 +482,7 @@ figcaption {
 .input--checkbox {
   -webkit-appearance: none;
   -moz-appearance: none;
-  background: #8e8e8e;
+  background: #dad5cd;
   border-radius: 0.4rem;
   color: white;
   cursor: pointer;

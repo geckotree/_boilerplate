@@ -17,7 +17,7 @@ include_once('snippets/nav.php');
 <main class="sg-main-content">
 	<section class="sg-article-helper__section">
 		<h3 class="sg-doc-header__heading">Topic</h3>
-		<button class="sg-doc-header__button button button--primary">Save <i class="icon--chat" aria-hidden="true"></i></button>
+		<button class="sg-doc-header__button button button--primary">Save <i class="sg-icon--save" aria-hidden="true"></i></button>
 
 		<input type="text" class="input" placeholder="Article title">
 	</section>

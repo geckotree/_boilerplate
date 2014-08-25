@@ -22,7 +22,7 @@ include_once('snippets/nav.php');
 			</h1>
 
 			<button class="sg-doc-header__button button button--primary">
-				Download Icons <i class="icon--download" aria-hidden="true"></i>
+				Download Icons <i class="sg-icon--download" aria-hidden="true"></i>
 			</button>
 		</header>
 
@@ -156,7 +156,7 @@ include_once('snippets/nav.php');
 			</h1>
 
 			<button class="sg-doc-header__button button button--primary">
-				Download Icons <i class="icon--download" aria-hidden="true"></i>
+				Download Icons <i class="sg-icon--download" aria-hidden="true"></i>
 			</button>
 		</header>
 

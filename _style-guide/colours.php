@@ -24,9 +24,7 @@ include_once('snippets/nav.php');
 
 		<ul class="sg-grid__list">
 			<li class="sg-grid__item">
-				<div class="sg-grid__colour sg-grid__colour--pri">
-					<button class="sg-grid__colour-changer" data-dark-colour></button>
-				</div>
+				<div class="sg-grid__colour sg-grid__colour--pri"></div>
 				<ul class="sg-grid__list--details">
 					<li class="sg-grid__item--details">CMYK: <span class="sg-grid__value--colour">68 6 72 0</span></li>
 					<li class="sg-grid__item--details">RGB: <span class="sg-grid__value--colour">87 178 117</span></li>
