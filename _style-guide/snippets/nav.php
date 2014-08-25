@@ -27,6 +27,11 @@
 		<i class="icon--feather" aria-hidden="true"></i>
 		<span class="sg-main-nav__label">Modules</span>
 	</a>
+
+	<a href="article-helper.php" class="sg-main-nav__link sg-main-nav__link--detached <?php if ($currentPage == "article-helper") { ?>active<?php } ?>">
+		<i class="icon--info" aria-hidden="true"></i>
+		<span class="sg-main-nav__label">Help</span>
+	</a>
 </nav>
 
 <div class="sg-page-wrap clearfix">

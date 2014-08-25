@@ -70,6 +70,13 @@ $nav-width: 6.8rem;
 		left: 8.8rem;
 		visibility: visible;
 	}
+
+	&--detached {
+		bottom: 0;
+		left: 0;
+		position: absolute;
+		width: 100%;
+	}
 }
 
 .sg-main-nav__label {
@@ -363,20 +370,26 @@ $nav-width: 6.8rem;
 }
 
 
-/*
-.sg-colour__list {
-	font-size: 0.8em;
+
+//= ARTICLE HELPER ===========================================
+
+.sg-article-helper__section {
+	margin-bottom: 6rem;
+}
+
+.sg-article-helper__list {
+	@include clearfix;
 	list-style: none;
-	margin-top: 1rem;
+	text-align: center;
 }
 
-.sg-colour__item {
-	display: block;
-	line-height: 1;
-	margin: 1rem 0 0;
-}
-*/
+.sg-article-helper__item {
+	@include column(2);
 
+	.label {
+		display: block;
+	}
+}
 
 
 

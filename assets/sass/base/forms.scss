@@ -7,8 +7,9 @@
 .input,
 .select,
 .textarea {
-	border: $border-width solid $border-colour;
-	border-radius: $border-radius;
+	background: none;
+	border: none;
+	border-bottom: $border-width solid $border-colour;
 	padding: 1rem 1.5rem;
 	resize: none;
 	text-indent: 1px;
@@ -102,7 +103,33 @@
 
 .input--radio,
 .input--checkbox {
-	width: auto;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	background: $grey-1;
+	border-radius: $border-radius;
+	color: $white;
+	cursor: pointer;
+	font-family: 'geckotree_icon_font';
+	line-height: 1;
+	padding: .8rem 1.4rem 1.6rem 1.5rem;
+	transition: background $transition-speed, border $transition-speed;
+
+	&:before {
+		content: '\2421';
+	}
+
+	&:hover,
+	&:focus {
+		background: $sec;
+	}
+
+	&:checked {
+		background: $pri;
+
+		&:before {
+			content: '\2713';
+		}
+	}
 }
 .input--radio + .label,
 .input--checkbox + .label {

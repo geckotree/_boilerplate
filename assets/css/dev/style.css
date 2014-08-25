@@ -416,8 +416,9 @@ figcaption {
 .input,
 .select,
 .textarea {
-  border: 0.2rem solid #8e8e8e;
-  border-radius: 0.4rem;
+  background: none;
+  border: none;
+  border-bottom: 0.2rem solid #8e8e8e;
   padding: 1rem 1.5rem;
   resize: none;
   text-indent: 1px;
@@ -479,7 +480,34 @@ figcaption {
 
 .input--radio,
 .input--checkbox {
-  width: auto;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background: #8e8e8e;
+  border-radius: 0.4rem;
+  color: white;
+  cursor: pointer;
+  font-family: 'geckotree_icon_font';
+  line-height: 1;
+  padding: .8rem 1.4rem 1.6rem 1.5rem;
+  -webkit-transition: background 0.3s, border 0.3s;
+  transition: background 0.3s, border 0.3s;
+}
+.input--radio:before,
+.input--checkbox:before {
+  content: '\2421';
+}
+.input--radio:hover, .input--radio:focus,
+.input--checkbox:hover,
+.input--checkbox:focus {
+  background: #f05d71;
+}
+.input--radio:checked,
+.input--checkbox:checked {
+  background: #57b275;
+}
+.input--radio:checked:before,
+.input--checkbox:checked:before {
+  content: '\2713';
 }
 
 .input--radio + .label,
