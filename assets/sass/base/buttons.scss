@@ -5,7 +5,7 @@
 // ===========================================================
 
 .button {
-	border-radius: $border-radius--rounded;
+	border-radius: $border-radius;
 	display: inline-block;
 	line-height: 1;
 	padding: 1rem 1.5rem;
@@ -16,14 +16,12 @@
 }
 
 .button--primary {
-	border: $border-width solid $pri;
 	background: $pri;
 	color: $white;
 
 	&:hover,
 	&:focus {
 		background: $sec;
-		border-color: $sec;
 		color: $white;
 	}
 }

@@ -3,19 +3,3 @@
 //	$HEADER
 //
 // ===========================================================
-
-.page-header {
-	background: $dark-1;
-	position: relative;
-}
-
-.page-header__inner {
-	padding-top: 1rem;
-	position: relative;
-	@include clearfix;
-}
-
-.page-header .logo {
-	float: left;
-	margin: 1rem;
-}

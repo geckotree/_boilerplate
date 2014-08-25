@@ -55,6 +55,7 @@ document.addEventListener('DOMContentLoaded', function() {
 		});
 	}
 
+
 /*
 	window.onscroll = function(e) {
 		//=Sets the current scroll top position

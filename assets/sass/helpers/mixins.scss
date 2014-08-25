@@ -48,6 +48,16 @@ $total-width: 100%;
 	@include clearfix;
 }
 
+
+
+
+
+// ===========================================================
+//
+//	$MEDIA QUERIES
+//
+// ===========================================================
+
 @mixin respond-min( $width ) {
 	@media only screen and ( min-width: $width ) {
 		@content;

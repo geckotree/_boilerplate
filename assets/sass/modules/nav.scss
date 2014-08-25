@@ -4,17 +4,371 @@
 //
 // ===========================================================
 
+.hide-text {
+	left: -100%;
+	overflow: hidden;
+	position: absolute;
+	top: -100%;
+}
+
+
+
+//= PAGE HEADER ==============================================
+
 .page-header {
 	background: $dark-1;
 	position: relative;
+	text-align: center;
 }
 
 .page-header__inner {
-	padding-top: 1rem;
-	position: relative;
-	@include clearfix;
+	margin: 0 auto;
+	max-width: 180rem;
 }
 
+.page-header__logo {
+	display: inline-block;
+	line-height: 1;
+	padding: 1.4rem 2rem;
+
+	&:hover {
+		color: $pri--alt;
+	}
+
+	.icon--logo {
+		font-size: 4rem;
+	}
+}
+
+.page-header__toggle {
+	color: $white;
+	padding: 2.3rem 2rem;
+	line-height: 1;
+	position: absolute;
+	top: 0;
+	width: 40%;
+
+	&--search {
+		left: 0;
+		text-align: left;
+	}
+
+	&--menu {
+		right: 0;
+		text-align: right;
+	}
+}
+
+
+
+//= MAIN NAV =================================================
+
+.main-nav {
+	&--detached {
+		display: none;
+	}
+}
+
+.main-nav__link {
+	color: $white;
+	display: block;
+	padding: 1rem 2rem;
+	text-align: left;
+	transition: background $transition-speed, color $transition-speed;
+
+	&:hover,
+	&:focus {
+		background: $dark-2;
+	}
+
+	&.active {
+		color: $yellow-1;
+	}
+
+	&--cta {
+		&:hover,
+		&:focus {
+			background: $sec;
+		}
+	}
+
+	[class^="icon-"] {
+		float: right;
+	}
+}
+
+
+
+@include respond-max( $mq-medium ) {
+
+	//= JS =======================================================
+
+	.js {
+		
+		//= PAGE HEADER & MAIN NAV ===============================
+
+		.page-header {
+			position: relative;
+			z-index: 10;
+		}
+
+		.page-header__inner {
+			background: $dark-1;
+		}
+
+		.main-nav {
+			animation-duration: $transition-speed;
+			animation-fill-mode: both;
+			animation-name: bounceOutUp;
+			background: $dark-1;
+			padding-top: 2rem;
+			position: absolute;
+			transform: translateY(calc(-168%));
+			width: 100%;
+			z-index: -1;
+		}
+
+		&.menu--open .main-nav {
+			animation-name: bounceInDown;
+		}
+
+	}
+
+}
+
+
+
+@include respond-min( $mq-medium ) {
+
+	//= PAGE HEADER ==============================================
+
+	.page-header {
+		@include clearfix;
+		text-align: left;
+	}
+
+	.page-header__inner {
+		padding: 0 2rem;
+	}
+
+	.page-header__logo {
+		float: left;
+		padding-left: 0;
+	}
+
+	.page-header__toggle {
+		display: none;
+	}
+
+
+
+	//= MAIN NAV =================================================
+
+	.main-nav {
+		display: block;
+		float: left;
+
+		&--detached {
+			display: block;
+			float: right;
+		}
+	}
+
+	.main-nav__link {
+		float: left;
+		padding: 2rem;
+
+		&--cta {
+			border-radius: $border-radius;
+			margin: 1rem 0 1rem 1rem;
+			padding: 1rem 2rem;
+		}
+
+		&--mobile {
+			display: none;
+		}
+
+		[class^="icon-"] {
+			float: none;
+		}
+	}
+
+	.main-nav__search {
+		position: relative;
+		transition: background $transition-speed, width $transition-speed;
+	}
+
+	.main-nav__search__form {
+		display: inline-block;
+	}
+
+	.main-nav__search__input {
+		background: none;
+		border: none;
+		color: $white;
+		margin: 0;
+		padding: 2rem 4.8rem 2rem 2rem;
+		width: 100%;
+	}
+
+	.main-nav__search__button {
+		color: $white;
+		display: inline-block;
+		padding: 2rem 2.6rem 2rem 2.7rem;
+		position: absolute;
+		right: 0;
+		top: 0;
+		transition: background $transition-speed, color $transition-speed;
+
+		&:hover {
+			background: $dark-2;
+			color: $sec;
+		}
+	}
+
+
+
+	//= NO-JS ====================================================
+
+	.no-js {
+
+		.main-nav__search {
+			background: $dark-2;
+		}
+
+	}
+
+
+
+	//= JS =======================================================
+	
+	.js {
+
+		.main-nav__search {
+			width: 4.8rem;
+		}
+		
+		&.search--open .main-nav__search {
+			background: $dark-2;
+			width: 26.5rem;
+		}
+
+		&.search--open .main-nav__search__button .icon--search:before {
+			content: '\e012';
+			font-size: 1.6rem;
+		}
+
+	}
+
+}
+
+
+
+
+
+
+@-webkit-keyframes bounceInDown {
+	0% {
+		-webkit-transform: translateY(-webkit-calc(-100% - 68px));
+	}
+	60% {
+		-webkit-transform: translateY(0px);
+	}
+	
+	100% {
+		-webkit-transform: translateY(-20px);
+	}
+}
+@-moz-keyframes bounceInDown {
+	0% {
+		-moz-transform: translateY(-moz-calc(-100% - 68px));
+	}
+	60% {
+		-moz-transform: translateY(0px);
+	}
+	
+	100% {
+		-moz-transform: translateY(-20px);
+	}
+}
+@-o-keyframes bounceInDown {
+	0% {
+		-o-transform: translateY(-o-calc(-100% - 68px));
+	}
+	60% {
+		-o-transform: translateY(0px);
+	}
+	
+	100% {
+		-o-transform: translateY(-20px);
+	}
+}
+@keyframes bounceInDown {
+	0% {
+		transform: translateY(calc(-100% - 68px));
+	}
+	60% {
+		transform: translateY(0px);
+	}
+	
+	100% {
+		transform: translateY(-20px);
+	}
+}
+
+@-webkit-keyframes bounceOutUp {
+	0% {
+		-webkit-transform: translateY(-20px);
+	}
+	
+	30% {
+		-webkit-transform: translateY(0px);
+	}
+	
+	100% {
+		-webkit-transform: translateY(-webkit-calc(-100% - 68px));
+	}
+}
+@-moz-keyframes bounceOutUp {
+	0% {
+		-moz-transform: translateY(-20px);
+	}
+	60% {
+		-moz-transform: translateY(0px);
+	}
+	
+	100% {
+		-moz-transform: translateY(-moz-calc(-100% - 68px));
+	}
+}
+@-o-keyframes bounceOutUp {
+	0% {
+		-o-transform: translateY(-20px);
+	}
+	60% {
+		-o-transform: translateY(0px);
+	}
+	
+	100% {
+		-o-transform: translateY(-o-calc(-100% - 68px));
+	}
+}
+@keyframes bounceOutUp {
+	0% {
+		transform: translateY(-20px);
+	}
+	60% {
+		transform: translateY(0px);
+	}
+	
+	100% {
+		transform: translateY(calc(-100% - 68px));
+	}
+}
+
+
+
+/*
 .page-header .logo {
 	float: left;
 	margin: 1rem;
@@ -33,6 +387,7 @@
 		color: $sec;
 	}
 }
+
 
 //= NO JS ================================================
 
@@ -143,3 +498,4 @@
 	}
 
 }
+*/

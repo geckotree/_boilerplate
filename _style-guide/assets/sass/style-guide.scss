@@ -15,15 +15,15 @@ Boilerplate version: 1.0
 @import "../../../assets/sass/helpers/variables.scss";
 @import "../../../assets/sass/helpers/mixins.scss";
 
+$sg-nav-colour:	$dark-1;
+$nav-width: 6.8rem;
+
 .sg-page-wrap {
-	padding-left: 20rem;
+	margin-left: $nav-width;
+	position: relative;
 }
 
-// ===========================================================
-//
-//	$NAV
-//
-// ===========================================================
+//= MAIN NAV =================================================
 
 .sg-main-nav {
 	background: $sg-nav-colour;
@@ -31,33 +31,46 @@ Boilerplate version: 1.0
 	left: 0;
 	position: fixed;
 	top: 0;
-	width: 20rem;
+	width: $nav-width;
+	z-index: 10;
 }
-.sg-main-nav__list {
-	list-style: none;
+
+.sg-main-nav__logo {
+	color: $pri;
+	font-size: 3.2rem;
+	padding: 1.7rem 1rem;
+	text-align: center;
 }
-.sg-main-nav__item {
-	margin: 0;
-}
+
 .sg-main-nav__link {
+	color: $white;
 	display: block;
 	line-height: 1;
-	padding: 2.3rem 2rem;
+	padding: 2rem 2rem 2.3rem;
 	position: relative;
-	//text-align: center;
+	text-align: center;
 	transition: background $transition-speed;
 
-	&--logo {
-		display: block;
-		padding: 3.9rem 4rem;
-		line-height: 1;
+	&:hover,
+	&:focus {
+		background: $dark-2;
 	}
 
-	&:hover {
-		background: rgba(255, 255, 255, 0.05);
+	&.active {
+		color: $yellow-1;
+	}
+
+	[class^="icon--"] {
+		font-size: 2.4rem;
+	}
+
+	&:hover .sg-main-nav__label {
+		opacity: 1;
+		left: 8.8rem;
+		visibility: visible;
 	}
 }
-/*
+
 .sg-main-nav__label {
 	background: $sg-nav-colour;
 	border-radius: $border-radius;
@@ -81,25 +94,257 @@ Boilerplate version: 1.0
 		top: 50%;
 	}
 }
-.sg-main-nav__link:hover .sg-main-nav__label {
-	opacity: 1;
-	left: 8.8rem;
-	visibility: visible;
+
+
+
+//= CONTENT ==================================================
+
+.sg-main-content {
+	padding: 4rem 2rem;
+}
+
+.sg-side-content {
+	background: #F2F0ED;
+	padding: 4rem 2rem;
+
+	.pull-quote {
+		margin: 3rem;
+
+		p {
+			padding: 0;
+			text-align: center;
+		}
+	}
+}
+
+@include respond-min( $mq-medium ) {
+
+	.sg-main-content {
+		padding: 4rem 6rem;
+	}
+
+	.sg-side-content {
+		padding: 4rem 6rem;
+	}
+
+}
+
+@include respond-min( $mq-large ) {
+
+	.sg-main-content {
+		float: right;
+		padding: 4rem 2rem;
+		width: 66.6666666667%;
+	}
+
+	.sg-side-content {
+		height: 100%;
+		padding: 4rem 2rem;
+		left: 0;
+		position: absolute;
+		top: 0;
+		width: 33.3333333333%;
+	}
+
+}
+
+@include respond-min( $mq-x-large ) {
+
+	.sg-main-content {
+		padding: 4rem 6rem;
+	}
+
+	.sg-side-content {
+		padding: 4rem 6rem;
+	}
+
+}
+
+
+
+//= DOC HEADER ===============================================
+
+.sg-doc-header__heading {
+	display: inline-block;
+}
+
+.sg-doc-header__button {
+	float: right;
+}
+
+
+
+//= COLOURS ==================================================
+
+.sg-grid {
+	margin-bottom: 6rem;
+}
+
+.sg-grid__list {
+	@include clearfix;
+	list-style: none;
+
+	&--details {
+		font-size: 0.8em;
+		list-style: none;
+		padding: 1rem .5rem .5rem;
+	}
+}
+
+.sg-grid__item {
+	background: $white;
+	margin-left: 0;
+	padding: .5rem;
+
+	&--small {
+		padding: 3rem .5rem;
+		text-align: center;
+	}
+
+	&--details {
+		line-height: 1.2;
+		margin: .5rem 0 0;
+	}
+}
+
+.sg-grid__value {
+	&--colour {
+		font-weight: 600;
+	}
+
+	&--icon {
+		font-size: 0.8em;
+	}
+}
+
+.sg-grid__icon {
+	font-size: 3.2rem;
+}
+
+.sg-grid__colour {
+	height: 10rem;
+	width: 100%;
+	border-top: 2rem solid transparent;
+
+	&--pri { 
+		background: $pri; 
+		border-color: $pri--alt;
+	}
+
+	&--sec { 
+		background: $sec; 
+		border-color: $sec--alt;
+	}
+	&--ter 		{ background: $ter; }
+	&--dark-1 	{ background: $dark-1; }
+
+	&--orange 	{ background: $orange-1 }
+	&--red 		{ background: $red-1 }
+	&--purple 	{ background: $purple-1 }
+	&--blue 	{ background: $blue-1 }
+	&--dark-2 	{ background: $dark-2; }
+	&--grey-1 	{ background: $grey-1; }
+}
+
+@include respond-min( $mq-small ) {
+
+	.sg-grid__item {
+		margin-bottom: 1rem;
+
+		&--small {
+			@include column(6);
+			margin-bottom: 1rem;
+		}
+	}
+
+}
+
+@include respond-min( $mq-medium ) {
+
+	.sg-grid__item {
+		margin-bottom: 1rem;
+
+		&--small {
+			@include column(4);
+			margin-bottom: 1rem;
+		}
+
+		&--details {
+			display: inline-block;
+
+			& + & {
+				margin-left: 2rem;
+			}
+		}
+	}
+
+}
+
+@include respond-min( $mq-large ) {
+
+	.sg-grid {
+		margin-bottom: 4rem;
+	}
+
+	.sg-grid__item {
+		@include column(3);
+		margin-bottom: 1rem;
+
+
+		&--small {
+			@include column(3);
+			margin-bottom: 1rem;
+		}
+
+		&--details {
+			display: block;
+
+			& + & {
+				margin-left: 0;
+			}
+		}
+	}
+
+	.sg-grid__value {
+		display: block;
+	}
+
+}
+
+@include respond-min( $mq-x-large ) {
+
+	.sg-grid__item {
+		margin-bottom: 2rem;
+
+		&--small {
+			@include column(2);
+			margin-bottom: 2rem;
+		}
+	}
+
+	.sg-grid__value {
+		display: inline;
+	}
+
+}
+
+
+/*
+.sg-colour__list {
+	font-size: 0.8em;
+	list-style: none;
+	margin-top: 1rem;
+}
+
+.sg-colour__item {
+	display: block;
+	line-height: 1;
+	margin: 1rem 0 0;
 }
 */
 
-// ===========================================================
-//
-//	$HEADER
-//
-// ===========================================================
 
-.sg-page-header {
-	border-bottom: 0.1rem solid #ebebeb;
-}
-.sg-page-header__heading {
-	padding: 2rem 0;
-}
+
 
 // ===========================================================
 //
@@ -136,17 +381,3 @@ Boilerplate version: 1.0
 .sg-section__button {
 	float: right;
 }
-
-/*
-.sg-main-content__list {
-	li {
-		border-bottom: 0.1rem solid #ebebeb;
-		display: block;
-		margin: 0;
-	}
-	a {
-		display: block;
-		padding: 1.9rem 4rem;
-	}
-}
-*/

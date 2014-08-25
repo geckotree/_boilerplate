@@ -1,42 +1,32 @@
 <nav class="sg-main-nav" role="navigation">
-	<ul class="sg-main-nav__list">
-		<li class="sg-main-nav__item">
-			<a href="" class="sg-main-nav__link">
-				L
-				<span class="sg-main-nav__label">Logo</span>
-			</a>
-		</li>
-		<li class="sg-main-nav__item">
-			<a href="typography.php" class="sg-main-nav__link">
-				T
-				<span class="sg-main-nav__label">Typography</span>
-			</a>
-		</li>
-		<li class="sg-main-nav__item">
-			<a href="" class="sg-main-nav__link">
-				C
-				<span class="sg-main-nav__label">Colours</span>
-			</a>
-		</li>
-		<li class="sg-main-nav__item">
-			<a href="" class="sg-main-nav__link">
-				F
-				<span class="sg-main-nav__label">Forms</span>
-			</a>
-		</li>
-		<li class="sg-main-nav__item">
-			<a href="" class="sg-main-nav__link">
-				I
-				<span class="sg-main-nav__label">Icons</span>
-			</a>
-		</li>
-		<li class="sg-main-nav__item">
-			<a href="modules.php" class="sg-main-nav__link">
-				M
-				<span class="sg-main-nav__label">Modules</span>
-			</a>
-		</li>
-	</ul>
+	<div class="sg-main-nav__logo">
+		<i class="icon--logo" aria-hidden="true"></i>
+	</div>
+
+	<a href="" class="sg-main-nav__link">
+		<i class="icon--design" aria-hidden="true"></i>
+		<span class="sg-main-nav__label">Logo</span>
+	</a>
+
+	<a href="typography.php" class="sg-main-nav__link">
+		<i class="icon--briefcase" aria-hidden="true"></i>
+		<span class="sg-main-nav__label">Typography</span>
+	</a>
+
+	<a href="colours.php" class="sg-main-nav__link active">
+		<i class="icon--heart" aria-hidden="true"></i>
+		<span class="sg-main-nav__label">Colours</span>
+	</a>
+
+	<a href="icons.php" class="sg-main-nav__link">
+		<i class="icon--send" aria-hidden="true"></i>
+		<span class="sg-main-nav__label">Icons</span>
+	</a>
+
+	<a href="modules.php" class="sg-main-nav__link">
+		<i class="icon--feather" aria-hidden="true"></i>
+		<span class="sg-main-nav__label">Modules</span>
+	</a>
 </nav>
 
-<div class="sg-page-wrap">
+<div class="sg-page-wrap clearfix">

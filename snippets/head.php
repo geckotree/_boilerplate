@@ -1,4 +1,4 @@
-<?php $baseURL = 'http://localhost/~kev/_boilerplate/'; ?>
+<?php $baseURL = 'http://localhost/~rob/_boilerplate/'; ?>
 
 <!doctype html>
 <!--[if IE 7]> <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
@@ -14,10 +14,8 @@
 	<meta name="robots" content="index, follow"> <!-- http://www.robotstxt.org -->
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui">
 
-	<!--
-	<script type="text/javascript" src="//use.typekit.net/eyy5lbl.js"></script>
-	<script type="text/javascript">try {Typekit.load();} catch(e) {}</script>
-	-->
+	<script type="text/javascript" src="//use.typekit.net/dmp1bpt.js"></script>
+	<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 
 	<!--[if lt IE 9]>
 		<script src="<?php echo $baseURL; ?>/assets/js/production/html5shiv.min.js"></script>
