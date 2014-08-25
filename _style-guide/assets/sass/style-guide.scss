@@ -192,13 +192,17 @@ $nav-width: 6.8rem;
 }
 
 .sg-grid__item {
-	background: $white;
 	margin-left: 0;
-	padding: .5rem;
 
 	&--small {
+		border-radius: $border-radius;
 		padding: 3rem .5rem;
 		text-align: center;
+		transition: background $transition-speed;
+
+		&:hover {
+			background: $white;
+		}
 	}
 
 	&--details {
@@ -222,9 +226,10 @@ $nav-width: 6.8rem;
 }
 
 .sg-grid__colour {
+	border-radius: $border-radius;
 	height: 10rem;
 	width: 100%;
-	border-top: 2rem solid transparent;
+	border-top: 3rem solid transparent;
 
 	&--pri { 
 		background: $pri; 
@@ -235,15 +240,43 @@ $nav-width: 6.8rem;
 		background: $sec; 
 		border-color: $sec--alt;
 	}
-	&--ter 		{ background: $ter; }
-	&--dark-1 	{ background: $dark-1; }
 
-	&--orange 	{ background: $orange-1 }
-	&--red 		{ background: $red-1 }
-	&--purple 	{ background: $purple-1 }
-	&--blue 	{ background: $blue-1 }
-	&--dark-2 	{ background: $dark-2; }
-	&--grey-1 	{ background: $grey-1; }
+	&--ter { 
+		background: $ter; 
+		border-color: $ter--alt;
+	}
+
+	&--dark-1 { 
+		background: $dark-1; 
+	}
+
+	&--orange { 
+		background: $orange-1;
+		border-color: $orange-2;
+	}
+
+	&--red { 
+		background: $red-1;
+		border-color: $red-2;
+	}
+
+	&--purple { 
+		background: $purple-1;
+		border-color: $purple-2; 
+	}
+
+	&--blue { 
+		background: $blue-1; 
+		border-color: $blue-2;
+	}
+
+	&--dark-2 { 
+		background: $dark-2; 
+	}
+
+	&--grey-1 { 
+		background: $grey-1; 
+	}
 }
 
 @include respond-min( $mq-small ) {

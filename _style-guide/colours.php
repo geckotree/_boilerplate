@@ -21,13 +21,15 @@ include_once('snippets/nav.php');
 	<section class="sg-grid clearfix">
 		<header class="sg-doc-header">
 			<h1 class="sg-doc-header__heading">
-				<span style="font-weight:normal;">Core</span> Colours
+				<span style="font-weight:normal;">Core</span> colours
 			</h1>
 		</header>
 
 		<ul class="sg-grid__list">
 			<li class="sg-grid__item">
-				<div class="sg-grid__colour sg-grid__colour--pri"></div>
+				<div class="sg-grid__colour sg-grid__colour--pri">
+					<button class="sg-grid__colour-changer" data-dark-colour></button>
+				</div>
 				<ul class="sg-grid__list--details">
 					<li class="sg-grid__item--details">CMYK: <span class="sg-grid__value--colour">68 6 72 0</span></li>
 					<li class="sg-grid__item--details">RGB: <span class="sg-grid__value--colour">87 178 117</span></li>
@@ -67,7 +69,7 @@ include_once('snippets/nav.php');
 	<section class="sg-grid clearfix">
 		<header class="sg-doc-header">
 			<h1 class="sg-doc-header__heading">
-				<span style="font-weight:normal;">Extended</span> Colours
+				<span style="font-weight:normal;">Extended</span> colours
 			</h1>
 		</header>
 

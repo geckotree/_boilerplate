@@ -167,13 +167,16 @@ Boilerplate version: 1.0
 }
 
 .sg-grid__item {
-  background: white;
   margin-left: 0;
-  padding: .5rem;
 }
 .sg-grid__item--small {
+  border-radius: 0.4rem;
   padding: 3rem .5rem;
   text-align: center;
+  transition: background 0.3s;
+}
+.sg-grid__item--small:hover {
+  background: white;
 }
 .sg-grid__item--details {
   line-height: 1.2;
@@ -192,9 +195,10 @@ Boilerplate version: 1.0
 }
 
 .sg-grid__colour {
+  border-radius: 0.4rem;
   height: 10rem;
   width: 100%;
-  border-top: 2rem solid transparent;
+  border-top: 3rem solid transparent;
 }
 .sg-grid__colour--pri {
   background: #57b275;
@@ -206,21 +210,26 @@ Boilerplate version: 1.0
 }
 .sg-grid__colour--ter {
   background: #f2d044;
+  border-color: #f2d044;
 }
 .sg-grid__colour--dark-1 {
   background: #2d2d2d;
 }
 .sg-grid__colour--orange {
   background: #f49e39;
+  border-color: #f29231;
 }
 .sg-grid__colour--red {
   background: #ec4e50;
+  border-color: #e84345;
 }
 .sg-grid__colour--purple {
   background: #8682d7;
+  border-color: #7a76d0;
 }
 .sg-grid__colour--blue {
   background: #07abca;
+  border-color: #05a0c2;
 }
 .sg-grid__colour--dark-2 {
   background: #242424;

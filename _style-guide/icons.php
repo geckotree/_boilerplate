@@ -15,7 +15,7 @@ include_once('snippets/nav.php');
 	<section class="sg-grid clearfix">
 		<header class="sg-doc-header">
 			<h1 class="sg-doc-header__heading">
-				<span style="font-weight:normal;">SS</span> Pika
+				<span style="font-weight:normal;">SS</span> pika
 			</h1>
 
 			<button class="sg-doc-header__button button button--primary">
@@ -149,7 +149,7 @@ include_once('snippets/nav.php');
 	<section class="sg-grid clearfix">
 		<header class="sg-doc-header">
 			<h1 class="sg-doc-header__heading">
-				<span style="font-weight:normal;">Social</span> Media
+				<span style="font-weight:normal;">Social</span> media
 			</h1>
 
 			<button class="sg-doc-header__button button button--primary">
