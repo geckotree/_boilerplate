@@ -370,7 +370,6 @@ $nav-width: 6.8rem;
 }
 
 
-
 //= ARTICLE HELPER ===========================================
 
 .sg-article-helper__section {
@@ -380,15 +379,42 @@ $nav-width: 6.8rem;
 .sg-article-helper__list {
 	@include clearfix;
 	list-style: none;
-	text-align: center;
 }
 
 .sg-article-helper__item {
-	@include column(2);
+	@include clearfix;
+	margin-left: 0;
 
 	.label {
-		display: block;
+		display: inline-block;
+		line-height: 1;
+		padding: 1.5rem 1rem;
 	}
+
+	.input--radio {
+		float: left;
+	}
+}
+
+@include respond-min( $mq-medium ) {
+
+	.sg-article-helper__list {
+		text-align: center;
+	}
+
+	.sg-article-helper__item {
+		@include column(2);
+
+		.label {
+			display: block;
+			padding: 0 0 1rem 0;
+		}
+
+		.input--radio {
+			float: none;
+		}
+	}
+
 }
 
 
@@ -431,7 +457,7 @@ $nav-width: 6.8rem;
 
 
 
-
+//= ICONS ====================================================
 
 @font-face {
 	font-family: 'sg-icon-font';
@@ -446,46 +472,26 @@ $nav-width: 6.8rem;
 
 [class^="sg-icon--"], [class*=" sg-icon--"] {
 	font-family: 'sg-icon-font';
-	speak: none;
 	font-style: normal;
-	font-weight: normal;
 	font-variant: normal;
-	text-transform: none;
+	font-weight: normal;
 	line-height: 1;
+	speak: none;
+	text-transform: none;
 
 	/* Better Font Rendering =========== */
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 }
 
-.sg-icon--cross:before {
-	content: "\2421";
-}
-.sg-icon--check:before {
-	content: "\2713";
-}
-.sg-icon--help:before {
-	content: "\2753";
-}
-.sg-icon--crop:before {
-	content: "\e201";
-}
-.sg-icon--paintroller:before {
-	content: "\e225";
-}
-.sg-icon--stamp:before {
-	content: "\e226";
-}
-.sg-icon--text:before {
-	content: "\ed00";
-}
-.sg-icon--layout:before {
-	content: "\eda0";
-}
-.sg-icon--save:before {
-	content: "\1f4be";
-}
-.sg-icon--download:before {
-	content: "\1f4e5";
-}
+.sg-icon--cross:before 			{ content: '\2421'; }
+.sg-icon--check:before 			{ content: '\2713'; }
+.sg-icon--help:before 			{ content: '\2753'; }
+.sg-icon--crop:before 			{ content: '\e201'; }
+.sg-icon--paintroller:before 	{ content: '\e225'; }
+.sg-icon--stamp:before 			{ content: '\e226'; }
+.sg-icon--text:before 			{ content: '\ed00'; }
+.sg-icon--layout:before 		{ content: '\eda0'; }
+.sg-icon--save:before 			{ content: '\1f4be'; }
+.sg-icon--download:before 		{ content: '\1f4e5'; }
 

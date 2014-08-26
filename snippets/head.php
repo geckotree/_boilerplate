@@ -1,18 +1,18 @@
 <?php $baseURL = 'http://localhost/~rob/_boilerplate/'; ?>
 
 <!doctype html>
-<!--[if IE 7]> <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]> <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html lang="en" class="preload no-js"> <!—<![endif]-->
+<!--[if IE 7]> <html lang="en" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]> <html lang="en" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en" class="no-js"> <!—<![endif]-->
 <head>
 	<meta charset="utf-8">
 
-	<title><?php echo $pageTitle ?></title>
+	<title><?php echo $pageTitle ?> &#149; geckotree</title>
 	<meta name="description" content="<?php echo $pageDescription ?>">
-
-	<link rel="author" href=""> <!-- http://humanstxt.org -->
-	<meta name="robots" content="index, follow"> <!-- http://www.robotstxt.org -->
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui">
+	<meta name="robots" content="index, follow"> <!-- http://www.robotstxt.org -->
+	<link rel="author" href=""> <!-- http://humanstxt.org -->
+
 
 	<script type="text/javascript" src="//use.typekit.net/dmp1bpt.js"></script>
 	<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
@@ -38,16 +38,18 @@
 	<!-- OPEN GRAPH - http://ogp.me -->
 	<meta property="og:title" content="<?php echo $pageTitle ?>" />
 	<meta property="og:description" content="<?php echo $pageDescription ?>" />
-	<meta property="og:url" content="<?php echo $pageDescription ?>" />
+	<meta property="og:url" content="<?php echo $_SERVER['REQUEST_URI'] ?>" />
 	<meta property="og:image" content="" />
-	<meta property="og:type" content="company" />
-	
+	<meta property="og:type" content="website" />
+
 	<!-- TWITTER CARD - https://dev.twitter.com/docs/cards/markup-reference -->
+	<meta name="twitter:card" content="summary" />
 	<meta name="twitter:title" content="<?php echo $pageTitle ?>" />
 	<meta name="twitter:description" content="<?php echo $pageDescription ?>" />
 	<meta name="twitter:url" content="<?php echo $_SERVER['REQUEST_URI'] ?>" />
 	<meta name="twitter:image" content="" />
-	<meta name="twitter:creator" value="" />
+	<meta name="twitter:site" content="@geckotree" />
+	<meta name="twitter:creator" content="@geckotree" />
 </head>
 
 <body class="<?php echo $currentPage ?>">

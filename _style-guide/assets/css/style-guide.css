@@ -327,7 +327,6 @@ Boilerplate version: 1.0
 
 .sg-article-helper__list {
   list-style: none;
-  text-align: center;
 }
 .sg-article-helper__list:before, .sg-article-helper__list:after {
   content: "";
@@ -338,15 +337,43 @@ Boilerplate version: 1.0
 }
 
 .sg-article-helper__item {
-  display: inline;
-  float: left;
-  width: 14.58333%;
-  margin: 0 1.04167%;
+  margin-left: 0;
+}
+.sg-article-helper__item:before, .sg-article-helper__item:after {
+  content: "";
+  display: table;
+}
+.sg-article-helper__item:after {
+  clear: both;
 }
 .sg-article-helper__item .label {
-  display: block;
+  display: inline-block;
+  line-height: 1;
+  padding: 1.5rem 1rem;
+}
+.sg-article-helper__item .input--radio {
+  float: left;
 }
 
+@media only screen and (min-width: 50em) {
+  .sg-article-helper__list {
+    text-align: center;
+  }
+
+  .sg-article-helper__item {
+    display: inline;
+    float: left;
+    width: 14.58333%;
+    margin: 0 1.04167%;
+  }
+  .sg-article-helper__item .label {
+    display: block;
+    padding: 0 0 1rem 0;
+  }
+  .sg-article-helper__item .input--radio {
+    float: none;
+  }
+}
 .sg-section__header {
   margin-bottom: 4rem;
   padding: 3rem 0;
@@ -392,53 +419,53 @@ Boilerplate version: 1.0
 }
 [class^="sg-icon--"], [class*=" sg-icon--"] {
   font-family: 'sg-icon-font';
-  speak: none;
   font-style: normal;
-  font-weight: normal;
   font-variant: normal;
-  text-transform: none;
+  font-weight: normal;
   line-height: 1;
+  speak: none;
+  text-transform: none;
   /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 .sg-icon--cross:before {
-  content: "\2421";
+  content: '\2421';
 }
 
 .sg-icon--check:before {
-  content: "\2713";
+  content: '\2713';
 }
 
 .sg-icon--help:before {
-  content: "\2753";
+  content: '\2753';
 }
 
 .sg-icon--crop:before {
-  content: "\e201";
+  content: '\e201';
 }
 
 .sg-icon--paintroller:before {
-  content: "\e225";
+  content: '\e225';
 }
 
 .sg-icon--stamp:before {
-  content: "\e226";
+  content: '\e226';
 }
 
 .sg-icon--text:before {
-  content: "\ed00";
+  content: '\ed00';
 }
 
 .sg-icon--layout:before {
-  content: "\eda0";
+  content: '\eda0';
 }
 
 .sg-icon--save:before {
-  content: "\1f4be";
+  content: '\1f4be';
 }
 
 .sg-icon--download:before {
-  content: "\1f4e5";
+  content: '\1f4e5';
 }

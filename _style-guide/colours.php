@@ -9,9 +9,9 @@ include_once('snippets/nav.php');
 <section class="sg-side-content">
 	<h1>Colours</h1>
 
-	<p>Colour gives us personality. Our colour palette is bright and bold while remaining fresh and approachable. It is meant to evoke emotion within our brand as our users experience and build on our services. The boldness and strength of the palette allow for a unique but simple learning experience. While we rely primarily on three main values, the extended palette allows us room to grow and reach outside the standard usage.</p>
+	<p>Mauris convallis hendrerit ipsum quis ultricies. Aliquam ornare tincidunt ultrices. Sed tincidunt lacus et diam gravida ultricies. Suspendisse eu nunc a turpis molestie mollis eget in ligula. Vestibulum ultrices lacinia erat et tristique. Suspendisse orci magna, tincidunt ut velit sed, elementum maximus lacus.</p>
 
-	<p>The orange and blue slate are used about 75% of the time. They are supported by a foundation of greys and white, and complimented by some additional soft yellows and greens. When pairing colours, create a hieracy by using high-contrast colours in conjunction with softer less domoinate values.</p>
+	<p>Suspendisse ut erat vitae neque facilisis tempor. Donec pellentesque, turpis at semper mollis, justo nisl pharetra risus, consequat ornare turpis enim at odio.</p>
 </section>
 
 <main class="sg-main-content">
