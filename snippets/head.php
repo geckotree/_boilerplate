@@ -6,7 +6,7 @@
 <!--[if gt IE 8]><!--> <html lang="en" class="no-js"> <!—<![endif]-->
 <head>
 	<meta charset="utf-8">
-	<title><?php echo $pageTitle ?> &#149; geckotree</title>
+	<title><?php echo $pageTitle ?> | geckotree</title>
 	<meta name="description" content="<?php echo $pageDescription ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui">
 	<meta name="robots" content="index, follow"> <!-- http://www.robotstxt.org -->
