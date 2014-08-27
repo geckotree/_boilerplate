@@ -6,7 +6,6 @@
 <!--[if gt IE 8]><!--> <html lang="en" class="no-js"> <!—<![endif]-->
 <head>
 	<meta charset="utf-8">
-
 	<title><?php echo $pageTitle ?> &#149; geckotree</title>
 	<meta name="description" content="<?php echo $pageDescription ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui">
@@ -29,11 +28,11 @@
 	<script src="<?php echo $baseURL; ?>/assets/js/production/head-script.min.js" async></script>
 
 	<!-- FAVICONS -->
-	<link rel="icon" type="image/png" href="assets/img/brand-icons/favicon-196.png" sizes="196x196">
-	<link rel="icon" type="image/png" href="assets/img/brand-icons/favicon-160.png" sizes="160x160">
-	<link rel="icon" type="image/png" href="assets/img/brand-icons/favicon-96.png" sizes="96x96">
-	<link rel="icon" type="image/png" href="assets/img/brand-icons/favicon-32.png" sizes="32x32">
-	<link rel="icon" type="image/png" href="assets/img/brand-icons/favicon-16.png" sizes="16x16">
+	<link rel="icon" type="image/png" sizes="196x196" href="assets/img/brand-icons/favicon-196.png">
+	<link rel="icon" type="image/png" sizes="160x160" href="assets/img/brand-icons/favicon-160.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="assets/img/brand-icons/favicon-96.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="assets/img/brand-icons/favicon-32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="assets/img/brand-icons/favicon-16.png">
 
 	<!-- APPLE ICONS -->
 	<link rel="apple-touch-icon-precomposed" sizes="152x152" href="assets/img/brand-icons/apple-152.png">
@@ -45,9 +44,9 @@
 	<link rel="apple-touch-icon-precomposed" sizes="60x60" href="assets/img/brand-icons/apple-60.png">
 	<link rel="apple-touch-icon-precomposed" sizes="57x57" href="assets/img/brand-icons/apple-57.png">
 
-	<!-- MS APPLICATION ICON -->
-	<meta name="msapplication-TileColor" content="#2b5797">
-	<meta name="msapplication-TileImage" content="/mstile-144x144.png">
+	<!-- MS-TILE ICON -->
+	<meta name="msapplication-TileColor" content="#57B275">
+	<meta name="msapplication-TileImage" content="assets/img/brand-icons/mstile-144.png">
 
 	<!-- OPEN GRAPH - http://ogp.me -->
 	<meta property="og:title" content="<?php echo $pageTitle ?>" />
