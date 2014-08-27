@@ -29,11 +29,25 @@
 	<script src="<?php echo $baseURL; ?>/assets/js/production/head-script.min.js" async></script>
 
 	<!-- FAVICONS -->
-	<link rel="shortcut icon" href="assets/img/favicon.png">
-	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/img/144.jpg">
-	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/img/114.jpg">
-	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/img/72.jpg">
-	<link rel="apple-touch-icon-precomposed" sizes="57x57" href="assets/img/57.jpg">
+	<link rel="icon" type="image/png" href="assets/img/brand-icons/favicon-196.png" sizes="196x196">
+	<link rel="icon" type="image/png" href="assets/img/brand-icons/favicon-160.png" sizes="160x160">
+	<link rel="icon" type="image/png" href="assets/img/brand-icons/favicon-96.png" sizes="96x96">
+	<link rel="icon" type="image/png" href="assets/img/brand-icons/favicon-32.png" sizes="32x32">
+	<link rel="icon" type="image/png" href="assets/img/brand-icons/favicon-16.png" sizes="16x16">
+
+	<!-- APPLE ICONS -->
+	<link rel="apple-touch-icon-precomposed" sizes="152x152" href="assets/img/brand-icons/apple-152.png">
+	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/img/brand-icons/apple-144.png">
+	<link rel="apple-touch-icon-precomposed" sizes="120x120" href="assets/img/brand-icons/apple-120.png">
+	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/img/brand-icons/apple-114.png">
+	<link rel="apple-touch-icon-precomposed" sizes="76x76" href="assets/img/brand-icons/apple-76.png">
+	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/img/brand-icons/apple-72.png">
+	<link rel="apple-touch-icon-precomposed" sizes="60x60" href="assets/img/brand-icons/apple-60.png">
+	<link rel="apple-touch-icon-precomposed" sizes="57x57" href="assets/img/brand-icons/apple-57.png">
+
+	<!-- MS APPLICATION ICON -->
+	<meta name="msapplication-TileColor" content="#2b5797">
+	<meta name="msapplication-TileImage" content="/mstile-144x144.png">
 
 	<!-- OPEN GRAPH - http://ogp.me -->
 	<meta property="og:title" content="<?php echo $pageTitle ?>" />
