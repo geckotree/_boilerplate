@@ -6,7 +6,7 @@
 <!--[if gt IE 8]><!--> <html lang="en" class="no-js"> <!—<![endif]-->
 <head>
 	<meta charset="utf-8">
-	<title><?php echo $pageTitle; ?> | geckotree brand guide</title>
+	<title><?php echo $pageTitle; ?> | Geckotree Style Guide</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui">
 
 	<script type="text/javascript" src="//use.typekit.net/dmp1bpt.js"></script>
