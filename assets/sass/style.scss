@@ -8,49 +8,77 @@
 `---'                    
 
 Authors: Rob & Kev Simpson
-Boilerplate version: 1.0
+Version: 1.0
+
+* TOOLS
+* Variables............Globally-available variables.
+* Grid.................
+* Utils................Useful mixins.
+* Responsive...........
+* Reset................A level playing field.
+*
+* Typography
+* Base.................Base font styles.
+* Headings.............Headings and intro styles.
+* Anchor...............Anchor colours.
+* Lists................List margins.
+* Code.................
+* Small................
+* Abbr.................
+* Blockquote...........
+* Pullquote............
+*
+* BASE
+* Wrappers.............Wrapping and constraining elements.
+* Buttons..............Button elements.
+* Images...............
+* Icons................
+* Figure...............
+* Forms................
+* Tables...............
+*
+* MODULES
+* Wrappers.............
+*
+* PAGES
+* Page-head............The main page header.
+* Page-foot............The main page footer.
 
 =========================================================== */
 
-@import "helpers/variables.scss";
-@import "helpers/mixins.scss";
-@import "helpers/reset.scss";
+@import "tools/variables.scss";
+@import "tools/grid.scss";
+@import "tools/utils.scss";
+@import "tools/responsive.scss";
+@import "tools/reset.scss";
 
-// ========================================================= //
+@import "typography/base.scss";
+@import "typography/headings.scss";
+@import "typography/anchor.scss";
+@import "typography/lists.scss";
+@import "typography/code.scss";
+@import "typography/small.scss";
+@import "typography/abbr.scss";
+@import "typography/blockquote.scss";
+@import "typography/pullquote.scss";
 
-@import "base/typography/base.scss";
-@import "base/typography/headings.scss";
-@import "base/typography/anchor.scss";
-@import "base/typography/lists.scss";
-
-@import "base/typography/code.scss";
-@import "base/typography/small.scss";
-@import "base/typography/abbr.scss";
-@import "base/typography/blockquote.scss";
-@import "base/typography/pullquote.scss";
-
-@import "base/structure.scss";
-@import "base/images.scss";
+@import "base/wrappers.scss";
 @import "base/buttons.scss";
+@import "base/images.scss";
+@import "base/icons.scss";
+@import "base/figure.scss";
 @import "base/forms.scss";
 @import "base/tables.scss";
-@import "base/icons.scss";
 
-// ========================================================= //
-
-@import "modules/header.scss";
-@import "modules/nav.scss";
+//@import "modules/header.scss";
+//@import "modules/nav.scss";
 //@import "modules/nav-push.scss";
-@import "modules/footer.scss";
-@import "modules/article.scss";
-@import "modules/author.scss";
-@import "modules/news.scss";
-@import "modules/sidebar.scss";
+//@import "modules/footer.scss";
+//@import "modules/article.scss";
+//@import "modules/author.scss";
+//@import "modules/news.scss";
+//@import "modules/sidebar.scss";
 
-// ========================================================= //
+//@import "pages/home.scss";
 
-@import "pages/home.scss";
-
-// ========================================================= //
-
-@import "helpers/mq.scss";
+@import "tools/mq.scss";

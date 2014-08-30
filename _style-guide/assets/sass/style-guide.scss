@@ -12,10 +12,12 @@ Boilerplate version: 1.0
 
 =========================================================== */
 
-@import "../../../assets/sass/helpers/variables.scss";
-@import "../../../assets/sass/helpers/mixins.scss";
+@import "../../../assets/sass/tools/variables.scss";
+@import "../../../assets/sass/tools/grid.scss";
+@import "../../../assets/sass/tools/utils.scss";
+@import "../../../assets/sass/tools/responsive.scss";
 
-$sg-nav-colour:	$dark-1;
+$sg-nav-colour:	$dark--1;
 $nav-width: 6.8rem;
 
 .sg-page-wrap {
@@ -54,11 +56,11 @@ $nav-width: 6.8rem;
 
 	&:hover,
 	&:focus {
-		background: $dark-2;
+		background: $dark--2;
 	}
 
 	&.active {
-		color: $yellow-1;
+		color: $yellow--1;
 	}
 
 	[class^="sg-icon--"] {
@@ -255,35 +257,35 @@ $nav-width: 6.8rem;
 	}
 
 	&--dark-1 { 
-		background: $dark-1; 
+		background: $dark--1; 
 	}
 
 	&--orange { 
-		background: $orange-1;
-		border-color: $orange-2;
+		background: $orange--1;
+		border-color: $orange--2;
 	}
 
 	&--red { 
-		background: $red-1;
-		border-color: $red-2;
+		background: $red--1;
+		border-color: $red--2;
 	}
 
 	&--purple { 
-		background: $purple-1;
-		border-color: $purple-2; 
+		background: $purple--1;
+		border-color: $purple--2; 
 	}
 
 	&--blue { 
-		background: $blue-1; 
-		border-color: $blue-2;
+		background: $blue--1; 
+		border-color: $blue--2;
 	}
 
 	&--dark-2 { 
-		background: $dark-2; 
+		background: $dark--2; 
 	}
 
 	&--grey-1 { 
-		background: $grey-1; 
+		background: $grey--1; 
 	}
 }
 

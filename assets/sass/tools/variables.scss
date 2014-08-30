@@ -1,0 +1,80 @@
+/* ===========================================================
+
+	#COLOURS
+
+=========================================================== */
+
+$white: 		#FFFFFF;
+$black: 		#000000;
+$dark--1: 		#2D2D2D;
+$dark--2: 		#242424;
+$dark--3: 		#454545;
+$cream--1:		#FAF8F5;
+$cream--2:		#DAD5CD;
+$grey--1: 		#8E8E8E;
+$grey--2:		#DFE7E9;
+
+$green--1: 		#57B275;
+$green--2: 		#4CA769;
+$pink--1: 		#F05D71;
+$pink--2: 		#ED5265;
+$yellow--1: 	#F2D044;
+$yellow--2: 	#F2D044;
+$purple--1: 	#8682D7;
+$purple--2: 	#7A76D0;
+$blue--1:		#07ABCA;
+$blue--2: 		#05A0C2;
+$orange--1: 	#F49E39;
+$orange--2: 	#F29231;
+$red--1: 		#EC4E50;
+$red--2: 		#E84345;
+
+$pri: 			$green--1;
+$pri--alt: 		$green--2;
+$sec: 			$pink--1;
+$sec--alt: 		$pink--2;
+$ter: 			$yellow--1;
+$ter--alt: 		$yellow--2;
+
+/* ===========================================================
+
+	#TYPOGRAPHY
+
+=========================================================== */
+
+$font-size--small:		2rem;
+$font-size--large:		2rem;
+$line-height:			1.4em;
+$type-scale--small:		1.200; //Perfect Fourth
+$type-scale--large:		1.200; //Perfect Fifth
+
+/* ===========================================================
+
+	#BASE VALUES
+
+=========================================================== */
+
+$text-colour:			$dark--2;
+$background-colour:		$cream--1;
+$border-colour:			$cream--2;
+$highlight-colour:		$grey--2;
+
+$padding--small:		4rem;
+$padding--medium:		6rem;
+$padding--large:		8rem;
+
+$border-width: 			.2rem;
+$border-radius: 		.4rem;
+$transition-speed: 		.3s;
+
+/* ===========================================================
+
+	#MEDIA QUERIES
+
+=========================================================== */
+
+$mq-small: 				37.5em;		// 600px
+$mq-medium: 			50em; 		// 800px
+$mq-large: 				62.5em; 	// 1000px
+$mq-x-large: 			80em; 		// 1280px
+$mq-xx-large:			93.75em;	// 1500px

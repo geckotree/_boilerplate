@@ -15,12 +15,12 @@
 }
 .lab__tile--small {
 	@include column(3);
-	background: $blue-1;
+	background: $blue--1;
 	padding: 2rem;
 }
 .lab__tile--medium {
 	@include column(6);
-	background: $red-1;
+	background: $red--1;
 	margin-top: 20px;
 }
 .lab__tile--featured {
@@ -46,14 +46,14 @@
 }
 
 .lab__tile--purple {
-	background: $purple-1;
+	background: $purple--1;
 }
 .lab__tile--blue {
-	background: $blue-1;
+	background: $blue--1;
 }
 .lab__tile--orange {
-	background: $orange-1;
+	background: $orange--1;
 }
 .lab__tile--red {
-	background: $red-1;
+	background: $red--1;
 }

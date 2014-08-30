@@ -1,8 +1,8 @@
-// ===========================================================
-//
-//	$TABLES
-//
-// ===========================================================
+/* ===========================================================
+
+	#TABLES
+
+=========================================================== */
 
 .table-responsive {
 	overflow-y: hidden;
@@ -18,12 +18,14 @@
 	border-spacing: 0;
 	width: 100%;
 }
+
 th, td {
 	border-top: $border-width solid $border-colour;
 	padding: 1.5rem 2rem;
 	text-align: left;
 	vertical-align: top;
 }
+
 th {
 	font-weight: 600;
 }

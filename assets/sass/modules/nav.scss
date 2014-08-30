@@ -16,7 +16,7 @@
 //= PAGE HEADER ==============================================
 
 .page-header {
-	background: $dark-1;
+	background: $dark--1;
 	position: relative;
 	text-align: center;
 }
@@ -78,11 +78,11 @@
 
 	&:hover,
 	&:focus {
-		background: $dark-2;
+		background: $dark--2;
 	}
 
 	&.active {
-		color: $yellow-1;
+		color: $yellow--1;
 	}
 
 	&--cta {
@@ -113,14 +113,14 @@
 		}
 
 		.page-header__inner {
-			background: $dark-1;
+			background: $dark--1;
 		}
 
 		.main-nav {
 			animation-duration: $transition-speed;
 			animation-fill-mode: both;
 			animation-name: bounceOutUp;
-			background: $dark-1;
+			background: $dark--1;
 			padding-top: 2rem;
 			position: absolute;
 			transform: translateY(calc(-168%));
@@ -221,7 +221,7 @@
 		transition: background $transition-speed, color $transition-speed;
 
 		&:hover {
-			background: $dark-2;
+			background: $dark--2;
 			color: $sec;
 		}
 	}
@@ -233,7 +233,7 @@
 	.no-js {
 
 		.main-nav__search {
-			background: $dark-2;
+			background: $dark--2;
 		}
 
 	}
@@ -249,7 +249,7 @@
 		}
 		
 		&.search--open .main-nav__search {
-			background: $dark-2;
+			background: $dark--2;
 			width: 26.5rem;
 		}
 

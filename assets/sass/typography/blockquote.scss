@@ -1,0 +1,36 @@
+/* ===========================================================
+
+	#BLOCKQUOTE
+
+	<figure class="figure--blockquote">
+		<blockquote class="blockquote" cite="">
+			<p></p>
+		</blockquote>
+		<figcaption>
+			<cite>
+				<small><a href=""></a></small>
+			</cite>
+		</figcaption>
+	</figure>
+
+=========================================================== */
+.figure--blockquote {
+	margin: 2rem auto;
+}
+
+.blockquote {
+	color: $grey--1;
+	margin-bottom: 2rem;
+	margin-top: 2rem;
+	text-indent: 2em;
+}
+
+.blockquote + figcaption {
+	display: block;
+	font-size: inherit;
+	text-align: right;
+}
+
+.blockquote + figcaption:before {
+	content: '-'; // "-" is your citation flourish
+}

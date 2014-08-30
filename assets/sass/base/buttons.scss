@@ -1,16 +1,25 @@
-// ===========================================================
-//
-//	$BUTTONS
-//
-// ===========================================================
+/* ===========================================================
+
+	#BUTTONS
+
+=========================================================== */
 
 .button {
 	border-radius: $border-radius;
 	display: inline-block;
 	line-height: 1;
 	padding: 1rem 1.5rem;
-	transition: background $transition-speed ease, border $transition-speed ease, color $transition-speed ease;
+	transition: background $transition-speed ease, 
+				border $transition-speed ease, 
+				color $transition-speed ease;
+
+	&:hover,
+	&:focus {
+		background: $sec;
+		color: $white;
+	}
 }
+
 .button--large {
 	padding: 2rem 3rem;
 }
@@ -18,44 +27,19 @@
 .button--primary {
 	background: $pri;
 	color: $white;
-
-	&:hover,
-	&:focus {
-		background: $sec;
-		color: $white;
-	}
 }
 
 .button--secondary {
-	border: $border-width solid $yellow-1;
-	background: $yellow-1;
+	background: $ter;
 	color: $white;
-
-	&:hover,
-	&:focus {
-		background: $yellow-2;
-		border-color: $yellow-2;
-		color: $white;
-	}
 }
-
-/*.button--secondary {
-	border: $border-width solid $pri;
-	color: $pri;
-
-	&:hover,
-	&:focus {
-		background: $sec;
-		border-color: $sec;
-		color: $white;
-	}
-}*/
 
 @include respond-max( $mq-small ) {
 
 	.button {
 		width: 100%;
 	}
+
 	.button + .button {
 		margin-top: 1em;
 	}

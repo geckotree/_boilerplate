@@ -1,11 +1,8 @@
-// ===========================================================
-//
-//	$BASE
-//
-// ===========================================================
+/* ===========================================================
 
-$base-font-size: 2rem;
-$base-line-height: 1.4em;
+	#BASE
+
+=========================================================== */
 
 html {
 	font-size: 62.5%;
@@ -16,12 +13,12 @@ input,
 textarea,
 select,
 button {
-	color: $base-colour;
+	color: $text-colour;
 	font-family: 'Proxima-Nova-Soft', Arial, Helvetica, Geneva, sans-serif;
-	font-size: $base-font-size;
+	font-size: $font-size--small;
 	//font-feature-settings: 'liga', 'kern'; //= http://elliotjaystocks.com/blog/kerning/
 	font-kerning: normal; 
-	line-height: $base-line-height;
+	line-height: $line-height;
 }
 
 p + p,
@@ -29,7 +26,7 @@ p + ul,
 p + ol,
 ul + p,
 ol + p {
-	margin-top: $base-line-height; //= Preserves verticle rythm being equal to line-height
+	margin-top: $line-height; //= Preserves verticle rythm being equal to line-height
 }
 
 p + h1, 
@@ -44,7 +41,7 @@ ul + h3,
 ul + h4, 
 ul + h5, 
 ul + h6 {
-	padding-top: $base-line-height;
+	padding-top: $line-height;
 }
 
 em {
@@ -54,26 +51,24 @@ em {
 small,
 .small {
 	font-size: 65%;
-	line-height: 1.4;
 }
 
 ::selection {
 	background: $highlight-colour;
 }
+
 ::-moz-selection {
 	background: $highlight-colour;
 }
 
 @include respond-min( $mq-medium ) {
 
-	$base-font-size: 2rem;
-
 	body,
 	input,
 	textarea,
 	select,
 	button {
-		font-size: $base-font-size;
+		font-size: $font-size--large;
 	}
 
 }
@@ -81,8 +76,8 @@ small,
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
 
 	p {
-		letter-spacing: 0.01em; /* Increase letter-spacing on high pixel density screens as they can appear too close */
-		word-spacing: 0.01em; /* Word-spacing same as letter-spacing for consistency */
+		letter-spacing: 0.01em; //= Increase letter-spacing on high pixel density screens as they can appear too close
+		word-spacing: 0.01em; //= Word-spacing same as letter-spacing for consistency
 	}
 
 }
