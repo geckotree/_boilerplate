@@ -32,7 +32,8 @@ module.exports = function (grunt) {
         sass: {
             dist: {
                 options: {
-                    style: 'expanded'
+                    style: 'expanded',
+                    sourcemap: true
                 },
                 files: {
                     'assets/css/dev/style.css': 'assets/sass/style.scss',
@@ -73,16 +74,15 @@ module.exports = function (grunt) {
                 }
             }
         },
-        remfallback: {
-            your_target: {
-                options: {
-                    log: false,
-                    replace: false
-                },
-                files: {
-                    'assets/css/production/style-ie.min.css': ['assets/css/dev/style-ie.css']
-                }
+        pixrem: {
+            options: {
+              rootvalue: '62.5%',
+              replace: true
             },
+            dist: {
+              src: 'assets/css/dev/style-ie.css',
+              dest: 'assets/css/production/style-ie.min.css'
+            }
         },
         cssmin: {
             main: {
@@ -207,7 +207,7 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-autoprefixer');
     grunt.loadNpmTasks('grunt-css-mqpacker');
     grunt.loadNpmTasks('grunt-stripmq');
-    grunt.loadNpmTasks('grunt-remfallback');
+    grunt.loadNpmTasks('grunt-pixrem');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
 
     grunt.loadNpmTasks('grunt-contrib-concat');
@@ -235,8 +235,8 @@ module.exports = function (grunt) {
         'images:build'
     ]);
 
-    grunt.registerTask('css:dev', ['sass', 'autoprefixer', 'css_mqpacker', 'stripmq', 'remfallback']);
-    grunt.registerTask('css:build', ['sass', 'autoprefixer', 'css_mqpacker', 'stripmq', 'remfallback', 'cssmin']);
+    grunt.registerTask('css:dev', ['sass', 'autoprefixer', 'css_mqpacker', 'stripmq', 'pixrem']);
+    grunt.registerTask('css:build', ['sass', 'autoprefixer', 'css_mqpacker', 'stripmq', 'pixrem', 'cssmin']);
 
     grunt.registerTask('js:dev', ['concat']);
     grunt.registerTask('js:build', ['concat', 'uglify']);
