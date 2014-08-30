@@ -12,12 +12,6 @@
 	transition: background $transition-speed ease, 
 				border $transition-speed ease, 
 				color $transition-speed ease;
-
-	&:hover,
-	&:focus {
-		background: $sec;
-		color: $white;
-	}
 }
 
 .button--large {
@@ -27,11 +21,23 @@
 .button--primary {
 	background: $pri;
 	color: $white;
+
+	&:hover,
+	&:focus {
+		background: $sec;
+		color: $white;
+	}
 }
 
 .button--secondary {
 	background: $ter;
 	color: $white;
+
+	&:hover,
+	&:focus {
+		background: $sec;
+		color: $white;
+	}
 }
 
 @include respond-max( $mq-small ) {

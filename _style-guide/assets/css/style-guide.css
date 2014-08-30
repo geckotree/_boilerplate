@@ -41,14 +41,6 @@ Boilerplate version: 1.0
 	#UTILS
 
 =========================================================== */
-.clearfix:before, .clearfix:after {
-  content: "";
-  display: table;
-}
-.clearfix:after {
-  clear: both;
-}
-
 /* ===========================================================
 
 	#MEDIA QUERIES

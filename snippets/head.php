@@ -12,20 +12,19 @@
 	<meta name="robots" content="index, follow"> <!-- http://www.robotstxt.org -->
 	<link rel="author" href=""> <!-- http://humanstxt.org -->
 
-
 	<script type="text/javascript" src="//use.typekit.net/dmp1bpt.js"></script>
 	<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 
 	<!--[if lt IE 9]>
 		<script src="<?php echo $baseURL; ?>/assets/js/production/html5shiv.min.js"></script>
-		<link rel="stylesheet" href="<?php echo $baseURL; ?>/assets/css/production/style-ie.min.css">
+		<link rel="stylesheet" href="<?php echo $baseURL; ?>/assets/css/build/style-ie.min.css">
 	<![endif]-->
 
 	<!--[if gt IE 8]><!-->
-		<link rel="stylesheet" href="<?php echo $baseURL; ?>/assets/css/production/style.min.css" /> <!-- STYLESHEET FOR IE8+ & MODERN BROWSERS -->
+		<link rel="stylesheet" href="<?php echo $baseURL; ?>/assets/css/build/style.min.css" />
 	<!--<![endif]-->
 
-	<script src="<?php echo $baseURL; ?>/assets/js/production/head-script.min.js" async></script>
+	<script src="<?php echo $baseURL; ?>/assets/js/build/head-script.min.js" async></script>
 
 	<!-- FAVICONS -->
 	<link rel="icon" type="image/png" sizes="196x196" href="assets/img/brand-icons/favicon-196.png">

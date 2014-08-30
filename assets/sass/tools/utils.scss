@@ -4,6 +4,12 @@
 
 =========================================================== */
 
+@mixin old-ie() {
+	@if $old-ie {
+		@content;
+	}
+}
+
 @mixin heading-font-size( $font-size ) {
 	font-size: $font-size;
 	font-weight: bold;
@@ -20,8 +26,4 @@
 	&:after {
 	    clear:both;
 	}
-}
-
-.clearfix {
-	@include clearfix;
 }

@@ -37,6 +37,7 @@ module.exports = function (grunt) {
                 },
                 files: {
                     'assets/css/dev/style.css': 'assets/sass/style.scss',
+                    'assets/css/dev/style-ie.css': 'assets/sass/style-ie.scss',
                     '_style-guide/assets/css/style-guide.css': '_style-guide/assets/sass/style-guide.scss'
                 }
             }
@@ -70,7 +71,7 @@ module.exports = function (grunt) {
             },
             all: {
                 files: {
-                    'assets/css/dev/style-ie.css': ['assets/css/dev/style.css']
+                    'assets/css/dev/style-ie.css': ['assets/css/dev/style-ie.css']
                 }
             }
         },
@@ -81,7 +82,7 @@ module.exports = function (grunt) {
             },
             dist: {
               src: 'assets/css/dev/style-ie.css',
-              dest: 'assets/css/production/style-ie.min.css'
+              dest: 'assets/css/dev/style-ie.css'
             }
         },
         cssmin: {
@@ -89,7 +90,7 @@ module.exports = function (grunt) {
                 expand: true,
                 cwd: 'assets/css/dev/',
                 src: 'style.css',
-                dest: 'assets/css/production',
+                dest: 'assets/css/build',
                 ext: '.min.css'
             }
         },
@@ -101,13 +102,13 @@ module.exports = function (grunt) {
         concat: {
             dist: {
                 src: ['assets/js/dev/*.js'],
-                dest: 'assets/js/production/combined.js'
+                dest: 'assets/js/build/combined.js'
             }
         },
         uglify: {
             build: {
-                src: 'assets/js/production/combined.js',
-                dest: 'assets/js/production/script.min.js'
+                src: 'assets/js/build/combined.js',
+                dest: 'assets/js/build/script.min.js'
             }
         },
 
@@ -153,7 +154,7 @@ module.exports = function (grunt) {
                     expand: true,
                     cwd: 'assets/img/photos/dev/',
                     src: ['*.{gif,jpg,png}'],
-                    custom_dest: 'assets/img/photos/production/{%= width %}/'
+                    custom_dest: 'assets/img/photos/build/{%= width %}/'
                 }]
             }
         },
@@ -164,7 +165,7 @@ module.exports = function (grunt) {
                     imageAlpha: false,
                     quitAfter: false
                 },
-                src: ['assets/img/photos/production/**/*.{png,gif,jpg}']
+                src: ['assets/img/photos/build/**/*.{png,gif,jpg}']
             }
         },
         svgmin: {
@@ -193,7 +194,7 @@ module.exports = function (grunt) {
         browserSync: {
             dev: {
                 bsFiles: {
-                    src: ['assets/css/production/*.css', 'assets/js/production/*.js', '*.php']
+                    src: ['assets/css/build/*.css', 'assets/js/build/*.js', '*.php']
                 },
                 options: {
                     watchTask: true
