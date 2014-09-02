@@ -1,14 +1,45 @@
+
+(function() {
+	var _this = this;
+	var $html = document.querySelector('html');
+	var $body = document.querySelector('body');
+
+	document.addEventListener('DOMContentLoaded', function() {
+		//_this.pages.homePage.init();
+	}, false);
+
+	this.pages = {
+		homePage: {
+			init: function() {
+				alert('homepage');
+			}
+		},
+		aboutPage: {
+			init: function() {
+				alert('aboutpage');
+			}
+		}
+	};
+
+	this.global = {
+		init: function() {
+			$html.removeClass('preload');
+		}
+	};
+})();
+
+/*
 document.addEventListener('DOMContentLoaded', function() {
 	var html = document.querySelector('html');
 	var	body = document.querySelector('body');
 //	var	navHeight = document.getElementById('pageHeader').offsetHeight;
 	var	lastScroll = 0;
-/*
+/
 	var sideContent = document.getElementById('sideContent');
 	var sideContentInner = document.getElementById('sideContentInner');
 	var sideContentTop = document.getElementById('sideContent').offsetTop;
 	var sideContentWidth = document.getElementById('sideContent').offsetWidth;
-*/
+/
 	//=helper: hasClass
 	Element.prototype.hasClass = function (className) {
 	    return new RegExp(' ' + className + ' ').test(' ' + this.className + ' ');
@@ -56,7 +87,7 @@ document.addEventListener('DOMContentLoaded', function() {
 	}
 
 
-/*
+/
 	window.onscroll = function(e) {
 		//=Sets the current scroll top position
 		var scrollTop = document.body.scrollTop;
@@ -92,5 +123,5 @@ document.addEventListener('DOMContentLoaded', function() {
 		//=Updates scroll position
 		lastScroll = scrollTop;
 	}
-*/	
-}, false);
+/	
+}, false);*/

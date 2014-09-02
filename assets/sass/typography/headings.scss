@@ -4,6 +4,25 @@
 
 =========================================================== */
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.tera,
+.giga,
+.mega,
+.alpha,
+.beta,
+.gamma,
+.delta,
+.epsilon,
+.zeta {
+	font-weight: bold;
+	line-height: 1.1;
+}
+
 $zeta--small: 		$font-size--small;
 $epsilon--small: 	$zeta--small		*	$type-scale--small;
 $delta--small: 		$epsilon--small		*	$type-scale--small;
@@ -13,7 +32,7 @@ $alpha--small: 		$beta--small		*	$type-scale--small;
 $mega--small:		$alpha--small		*	$type-scale--small;
 $giga--small:		$mega--small		*	$type-scale--small;
 $tera--small: 		$giga--small		*	$type-scale--small;
-$intro--small: 		$alpha--small;
+$intro--small: 		$delta--small;
 
 .tera {
 	@include heading-font-size($tera--small);
@@ -59,6 +78,7 @@ h6,
 
 .intro {
 	font-size: $intro--small;
+	line-height: $line-height;
 }
 
 @include respond-min( $mq-medium ) {
@@ -72,7 +92,7 @@ h6,
 	$mega--large:		$alpha--large		*	$type-scale--large;
 	$giga--large:		$mega--large		*	$type-scale--large;
 	$tera--large: 		$giga--large		*	$type-scale--large;
-	$intro--large: 		$alpha--large;
+	$intro--large: 		$delta--large;
 
 	.tera {
 		@include heading-font-size($tera--large);

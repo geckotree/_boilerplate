@@ -8,7 +8,7 @@ module.exports = function (grunt) {
          */
         watch: {
             css: {
-                files: ['assets/sass/*/*/*.scss', 'assets/sass/*/*.scss', '_style-guide/assets/sass/*.scss'],
+                files: ['assets/sass/*/*.scss', '_style-guide/assets/sass/*/*.scss'],
                 tasks: ['sass', 'autoprefixer', 'css_mqpacker', 'stripmq', 'cssmin']
             },
             scripts: {
@@ -158,6 +158,22 @@ module.exports = function (grunt) {
                 }]
             }
         },
+        imagemin: {
+            dynamic: {
+                options: {
+                    optimizationLevel: 7,
+                    progressive: true
+                },
+                files: [
+                    {
+                        expand: true,
+                        cwd: 'assets/img/photos/build/',
+                        src: ['**/*.{png,jpg,gif}'],
+                        dest: 'assets/img/photos/build/'
+                    }
+                ]
+            }
+        },
         imageoptim: {
             myTask: {
                 options: {
@@ -216,6 +232,7 @@ module.exports = function (grunt) {
 
     grunt.loadNpmTasks('grunt-responsive-images');
     grunt.loadNpmTasks('grunt-imageoptim');
+    grunt.loadNpmTasks('grunt-contrib-imagemin');
     grunt.loadNpmTasks('grunt-svgmin');
     
     grunt.loadNpmTasks('grunt-contrib-watch');
@@ -243,6 +260,6 @@ module.exports = function (grunt) {
     grunt.registerTask('js:build', ['concat', 'uglify']);
 
     grunt.registerTask('images:dev', ['responsive_images']);
-    grunt.registerTask('images:build', ['imageoptim', 'svgmin'])
+    grunt.registerTask('images:build', ['imagemin', 'svgmin', 'imageoptim'])
 
 };

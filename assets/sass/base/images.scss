@@ -10,23 +10,32 @@ img {
   	vertical-align: top;
 }
 
-.wrap-image--small,
-.wrap-image--large {
+.image--small,
+.image--large {
 	margin: 4rem 0;
 	position: relative;
 }
 
 @include respond-min( $mq-medium ) {
 
-	.wrap-image--large {
+	.image--large {
 		margin: 8rem 0;
+	}
+
+}
+
+@include respond-min( $mq-x-large ) {
+
+	.image--large {
+		margin-left: -15%;
+		width: 130%;
 	}
 
 }
 
 @include respond-min( $mq-xx-large ) {
 
-	.wrap-image--small {
+	.image--small {
 		float: left;
 		margin: 1em 1em 0.5em -12em;
 		max-width: 48rem;

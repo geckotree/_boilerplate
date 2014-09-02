@@ -222,77 +222,79 @@ small,
 	#HEADINGS
 
 =========================================================== */
-.tera {
-  font-size: 8.59963rem;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.tera,
+.giga,
+.mega,
+.alpha,
+.beta,
+.gamma,
+.delta,
+.epsilon,
+.zeta {
   font-weight: bold;
   line-height: 1.1;
-  padding-bottom: 4.29982rem;
+}
+
+.tera {
+  font-size: 5.13157rem;
+  padding-bottom: 2.56578rem;
 }
 
 .giga {
-  font-size: 7.16636rem;
-  font-weight: bold;
-  line-height: 1.1;
-  padding-bottom: 3.58318rem;
+  font-size: 4.56139rem;
+  padding-bottom: 2.2807rem;
 }
 
 .mega {
-  font-size: 5.97197rem;
-  font-weight: bold;
-  line-height: 1.1;
-  padding-bottom: 2.98598rem;
+  font-size: 4.05457rem;
+  padding-bottom: 2.02729rem;
 }
 
 h1,
 .alpha {
-  font-size: 4.97664rem;
-  font-weight: bold;
-  line-height: 1.1;
-  padding-bottom: 2.48832rem;
+  font-size: 3.60406rem;
+  padding-bottom: 1.80203rem;
 }
 
 h2,
 .beta {
-  font-size: 4.1472rem;
-  font-weight: bold;
-  line-height: 1.1;
-  padding-bottom: 2.0736rem;
+  font-size: 3.20361rem;
+  padding-bottom: 1.60181rem;
 }
 
 h3,
 .gamma {
-  font-size: 3.456rem;
-  font-weight: bold;
-  line-height: 1.1;
-  padding-bottom: 1.728rem;
+  font-size: 2.84766rem;
+  padding-bottom: 1.42383rem;
 }
 
 h4,
 .delta {
-  font-size: 2.88rem;
-  font-weight: bold;
-  line-height: 1.1;
-  padding-bottom: 1.44rem;
+  font-size: 2.53125rem;
+  padding-bottom: 1.26563rem;
 }
 
 h5,
 .epsilon {
-  font-size: 2.4rem;
-  font-weight: bold;
-  line-height: 1.1;
-  padding-bottom: 1.2rem;
+  font-size: 2.25rem;
+  padding-bottom: 1.125rem;
 }
 
 h6,
 .zeta {
   font-size: 2rem;
-  font-weight: bold;
-  line-height: 1.1;
   padding-bottom: 1rem;
 }
 
 .intro {
-  font-size: 4.97664rem;
+  font-size: 2.53125rem;
+  line-height: 1.4em;
 }
 /* ===========================================================
 
@@ -531,8 +533,8 @@ img {
   vertical-align: top;
 }
 
-.wrap-image--small,
-.wrap-image--large {
+.image--small,
+.image--large {
   margin: 4rem 0;
   position: relative;
 }
@@ -1150,6 +1152,22 @@ th {
 
 }
 */
+.article__header {
+  text-align: center;
+}
+
+.article__list--meta {
+  margin-bottom: 1.4em;
+}
+
+.article__item--meta {
+  display: inline-block;
+  padding-right: 1.4em;
+}
+.article__item--meta:last-child {
+  padding-right: 0;
+}
+
 @media only screen and (min-width: 37.5em) {
   .wrap--site {
     padding-left: 2rem;
@@ -1165,79 +1183,61 @@ th {
   textarea,
   select,
   button {
-    font-size: 2rem;
+    font-size: 2.2rem;
   }
   .tera {
-    font-size: 8.59963rem;
-    font-weight: bold;
-    line-height: 1.1;
-    padding-bottom: 4.29982rem;
+    font-size: 9.4596rem;
+    padding-bottom: 4.7298rem;
   }
 
   .giga {
-    font-size: 7.16636rem;
-    font-weight: bold;
-    line-height: 1.1;
-    padding-bottom: 3.58318rem;
+    font-size: 7.883rem;
+    padding-bottom: 3.9415rem;
   }
 
   .mega {
-    font-size: 5.97197rem;
-    font-weight: bold;
-    line-height: 1.1;
-    padding-bottom: 2.98598rem;
+    font-size: 6.56916rem;
+    padding-bottom: 3.28458rem;
   }
 
   h1,
   .alpha {
-    font-size: 4.97664rem;
-    font-weight: bold;
-    line-height: 1.1;
-    padding-bottom: 2.48832rem;
+    font-size: 5.4743rem;
+    padding-bottom: 2.73715rem;
   }
 
   h2,
   .beta {
-    font-size: 4.1472rem;
-    font-weight: bold;
-    line-height: 1.1;
-    padding-bottom: 2.0736rem;
+    font-size: 4.56192rem;
+    padding-bottom: 2.28096rem;
   }
 
   h3,
   .gamma {
-    font-size: 3.456rem;
-    font-weight: bold;
-    line-height: 1.1;
-    padding-bottom: 1.728rem;
+    font-size: 3.8016rem;
+    padding-bottom: 1.9008rem;
   }
 
   h4,
   .delta {
-    font-size: 2.88rem;
-    font-weight: bold;
-    line-height: 1.1;
-    padding-bottom: 1.44rem;
+    font-size: 3.168rem;
+    padding-bottom: 1.584rem;
   }
 
   h5,
   .epsilon {
-    font-size: 2.4rem;
-    font-weight: bold;
-    line-height: 1.1;
-    padding-bottom: 1.2rem;
+    font-size: 2.64rem;
+    padding-bottom: 1.32rem;
   }
 
   h6,
   .zeta {
-    font-size: 2rem;
-    font-weight: bold;
-    line-height: 1.1;
-    padding-bottom: 1rem;
+    font-size: 2.2rem;
+    padding-bottom: 1.1rem;
   }
 
   .intro {
-    font-size: 4.97664rem;
+    font-size: 3.168rem;
   }
   .wrap--site {
     padding-left: 4rem;
@@ -1248,7 +1248,7 @@ th {
     padding-top: 6rem;
     padding-top: 6rem;
   }
-  .wrap-image--large {
+  .image--large {
     margin: 8rem 0;
   }
   .page-header {
@@ -1363,12 +1363,16 @@ th {
   }
 }
 @media only screen and (min-width: 80em) {
+  .image--large {
+    margin-left: -15%;
+    width: 130%;
+  }
   .foo {
     color: #f00;
   }
 }
 @media only screen and (min-width: 93.75em) {
-  .wrap-image--small {
+  .image--small {
     float: left;
     margin: 1em 1em 0.5em -12em;
     max-width: 48rem;

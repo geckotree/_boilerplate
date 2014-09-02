@@ -8,9 +8,7 @@ include_once('snippets/nav.php');
 
 <section class="sg-side-content">
 	<h1>Colours</h1>
-
 	<p>Mauris convallis hendrerit ipsum quis ultricies. Aliquam ornare tincidunt ultrices. Sed tincidunt lacus et diam gravida ultricies. Suspendisse eu nunc a turpis molestie mollis eget in ligula. Vestibulum ultrices lacinia erat et tristique. Suspendisse orci magna, tincidunt ut velit sed, elementum maximus lacus.</p>
-
 	<p>Suspendisse ut erat vitae neque facilisis tempor. Donec pellentesque, turpis at semper mollis, justo nisl pharetra risus, consequat ornare turpis enim at odio.</p>
 </section>
 

@@ -1,0 +1,190 @@
+/* ===========================================================
+
+	#COLOURS
+
+=========================================================== */
+
+.sg-grid {
+	margin-bottom: 6rem;
+}
+
+.sg-grid__list {
+	@include clearfix;
+	list-style: none;
+
+	&--details {
+		font-size: 0.8em;
+		list-style: none;
+		padding: 1rem .5rem .5rem;
+	}
+}
+
+.sg-grid__item {
+	margin-left: 0;
+
+	&--small {
+		border-radius: $border-radius;
+		padding: 3rem .5rem;
+		text-align: center;
+		transition: background $transition-speed;
+
+		&:hover {
+			background: $white;
+		}
+	}
+
+	&--details {
+		line-height: 1.2;
+		margin: .5rem 0 0;
+	}
+}
+
+.sg-grid__value {
+	&--colour {
+		font-weight: 600;
+	}
+
+	&--icon {
+		font-size: 0.8em;
+	}
+}
+
+.sg-grid__icon {
+	font-size: 3.2rem;
+}
+
+.sg-grid__colour {
+	border-radius: $border-radius;
+	height: 10rem;
+	width: 100%;
+	border-top: 3rem solid transparent;
+
+	&--pri { 
+		background: $pri; 
+		border-color: $pri--alt;
+	}
+
+	&--sec { 
+		background: $sec; 
+		border-color: $sec--alt;
+	}
+
+	&--ter { 
+		background: $ter; 
+		border-color: $ter--alt;
+	}
+
+	&--dark-1 { 
+		background: $dark--1; 
+	}
+
+	&--orange { 
+		background: $orange--1;
+		border-color: $orange--2;
+	}
+
+	&--red { 
+		background: $red--1;
+		border-color: $red--2;
+	}
+
+	&--purple { 
+		background: $purple--1;
+		border-color: $purple--2; 
+	}
+
+	&--blue { 
+		background: $blue--1; 
+		border-color: $blue--2;
+	}
+
+	&--dark-2 { 
+		background: $dark--2; 
+	}
+
+	&--grey-1 { 
+		background: $grey--1; 
+	}
+}
+
+@include respond-min( $mq-small ) {
+
+	.sg-grid__item {
+		margin-bottom: 1rem;
+
+		&--small {
+			@include column(6);
+			margin-bottom: 1rem;
+		}
+	}
+
+}
+
+@include respond-min( $mq-medium ) {
+
+	.sg-grid__item {
+		margin-bottom: 1rem;
+
+		&--small {
+			@include column(4);
+			margin-bottom: 1rem;
+		}
+
+		&--details {
+			display: inline-block;
+
+			& + & {
+				margin-left: 2rem;
+			}
+		}
+	}
+
+}
+
+@include respond-min( $mq-large ) {
+
+	.sg-grid {
+		margin-bottom: 4rem;
+	}
+
+	.sg-grid__item {
+		@include column(3);
+		margin-bottom: 1rem;
+
+
+		&--small {
+			@include column(3);
+			margin-bottom: 1rem;
+		}
+
+		&--details {
+			display: block;
+
+			& + & {
+				margin-left: 0;
+			}
+		}
+	}
+
+	.sg-grid__value {
+		display: block;
+	}
+
+}
+
+@include respond-min( $mq-x-large ) {
+
+	.sg-grid__item {
+		margin-bottom: 2rem;
+
+		&--small {
+			@include column(2);
+			margin-bottom: 2rem;
+		}
+	}
+
+	.sg-grid__value {
+		display: inline;
+	}
+
+}

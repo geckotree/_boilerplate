@@ -46,11 +46,148 @@ Boilerplate version: 1.0
 	#MEDIA QUERIES
 
 =========================================================== */
+/* ===========================================================
+
+	#WRAPPERS
+
+=========================================================== */
 .sg-page-wrap {
   margin-left: 6.8rem;
   position: relative;
 }
 
+/* ===========================================================
+
+	#CONTENT
+
+=========================================================== */
+.sg-main-content {
+  padding: 4rem 2rem;
+}
+
+.sg-side-content {
+  background: #f2f0ed;
+  padding: 4rem 2rem;
+}
+
+@media only screen and (min-width: 50em) {
+  .sg-main-content {
+    padding: 4rem 6rem;
+  }
+
+  .sg-side-content {
+    padding: 4rem 6rem;
+  }
+}
+@media only screen and (min-width: 62.5em) {
+  .sg-main-content {
+    float: right;
+    padding: 4rem 2rem;
+    width: 66.6666666667%;
+  }
+
+  .sg-side-content {
+    height: 100%;
+    padding: 4rem 2rem;
+    left: 6.8rem;
+    overflow: scroll;
+    position: fixed;
+    top: 0;
+    width: calc(33.3333333333% - 23px);
+  }
+}
+@media only screen and (min-width: 80em) {
+  .sg-main-content {
+    padding: 4rem 6rem;
+  }
+
+  .sg-side-content {
+    padding: 4rem 6rem;
+  }
+}
+/* ===========================================================
+
+	#ICONS
+
+=========================================================== */
+@font-face {
+  font-family: 'sg-icon-font';
+  font-style: normal;
+  font-weight: normal;
+  src: url("../fonts/sg-icon-font.eot?-40jj5h");
+  src: url("../fonts/sg-icon-font.eot?#iefix-40jj5h") format("embedded-opentype"), url("../fonts/sg-icon-font.woff?-40jj5h") format("woff"), url("../fonts/sg-icon-font.ttf?-40jj5h") format("truetype"), url("../fonts/sg-icon-font.svg?-40jj5h#sg-icon-font") format("svg");
+}
+[class^="sg-icon--"],
+[class*=" sg-icon--"] {
+  font-family: 'sg-icon-font';
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  line-height: 1;
+  speak: none;
+  text-transform: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.sg-icon--cross:before {
+  content: '\2421';
+}
+
+.sg-icon--check:before {
+  content: '\2713';
+}
+
+.sg-icon--help:before {
+  content: '\2753';
+}
+
+.sg-icon--crop:before {
+  content: '\e201';
+}
+
+.sg-icon--paintroller:before {
+  content: '\e225';
+}
+
+.sg-icon--stamp:before {
+  content: '\e226';
+}
+
+.sg-icon--text:before {
+  content: '\ed00';
+}
+
+.sg-icon--layout:before {
+  content: '\eda0';
+}
+
+.sg-icon--save:before {
+  content: '\1f4be';
+}
+
+.sg-icon--download:before {
+  content: '\1f4e5';
+}
+
+/* ===========================================================
+
+	#DOC HEADING
+
+=========================================================== */
+.sg-doc-header__heading {
+  display: inline-block;
+}
+
+.sg-doc-header__button {
+  float: right;
+}
+
+/* ===========================================================
+
+	#NAV
+
+=========================================================== */
 .sg-main-nav {
   background: #2d2d2d;
   height: 100%;
@@ -81,17 +218,18 @@ Boilerplate version: 1.0
 .sg-main-nav__link:hover, .sg-main-nav__link:focus {
   background: #242424;
 }
+.sg-main-nav__link:hover .sg-main-nav__label, .sg-main-nav__link:focus .sg-main-nav__label {
+  opacity: 1;
+  left: 8.8rem;
+  visibility: visible;
+}
 .sg-main-nav__link.active {
   color: #f2d044;
 }
 .sg-main-nav__link [class^="sg-icon--"] {
   font-size: 2.4rem;
 }
-.sg-main-nav__link:hover .sg-main-nav__label {
-  opacity: 1;
-  left: 8.8rem;
-  visibility: visible;
-}
+
 .sg-main-nav__link--detached {
   bottom: 0;
   left: 0;
@@ -122,64 +260,11 @@ Boilerplate version: 1.0
   top: 50%;
 }
 
-.sg-main-content {
-  padding: 4rem 2rem;
-}
+/* ===========================================================
 
-.sg-side-content {
-  background: #F2F0ED;
-  padding: 4rem 2rem;
-}
-.sg-side-content .pull-quote {
-  margin: 3rem;
-}
-.sg-side-content .pull-quote p {
-  padding: 0;
-  text-align: center;
-}
+	#COLOURS
 
-@media only screen and (min-width: 50em) {
-  .sg-main-content {
-    padding: 4rem 6rem;
-  }
-
-  .sg-side-content {
-    padding: 4rem 6rem;
-  }
-}
-@media only screen and (min-width: 62.5em) {
-  .sg-main-content {
-    float: right;
-    padding: 4rem 2rem;
-    width: 66.6666666667%;
-  }
-
-  .sg-side-content {
-    height: 100%;
-    padding: 4rem 2rem;
-    left: 0;
-    position: absolute;
-    top: 0;
-    width: 33.3333333333%;
-  }
-}
-@media only screen and (min-width: 80em) {
-  .sg-main-content {
-    padding: 4rem 6rem;
-  }
-
-  .sg-side-content {
-    padding: 4rem 6rem;
-  }
-}
-.sg-doc-header__heading {
-  display: inline-block;
-}
-
-.sg-doc-header__button {
-  float: right;
-}
-
+=========================================================== */
 .sg-grid {
   margin-bottom: 6rem;
 }
@@ -348,6 +433,11 @@ Boilerplate version: 1.0
     display: inline;
   }
 }
+/* ===========================================================
+
+	#ARTICLE HELPER
+
+=========================================================== */
 .sg-article-helper__section {
   margin-bottom: 6rem;
 }
@@ -435,66 +525,6 @@ Boilerplate version: 1.0
 
 .sg-section__button {
   float: right;
-}
-
-@font-face {
-  font-family: 'sg-icon-font';
-  src: url("../fonts/sg-icon-font.eot?-40jj5h");
-  src: url("../fonts/sg-icon-font.eot?#iefix-40jj5h") format("embedded-opentype"), url("../fonts/sg-icon-font.woff?-40jj5h") format("woff"), url("../fonts/sg-icon-font.ttf?-40jj5h") format("truetype"), url("../fonts/sg-icon-font.svg?-40jj5h#sg-icon-font") format("svg");
-  font-weight: normal;
-  font-style: normal;
-}
-[class^="sg-icon--"], [class*=" sg-icon--"] {
-  font-family: 'sg-icon-font';
-  font-style: normal;
-  font-variant: normal;
-  font-weight: normal;
-  line-height: 1;
-  speak: none;
-  text-transform: none;
-  /* Better Font Rendering =========== */
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-.sg-icon--cross:before {
-  content: '\2421';
-}
-
-.sg-icon--check:before {
-  content: '\2713';
-}
-
-.sg-icon--help:before {
-  content: '\2753';
-}
-
-.sg-icon--crop:before {
-  content: '\e201';
-}
-
-.sg-icon--paintroller:before {
-  content: '\e225';
-}
-
-.sg-icon--stamp:before {
-  content: '\e226';
-}
-
-.sg-icon--text:before {
-  content: '\ed00';
-}
-
-.sg-icon--layout:before {
-  content: '\eda0';
-}
-
-.sg-icon--save:before {
-  content: '\1f4be';
-}
-
-.sg-icon--download:before {
-  content: '\1f4e5';
 }
 
 /*# sourceMappingURL=style-guide.css.map */

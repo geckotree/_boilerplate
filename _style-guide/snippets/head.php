@@ -12,10 +12,10 @@
 	<script type="text/javascript" src="//use.typekit.net/dmp1bpt.js"></script>
 	<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 
-	<link rel="stylesheet" href="<?php echo $baseURL; ?>/assets/css/production/style.min.css" />
-	<link rel="stylesheet" href="<?php echo $baseURL; ?>/_style-guide/assets/css/style-guide.css">
+	<link rel="stylesheet" href="../assets/css/build/style.min.css" />
+	<link rel="stylesheet" href="assets/css/style-guide.css" />
 
-	<script src="<?php echo $baseURL; ?>/assets/js/production/head-script.min.js" async></script>
+	<script type="text/javascript" src="../assets/js/build/head-script.min.js" async></script>
 	
 	<!-- FAVICONS -->
 	<link rel="icon" type="image/png" sizes="196x196" href="../assets/img/brand-icons/favicon-196.png">

@@ -1,0 +1,59 @@
+/* ===========================================================
+
+	#CONTENT
+
+=========================================================== */
+
+.sg-main-content {
+	padding: 4rem 2rem;
+}
+
+.sg-side-content {
+	background: $cream--3;
+	padding: 4rem 2rem;
+}
+
+@include respond-min( $mq-medium ) {
+
+	.sg-main-content {
+		padding: 4rem 6rem;
+	}
+
+	.sg-side-content {
+		padding: 4rem 6rem;
+	}
+
+}
+
+@include respond-min( $mq-large ) {
+
+	.sg-main-content {
+		float: right;
+		padding: 4rem 2rem;
+		width: 66.6666666667%;
+	}
+
+	.sg-side-content {
+		height: 100%;
+		padding: 4rem 2rem;
+		left: $nav-width;
+		overflow: scroll;
+		position: fixed;
+		top: 0;
+		width: calc(33.3333333333% - 23px);
+
+	}
+
+}
+
+@include respond-min( $mq-x-large ) {
+
+	.sg-main-content {
+		padding: 4rem 6rem;
+	}
+
+	.sg-side-content {
+		padding: 4rem 6rem;
+	}
+
+}

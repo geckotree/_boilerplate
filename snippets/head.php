@@ -1,4 +1,4 @@
-<?php $baseURL = 'http://localhost/~rob/_boilerplate/'; ?>
+<?php $baseURL = 'http://192.168/~rob/_boilerplate/'; ?>
 
 <!doctype html>
 <!--[if IE 7]> <html lang="en" class="no-js lt-ie9 lt-ie8"> <![endif]-->
@@ -16,15 +16,15 @@
 	<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 
 	<!--[if lt IE 9]>
-		<script src="<?php echo $baseURL; ?>/assets/js/production/html5shiv.min.js"></script>
-		<link rel="stylesheet" href="<?php echo $baseURL; ?>/assets/css/build/style-ie.min.css">
+		<script type="text/javascript" src="assets/js/production/html5shiv.min.js"></script>
+		<link rel="stylesheet" href="assets/css/build/style-ie.min.css" />
 	<![endif]-->
 
 	<!--[if gt IE 8]><!-->
-		<link rel="stylesheet" href="<?php echo $baseURL; ?>/assets/css/build/style.min.css" />
+		<link rel="stylesheet" href="assets/css/build/style.min.css" />
 	<!--<![endif]-->
 
-	<script src="<?php echo $baseURL; ?>/assets/js/build/head-script.min.js" async></script>
+	<script type="text/javascript" src="assets/js/build/head-script.min.js" async></script>
 
 	<!-- FAVICONS -->
 	<link rel="icon" type="image/png" sizes="196x196" href="assets/img/brand-icons/favicon-196.png">
