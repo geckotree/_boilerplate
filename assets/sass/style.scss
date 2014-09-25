@@ -1,51 +1,17 @@
 /* ===========================================================
                                               
-                    ,--.            ,--.                        
- ,---.  ,---.  ,---.|  |,-. ,---. ,-'  '-.,--.--. ,---.  ,---.  
-| .-. || .-. :| .--'|     /| .-. |'-.  .-'|  .--'| .-. :| .-. : 
-' '-' '\   --.\ `--.|  \  \' '-' '  |  |  |  |   \   --.\   --. 
-.`-  /  `----' `---'`--'`--'`---'   `--'  `--'    `----' `----' 
-`---'                    
+        ,--.           ,--.               
+ ,---.,-'  '-.,--. ,--.|  | ,---.  ,---.  
+(  .-''-.  .-' \  '  / |  || .-. :(  .-'  
+.-'  `) |  |    \   '  |  |\   --..-'  `) 
+`----'  `--'  .-'  /   `--' `----'`----'  
+              `---'                       
 
 Authors: Rob & Kev Simpson
-Version: 1.0
 
-* TOOLS
-* Variables............Globally-available variables.
-* Grid.................
-* Utils................Useful mixins.
-* Responsive...........
-* Reset................A level playing field.
-*
-* Typography
-* Base.................Base font styles.
-* Headings.............Headings and intro styles.
-* Anchor...............Anchor colours.
-* Lists................List margins.
-* Code.................
-* Small................
-* Abbr.................
-* Blockquote...........
-* Pullquote............
-*
-* BASE
-* Wrappers.............Wrapping and constraining elements.
-* Buttons..............Button elements.
-* Images...............
-* Icons................
-* Figure...............
-* Forms................
-* Tables...............
-*
-* MODULES
-* Wrappers.............
-*
-* PAGES
-* Page-head............The main page header.
-* Page-foot............The main page footer.
 
+/* TOOLS
 =========================================================== */
-
 @import "tools/variables.scss";
 @import "tools/grid.scss";
 @import "tools/utils.scss";
@@ -53,6 +19,8 @@ Version: 1.0
 @import "tools/reset.scss";
 @import "tools/helpers.scss";
 
+/* TYPOGRAPHY
+=========================================================== */
 @import "typography/base.scss";
 @import "typography/headings.scss";
 @import "typography/anchor.scss";
@@ -63,6 +31,8 @@ Version: 1.0
 @import "typography/blockquote.scss";
 @import "typography/pullquote.scss";
 
+/* BASE
+=========================================================== */
 @import "base/wrappers.scss";
 @import "base/buttons.scss";
 @import "base/images.scss";
@@ -71,14 +41,14 @@ Version: 1.0
 @import "base/forms.scss";
 @import "base/tables.scss";
 
-@import "modules/nav.scss";
-//@import "modules/nav-push.scss";
+/* MODULES
+=========================================================== */
+//@import "modules/nav.scss";
 //@import "modules/footer.scss";
 @import "modules/article.scss";
-//@import "modules/author.scss";
-//@import "modules/news.scss";
-//@import "modules/sidebar.scss";
 
+/* PAGES
+=========================================================== */
 //@import "pages/home.scss";
 
 @import "tools/mq.scss";

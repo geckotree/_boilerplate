@@ -8,7 +8,7 @@ module.exports = function (grunt) {
          */
         watch: {
             css: {
-                files: ['assets/sass/*/*.scss', '_style-guide/assets/sass/*/*.scss'],
+                files: ['assets/sass/*/*.scss'],
                 tasks: ['sass', 'autoprefixer', 'css_mqpacker', 'stripmq', 'cssmin']
             },
             scripts: {
@@ -37,8 +37,7 @@ module.exports = function (grunt) {
                 },
                 files: {
                     'assets/css/dev/style.css': 'assets/sass/style.scss',
-                    'assets/css/dev/style-ie.css': 'assets/sass/style-ie.scss',
-                    '_style-guide/assets/css/style-guide.css': '_style-guide/assets/sass/style-guide.scss'
+                    'assets/css/dev/style-ie.css': 'assets/sass/style-ie.scss'
                 }
             }
         },

@@ -4,15 +4,15 @@
 
 =========================================================== */
 
-.input,
-.select,
-.textarea {
+input[type="text"],
+select,
+textarea {
 	background: none;
 	border: $border-width solid $border-colour;
 	border-radius: $border-radius;
 	margin: 0;
-	padding: 1rem 1.5rem;
-	transition: border $transition-speed ease;
+	padding: 1rem;
+	transition: border $speed ease;
 	width: 100%;
 
 	&:focus {
@@ -28,7 +28,7 @@
 
 =========================================================== */
 
-.label {
+label {
 	display: block;
 	padding-top: $line-height;
 	padding-bottom: $line-height / 2;
@@ -38,7 +38,7 @@
 	}
 }
 
-.label[for] {
+label[for] {
 	cursor: pointer;
 }
 
@@ -50,11 +50,11 @@
 
 =========================================================== */
 
-.select-wrap {
+select-wrap {
 	position: relative;
 }
 
-.select {
+select {
 	background: none;
 	position: relative;
 	text-indent: 1px;
@@ -64,10 +64,10 @@
 	-moz-appearance: none;
 }
 
-.select-wrap:after {
+select-wrap:after {
 	color: $border-colour;
 	content: '\25BE';
-	padding: 1.2rem 1.5rem;
+	padding: 12rem 15rem;
 	position: absolute;
 	right: 0;
 	top: 0;
@@ -81,7 +81,7 @@
 
 =========================================================== */
 
-.textarea {
+textarea {
 	resize: none;
 }
 
@@ -93,20 +93,22 @@
 
 =========================================================== */
 
-.radio,
-.checkbox {
+input[type="radio"],
+input[type="checkbox"] {
+	width: 2rem;
+	height: 2rem;
+
 	background: $border-colour;
-	color: $white;
+	color: #fff;
 	cursor: pointer;
-	font-family: 'geckotree_icon_font';
 	line-height: 1;
-	padding: .8rem 1.4rem 1.6rem 1.5rem;
-	transition: background $transition-speed, border $transition-speed;
+	vertical-align: middle;
+	transition: background $speed, border $speed;
 	-webkit-appearance: none;
 	-moz-appearance: none;
 
 	&:before {
-		content: '\2421';
+		content: '';
 	}
 
 	&:hover {
@@ -122,12 +124,12 @@
 	}
 }
 
-.radio {
+input[type="radio"] {
 	border-radius: 50%;
 }
 
-.checkbox {
-	border-radius: $border-radius;
+input[type="checkbox"] {
+	
 }
 
 
@@ -139,14 +141,14 @@
 =========================================================== */
 
 ::-webkit-input-placeholder {
-   color: $grey--1;
+   color: $pri;
 }
 :-moz-placeholder { // Firefox 18-
-   color: $grey--1;  
+   color: $pri;  
 }
 ::-moz-placeholder {  // Firefox 19+
-   color: $grey--1;  
+   color: $pri;  
 }
 :-ms-input-placeholder {  
-   color: $grey--1;  
+   color: $pri;
 }
