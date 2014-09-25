@@ -7,10 +7,3 @@
 .clearfix {
 	@include clearfix;
 }
-
-.hide-text {
-	left: -100%;
-	overflow: hidden;
-	position: absolute;
-	top: -100%;
-}

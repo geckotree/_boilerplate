@@ -7,20 +7,24 @@
 h1,
 h2,
 h3,
-h4,
-h5,
-h6,
 .tera,
 .giga,
 .mega,
 .alpha,
 .beta,
-.gamma,
+.gamma {
+	font-weight: 700;
+	line-height: 1.1;
+}
+
+
+h4,
+h5,
+h6,
 .delta,
 .epsilon,
 .zeta {
-	font-weight: bold;
-	line-height: 1.1;
+	font-weight: 500;
 }
 
 $zeta--small: 		$font-size--small;

@@ -25,11 +25,7 @@ Authors: Rob & Kev Simpson
 @import "typography/headings.scss";
 @import "typography/anchor.scss";
 @import "typography/lists.scss";
-@import "typography/code.scss";
 @import "typography/small.scss";
-@import "typography/abbr.scss";
-@import "typography/blockquote.scss";
-@import "typography/pullquote.scss";
 
 /* BASE
 =========================================================== */
@@ -43,12 +39,15 @@ Authors: Rob & Kev Simpson
 
 /* MODULES
 =========================================================== */
-//@import "modules/nav.scss";
-//@import "modules/footer.scss";
-@import "modules/article.scss";
+@import "modules/header.scss";
+@import "modules/nav.scss";
+@import "modules/footer.scss";
 
 /* PAGES
 =========================================================== */
-//@import "pages/home.scss";
+@import "pages/home.scss";
 
+/* PLEASE DON'T REMOVE
+=========================================================== */
 @import "tools/mq.scss";
+

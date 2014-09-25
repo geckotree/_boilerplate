@@ -4,12 +4,6 @@
 
 =========================================================== */
 
-@mixin old-ie() {
-	@if $old-ie {
-		@content;
-	}
-}
-
 @mixin heading-font-size( $font-size ) {
 	font-size: $font-size;
 	padding-bottom: $font-size / 2;
