@@ -6,7 +6,7 @@
 
 a {
 	color: $pri;
-	transition: color $transition-speed ease;
+	transition: color $speed ease;
 
 	&:hover {
 		color: $sec;

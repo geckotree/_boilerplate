@@ -12,40 +12,37 @@
 	<meta name="robots" content="index, follow"> <!-- http://www.robotstxt.org -->
 	<link rel="author" href=""> <!-- http://humanstxt.org -->
 
-	<script type="text/javascript" src="//use.typekit.net/dmp1bpt.js"></script>
-	<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
-
 	<!--[if lt IE 9]>
-		<script type="text/javascript" src="assets/js/production/html5shiv.min.js"></script>
-		<link rel="stylesheet" href="assets/css/build/style-ie.min.css" />
+		<script type="text/javascript" src="assets/build/js/html5shiv.min.js"></script>
+		<link rel="stylesheet" href="assets/build/css/style-ie.min.css" />
 	<![endif]-->
 
 	<!--[if gt IE 8]><!-->
-		<link rel="stylesheet" href="assets/css/build/style.min.css" />
+		<link rel="stylesheet" href="assets/build/css/style.min.css" />
 	<!--<![endif]-->
 
-	<script type="text/javascript" src="assets/js/build/head-script.min.js" async></script>
+	<script type="text/javascript" src="assets/build/js/head-script.min.js" async></script>
 
 	<!-- FAVICONS -->
-	<link rel="icon" type="image/png" sizes="196x196" href="assets/img/brand-icons/favicon-196.png">
-	<link rel="icon" type="image/png" sizes="160x160" href="assets/img/brand-icons/favicon-160.png">
-	<link rel="icon" type="image/png" sizes="96x96" href="assets/img/brand-icons/favicon-96.png">
-	<link rel="icon" type="image/png" sizes="32x32" href="assets/img/brand-icons/favicon-32.png">
-	<link rel="icon" type="image/png" sizes="16x16" href="assets/img/brand-icons/favicon-16.png">
+	<link rel="icon" type="image/png" sizes="196x196" href="assets/build/img/brand-icons/favicon-196.png">
+	<link rel="icon" type="image/png" sizes="160x160" href="assets/build/img/brand-icons/favicon-160.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="assets/build/img/brand-icons/favicon-96.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="assets/build/img/brand-icons/favicon-32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="assets/build/img/brand-icons/favicon-16.png">
 
 	<!-- APPLE ICONS -->
-	<link rel="apple-touch-icon-precomposed" sizes="152x152" href="assets/img/brand-icons/apple-152.png">
-	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/img/brand-icons/apple-144.png">
-	<link rel="apple-touch-icon-precomposed" sizes="120x120" href="assets/img/brand-icons/apple-120.png">
-	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/img/brand-icons/apple-114.png">
-	<link rel="apple-touch-icon-precomposed" sizes="76x76" href="assets/img/brand-icons/apple-76.png">
-	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/img/brand-icons/apple-72.png">
-	<link rel="apple-touch-icon-precomposed" sizes="60x60" href="assets/img/brand-icons/apple-60.png">
-	<link rel="apple-touch-icon-precomposed" sizes="57x57" href="assets/img/brand-icons/apple-57.png">
+	<link rel="apple-touch-icon-precomposed" sizes="152x152" href="assets/build/img/brand-icons/apple-152.png">
+	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/build/img/brand-icons/apple-144.png">
+	<link rel="apple-touch-icon-precomposed" sizes="120x120" href="assets/build/img/brand-icons/apple-120.png">
+	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/build/img/brand-icons/apple-114.png">
+	<link rel="apple-touch-icon-precomposed" sizes="76x76" href="assets/build/img/brand-icons/apple-76.png">
+	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/build/img/brand-icons/apple-72.png">
+	<link rel="apple-touch-icon-precomposed" sizes="60x60" href="assets/build/img/brand-icons/apple-60.png">
+	<link rel="apple-touch-icon-precomposed" sizes="57x57" href="assets/build/img/brand-icons/apple-57.png">
 
 	<!-- MS-TILE ICON -->
 	<meta name="msapplication-TileColor" content="#57B275">
-	<meta name="msapplication-TileImage" content="assets/img/brand-icons/mstile-144.png">
+	<meta name="msapplication-TileImage" content="assets/build/img/brand-icons/mstile-144.png">
 
 	<!-- OPEN GRAPH - http://ogp.me -->
 	<meta property="og:title" content="<?php echo $pageTitle ?>" />

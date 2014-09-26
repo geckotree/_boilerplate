@@ -16,7 +16,7 @@ button {
 	color: $text-colour;
 	font-family: 'Proxima-Nova-Soft', Arial, Helvetica, Geneva, sans-serif;
 	font-size: $font-size--small;
-	//font-feature-settings: 'liga', 'kern'; //= http://elliotjaystocks.com/blog/kerning/
+	font-feature-settings: 'liga', 'kern'; //= http://elliotjaystocks.com/blog/kerning/
 	font-kerning: normal; 
 	line-height: $line-height;
 }
@@ -46,11 +46,6 @@ ul + h6 {
 
 em {
 	font-style: italic;
-}
-
-small,
-.small {
-	font-size: 65%;
 }
 
 ::selection {

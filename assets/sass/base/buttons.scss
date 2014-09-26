@@ -9,9 +9,7 @@
 	display: inline-block;
 	line-height: 1;
 	padding: 1rem 1.5rem;
-	transition: background $transition-speed ease, 
-				border $transition-speed ease, 
-				color $transition-speed ease;
+	transition: background $speed ease, border $speed ease, color $speed ease;
 }
 
 .button--large {
@@ -20,23 +18,23 @@
 
 .button--primary {
 	background: $pri;
-	color: $white;
+	color: #fff;
 
 	&:hover,
 	&:focus {
 		background: $sec;
-		color: $white;
+		color: #fff;
 	}
 }
 
 .button--secondary {
-	background: $ter;
-	color: $white;
+	background: $sec;
+	color: #fff;
 
 	&:hover,
 	&:focus {
 		background: $sec;
-		color: $white;
+		color: #fff;
 	}
 }
 

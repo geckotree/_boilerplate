@@ -8,7 +8,7 @@ module.exports = function (grunt) {
          */
         watch: {
             css: {
-                files: ['assets/sass/*/*.scss', '_style-guide/assets/sass/*/*.scss'],
+                files: ['assets/sass/*/*.scss'],
                 tasks: ['sass', 'autoprefixer', 'css_mqpacker', 'stripmq', 'cssmin']
             },
             scripts: {
@@ -36,9 +36,8 @@ module.exports = function (grunt) {
                     sourcemap: true
                 },
                 files: {
-                    'assets/css/dev/style.css': 'assets/sass/style.scss',
-                    'assets/css/dev/style-ie.css': 'assets/sass/style-ie.scss',
-                    '_style-guide/assets/css/style-guide.css': '_style-guide/assets/sass/style-guide.scss'
+                    'assets/css/style.css': 'assets/sass/style.scss',
+                    'assets/css/style-ie.css': 'assets/sass/style-ie.scss'
                 }
             }
         },
@@ -49,8 +48,8 @@ module.exports = function (grunt) {
             multiple_files: {
                 expand: true,
                 flatten: true,
-                src: 'assets/css/dev/style.css',
-                dest: 'assets/css/dev/'
+                src: 'assets/css/style.css',
+                dest: 'assets/css/'
             }
         },
         css_mqpacker: {
@@ -59,9 +58,9 @@ module.exports = function (grunt) {
             },
             main: {
                 expand: true,
-                cwd: 'assets/css/dev/',
+                cwd: 'assets/css/',
                 src: 'style.css',
-                dest: 'assets/css/dev/'
+                dest: 'assets/css/'
             }
         },
         stripmq: {
@@ -71,7 +70,7 @@ module.exports = function (grunt) {
             },
             all: {
                 files: {
-                    'assets/css/dev/style-ie.css': ['assets/css/dev/style-ie.css']
+                    'assets/css/style-ie.css': ['assets/css/style-ie.css']
                 }
             }
         },
@@ -81,16 +80,16 @@ module.exports = function (grunt) {
               replace: true
             },
             dist: {
-              src: 'assets/css/dev/style-ie.css',
-              dest: 'assets/css/dev/style-ie.css'
+              src: 'assets/css/style-ie.css',
+              dest: 'assets/css/style-ie.css'
             }
         },
         cssmin: {
             main: {
                 expand: true,
-                cwd: 'assets/css/dev/',
-                src: 'style.css',
-                dest: 'assets/css/build',
+                cwd: 'assets/css/',
+                src: '*.css',
+                dest: 'assets/build/css/',
                 ext: '.min.css'
             }
         },
@@ -101,14 +100,14 @@ module.exports = function (grunt) {
          */
         concat: {
             dist: {
-                src: ['assets/js/dev/*.js'],
-                dest: 'assets/js/build/combined.js'
+                src: ['assets/js/*.js'],
+                dest: 'assets/build/js/script.min.js'
             }
         },
         uglify: {
             build: {
-                src: 'assets/js/build/combined.js',
-                dest: 'assets/js/build/script.min.js'
+                src: 'assets/build/js/script.min.js',
+                dest: 'assets/build/js/script.min.js'
             }
         },
 
@@ -152,36 +151,19 @@ module.exports = function (grunt) {
             all: {
                 files: [{
                     expand: true,
-                    cwd: 'assets/img/photos/dev/',
+                    cwd: 'assets/img/bitmap/',
                     src: ['*.{gif,jpg,png}'],
-                    custom_dest: 'assets/img/photos/build/{%= width %}/'
+                    custom_dest: 'assets/build/img/bitmap/{%= width %}/'
                 }]
             }
         },
-        imagemin: {
-            dynamic: {
-                options: {
-                    optimizationLevel: 7,
-                    progressive: true
-                },
-                files: [
-                    {
-                        expand: true,
-                        cwd: 'assets/img/photos/build/',
-                        src: ['**/*.{png,jpg,gif}'],
-                        dest: 'assets/img/photos/build/'
-                    }
-                ]
-            }
-        },
-        imageoptim: {
-            myTask: {
-                options: {
-                    jpegMini: false,
-                    imageAlpha: false,
-                    quitAfter: false
-                },
-                src: ['assets/img/photos/build/**/*.{png,gif,jpg}']
+        svg2png: {
+            all: {
+                files: [{ 
+                    cwd: 'assets/img/svg/', 
+                    src: ['*.svg'], 
+                    dest: 'assets/build/img/svg/'
+                }]
             }
         },
         svgmin: {
@@ -195,11 +177,24 @@ module.exports = function (grunt) {
             dist: {
                 files: [{
                     expand: true,
-                    cwd: 'assets/img/',
+                    cwd: 'assets/img/svg/',
                     src: '*.svg',
-                    dest: 'assets/img/',
+                    dest: 'assets/build/img/svg/',
                     ext: '.svg'
                 }]
+            }
+        },
+        imageoptim: {
+            myTask: {
+                options: {
+                    jpegMini: false,
+                    imageAlpha: false,
+                    quitAfter: false
+                },
+                src: [
+                    'assets/build/img/bitmap/*.{png,gif,jpg}',
+                    'assets/build/img/svg/*.png'
+                ]
             }
         },
 
@@ -210,7 +205,7 @@ module.exports = function (grunt) {
         browserSync: {
             dev: {
                 bsFiles: {
-                    src: ['assets/css/build/*.css', 'assets/js/build/*.js', '*.php']
+                    src: ['assets/build/css/*.css', 'assets/build/js/*.js', '*.php']
                 },
                 options: {
                     watchTask: true
@@ -231,35 +226,46 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-uglify');
 
     grunt.loadNpmTasks('grunt-responsive-images');
-    grunt.loadNpmTasks('grunt-imageoptim');
-    grunt.loadNpmTasks('grunt-contrib-imagemin');
+    grunt.loadNpmTasks('grunt-svg2png');
     grunt.loadNpmTasks('grunt-svgmin');
-    
+    grunt.loadNpmTasks('grunt-imageoptim');
+
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-browser-sync');
 
 
     grunt.registerTask('dev', [
-        'css:dev',
-        'js:dev',
-        'images:dev',
+        'css',
+        'js',
         'browserSync',
         'watch'
     ]);
 
     grunt.registerTask('build', [
-        'css:build',
-        'js:build',
-        'images:build'
+        'css',
+        'js',
+        'images'
     ]);
 
-    grunt.registerTask('css:dev', ['sass', 'autoprefixer', 'css_mqpacker', 'stripmq', 'pixrem']);
-    grunt.registerTask('css:build', ['sass', 'autoprefixer', 'css_mqpacker', 'stripmq', 'pixrem', 'cssmin']);
 
-    grunt.registerTask('js:dev', ['concat']);
-    grunt.registerTask('js:build', ['concat', 'uglify']);
+    grunt.registerTask('css', [
+        'sass', 
+        'autoprefixer', 
+        'css_mqpacker', 
+        'stripmq', 
+        'pixrem', 
+        'cssmin'
+    ]);
 
-    grunt.registerTask('images:dev', ['responsive_images']);
-    grunt.registerTask('images:build', ['imagemin', 'svgmin', 'imageoptim'])
+    grunt.registerTask('js', [
+        'concat',
+        'uglify'
+    ]);
 
+    grunt.registerTask('images', [
+        'responsive_images',
+        'svg2png',
+        'svgmin',
+        'imageoptim'
+    ]);
 };
