@@ -50,7 +50,7 @@ label[for] {
 
 =========================================================== */
 
-select-wrap {
+.select-wrap {
 	position: relative;
 }
 
@@ -64,7 +64,7 @@ select {
 	-moz-appearance: none;
 }
 
-select-wrap:after {
+.select-wrap:after {
 	color: $border-colour;
 	content: '\25BE';
 	padding: 12rem 15rem;

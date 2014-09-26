@@ -9,9 +9,7 @@
 	display: inline-block;
 	line-height: 1;
 	padding: 1rem 1.5rem;
-	transition: background $speed ease, 
-				border $speed ease, 
-				color $speed ease;
+	transition: background $speed ease, border $speed ease, color $speed ease;
 }
 
 .button--large {
