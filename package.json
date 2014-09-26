@@ -14,8 +14,8 @@
     "grunt-imageoptim": "~1.4.1",
     "grunt-responsive-images": "~0.1.3",
     "grunt-stripmq": "0.0.5",
+    "grunt-svg2png": "~0.2.5",
     "grunt-svgmin": "~0.3.0",
-    "grunt-pixrem": "~0.1.2",
-    "grunt-contrib-imagemin": "~0.8.1"
+    "grunt-pixrem": "~0.1.2"
   }
 }

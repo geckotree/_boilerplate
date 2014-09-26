@@ -157,14 +157,13 @@ module.exports = function (grunt) {
                 }]
             }
         },
-        imageoptim: {
-            myTask: {
-                options: {
-                    jpegMini: false,
-                    imageAlpha: false,
-                    quitAfter: false
-                },
-                src: ['assets/build/img/*/*.{png,gif,jpg}']
+        svg2png: {
+            all: {
+                files: [{ 
+                    cwd: 'assets/img/svg/', 
+                    src: ['*.svg'], 
+                    dest: 'assets/build/img/svg/'
+                }]
             }
         },
         svgmin: {
@@ -183,6 +182,19 @@ module.exports = function (grunt) {
                     dest: 'assets/build/img/svg/',
                     ext: '.svg'
                 }]
+            }
+        },
+        imageoptim: {
+            myTask: {
+                options: {
+                    jpegMini: false,
+                    imageAlpha: false,
+                    quitAfter: false
+                },
+                src: [
+                    'assets/build/img/bitmap/*.{png,gif,jpg}',
+                    'assets/build/img/svg/*.png'
+                ]
             }
         },
 
@@ -214,9 +226,10 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-uglify');
 
     grunt.loadNpmTasks('grunt-responsive-images');
-    grunt.loadNpmTasks('grunt-imageoptim');
+    grunt.loadNpmTasks('grunt-svg2png');
     grunt.loadNpmTasks('grunt-svgmin');
-    
+    grunt.loadNpmTasks('grunt-imageoptim');
+
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-browser-sync');
 
@@ -251,6 +264,7 @@ module.exports = function (grunt) {
 
     grunt.registerTask('images', [
         'responsive_images',
+        'svg2png',
         'svgmin',
         'imageoptim'
     ]);
