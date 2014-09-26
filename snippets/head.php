@@ -12,9 +12,6 @@
 	<meta name="robots" content="index, follow"> <!-- http://www.robotstxt.org -->
 	<link rel="author" href=""> <!-- http://humanstxt.org -->
 
-	<script type="text/javascript" src="//use.typekit.net/dmp1bpt.js"></script>
-	<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
-
 	<!--[if lt IE 9]>
 		<script type="text/javascript" src="assets/build/js/html5shiv.min.js"></script>
 		<link rel="stylesheet" href="assets/build/css/style-ie.min.css" />
