@@ -1,0 +1,46 @@
+/* ===========================================================
+
+	# MEDIA
+
+=========================================================== */
+
+img {
+  	max-width: 100%;
+  	vertical-align: top;
+}
+
+.media--large {
+	margin: $padding--small 0;
+	position: relative;
+
+	img {
+		border-radius: $border-radius;
+		width: 100%;
+	}
+}
+
+@include respond-min( $mq-medium ) {
+
+	.media--large {
+		margin: $padding--medium 0;
+	}
+
+}
+
+@include respond-min( $mq-large ) {
+
+	.media--large {
+		margin-left: -7.5%;
+		width: 115%;
+	}
+
+}
+
+@include respond-min( $mq-x-large ) {
+
+	.media--large {
+		margin-left: -15%;
+		width: 130%;
+	}
+
+}

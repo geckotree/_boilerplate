@@ -1,31 +1,48 @@
 /* ===========================================================
 
-	#TABLES
+  # TABLES
 
 =========================================================== */
 
-.table-responsive {
+.table {
+	width: 100%;
+
+	table {
+		width: 100%;
+		text-align: left;
+	}
+
+	th,
+	td {
+		padding: 1rem 2rem;
+		text-align: left;
+	}
+}
+
+.table--scroll {
 	overflow-y: hidden;
 	overflow-x: auto;
+	position: relative;
 	-ms-overflow-style: -ms-autohiding-scrollbar;
 	-webkit-overflow-scrolling: touch;
-	width: 100%;
 }
 
-table {
-	border-bottom: $border-width solid $border-colour;
-	border-collapse: collapse;
-	border-spacing: 0;
-	width: 100%;
-}
+@include respond-max( $mq-medium ) {
 
-th, td {
-	border-top: $border-width solid $border-colour;
-	padding: 1.5rem 2rem;
-	text-align: left;
-	vertical-align: top;
-}
+	.table--stacked {
+		thead {
+			display: none;
+		}
 
-th {
-	font-weight: 600;
+		td {
+			display: block;
+
+			&:before {
+				content: attr( data-label ) ': ';
+				display: inline-block;
+				width: 50%;
+			}
+		}
+	}
+
 }

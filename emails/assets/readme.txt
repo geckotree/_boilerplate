@@ -1,1 +1,0 @@
-This is where assets for emails will go

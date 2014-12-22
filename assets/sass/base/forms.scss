@@ -1,36 +1,42 @@
 /* ===========================================================
 
-	#FORMS
+	# FORMS
 
 =========================================================== */
 
-input[type="text"],
+.input,
 select,
 textarea {
 	background: none;
 	border: $border-width solid $border-colour;
 	border-radius: $border-radius;
-	margin: 0;
-	padding: 1rem;
-	transition: border $speed ease;
+	padding: 1rem 1.5rem;
+	resize: none;
+	transition: border $transition-speed ease;
 	width: 100%;
+
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	-ms-appearance: none;
+	-o-appearance: none;
+	appearance: none;
 
 	&:focus {
 		border-color: $pri;
 	}
 }
 
+textarea {
+	overflow: auto; // Hide scrollbar IE
+}
 
 
-/* ===========================================================
 
-	#LABEL
-
-=========================================================== */
+//= LABEL ====================================================
 
 label {
 	display: block;
-	padding-top: $line-height;
+	margin-top: $line-height;
 	padding-bottom: $line-height / 2;
 
 	&:first-child {
@@ -42,112 +48,89 @@ label[for] {
 	cursor: pointer;
 }
 
-
-
-/* ===========================================================
-
-	#SELECT
-
-=========================================================== */
-
-.select-wrap {
-	position: relative;
-}
-
-select {
-	background: none;
-	position: relative;
-	text-indent: 1px;
-	text-overflow: '';
-	z-index: 1;
-	-webkit-appearance: none;
-	-moz-appearance: none;
-}
-
-.select-wrap:after {
+.label__note {
 	color: $border-colour;
-	content: '\25BE';
-	padding: 12rem 15rem;
-	position: absolute;
-	right: 0;
-	top: 0;
+	float: right;
+	font-size: .8em;
+	font-style: italic;
 }
 
 
 
-/* ===========================================================
+//= SELECT ===================================================
 
-	#TEXTAREA
-
-=========================================================== */
-
-textarea {
-	resize: none;
-}
-
-
-
-/* ===========================================================
-
-	#RADIO & CHECKBOX
-
-=========================================================== */
-
-input[type="radio"],
-input[type="checkbox"] {
-	width: 2rem;
-	height: 2rem;
-
-	background: $border-colour;
-	color: #fff;
-	cursor: pointer;
-	line-height: 1;
+.select {
+	position: relative;
 	vertical-align: middle;
-	transition: background $speed, border $speed;
-	-webkit-appearance: none;
-	-moz-appearance: none;
+	z-index: 1;
 
-	&:before {
-		content: '';
+	select {
+		position: relative;
+		text-indent: .01px;
+		text-overflow: '';
+		z-index: 1;
+
+		&::-ms-expand {
+		    display: none;
+		}
+
+		.lt-ie10 & {
+			padding-right: 1rem;
+		}
 	}
 
-	&:hover {
-		background: $sec;
-	}
+	&:after {
+		background: $background-colour;
+		border-radius: 0 $border-radius - $border-width $border-radius - $border-width 0;
+		box-sizing: border-box;
+		color: $border-colour;
+		content: '\25BE';
+		display: block;
+		height: calc( 100% - .2rem );
+		padding: 1rem 1.5rem;
+		position: absolute;
+		pointer-events: none;
+		right: $border-width;
+		top: $border-width;
+		z-index: 0;
 
-	&:checked {
-		background: $pri;
-
-		&:before {
-			content: '\2713';
+		.lt-ie10 & {
+			display: none;
 		}
 	}
 }
 
-input[type="radio"] {
-	border-radius: 50%;
-}
-
-input[type="checkbox"] {
-	
+// FireFox 30 hide native down arrow
+:-moz-any( .select ):after {
+	z-index: 1;
 }
 
 
-/* ===========================================================
 
-	#PLACEHOLDER
+//= BUTTON ===================================================
 
-=========================================================== */
+.input + .button,
+.select + .button,
+textarea + .button {
+	margin-top: $line-height * 2;
+}
+
+
+
+//= PLACEHOLDER ==============================================
 
 ::-webkit-input-placeholder {
-   color: $pri;
+   color: $border-colour;
 }
+
 :-moz-placeholder { // Firefox 18-
-   color: $pri;  
+   color: $border-colour;
 }
+
 ::-moz-placeholder {  // Firefox 19+
-   color: $pri;  
+   color: $border-colour;
 }
-:-ms-input-placeholder {  
-   color: $pri;
+
+:-ms-input-placeholder {
+   color: $border-colour;
 }

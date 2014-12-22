@@ -1,53 +1,33 @@
+@charset 'UTF-8';
+
 /* ===========================================================
-                                              
-        ,--.           ,--.               
- ,---.,-'  '-.,--. ,--.|  | ,---.  ,---.  
-(  .-''-.  .-' \  '  / |  || .-. :(  .-'  
-.-'  `) |  |    \   '  |  |\   --..-'  `) 
-`----'  `--'  .-'  /   `--' `----'`----'  
-              `---'                       
 
-Authors: Rob & Kev Simpson
+                    ,--.            ,--.
+ ,---.  ,---.  ,---.|  |,-. ,---. ,-'  '-.,--.--. ,---.  ,---.
+| .-. || .-. :| .--'|     /| .-. |'-.  .-'|  .--'| .-. :| .-. :
+' '-' '\   --.\ `--.|  \  \' '-' '  |  |  |  |   \   --.\   --.
+.`-  /  `----' `---'`--'`--'`---'   `--'  `--'    `----' `----'
+`---'
 
+Version: 	1.0.0
+Authors: 	Rob Simpson & Kev Simpson
 
-/* TOOLS
 =========================================================== */
-@import "tools/variables.scss";
-@import "tools/grid.scss";
-@import "tools/utils.scss";
-@import "tools/responsive.scss";
-@import "tools/reset.scss";
-@import "tools/helpers.scss";
 
-/* TYPOGRAPHY
-=========================================================== */
-@import "typography/base.scss";
-@import "typography/headings.scss";
-@import "typography/anchor.scss";
-@import "typography/lists.scss";
-@import "typography/small.scss";
+@import 'utils/variables.scss',
+		'utils/mixins';
 
-/* BASE
-=========================================================== */
-@import "base/wrappers.scss";
-@import "base/buttons.scss";
-@import "base/images.scss";
-@import "base/icons.scss";
-@import "base/figure.scss";
-@import "base/forms.scss";
-@import "base/tables.scss";
+@import 'base/reset',
+		'base/text',
+		'base/headings',
+		'base/anchor',
+		'base/buttons',
+		'base/lists',
+		'base/forms',
+		'base/tables',
+		'base/media';
 
-/* MODULES
-=========================================================== */
-@import "modules/header.scss";
-@import "modules/nav.scss";
-@import "modules/footer.scss";
-
-/* PAGES
-=========================================================== */
-@import "pages/home.scss";
-
-/* PLEASE DON'T REMOVE
-=========================================================== */
-@import "tools/mq.scss";
+@import 'layout/page',
+		'layout/wrap',
+		'layout/section';
 
