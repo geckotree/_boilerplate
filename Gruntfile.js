@@ -248,32 +248,40 @@ module.exports = function (grunt) {
 
 
 	grunt.registerTask('dev', [
-		'css',
-		'js',
+		'css:dev',
+		'js:dev',
 		'browserSync',
 		'watch'
 	]);
 
 	grunt.registerTask('build', [
-		'css',
-		'js',
+		'css:build',
+		'js:build',
 		'images'
 	]);
 
 
-	grunt.registerTask('css', [
+	grunt.registerTask('css:dev', [
 		'sass',
 		'autoprefixer',
 		'css_mqpacker',
 		'stripmq',
-		'pixrem',
+		'pixrem'
+	]);
+
+	grunt.registerTask('js:dev', [
+		'requirejs',
+		'jshint',
+		'concat'
+	]);
+
+	grunt.registerTask('css:build', [
+		'css:dev',
 		'cssmin'
 	]);
 
-	grunt.registerTask('js', [
-		'requirejs',
-		'jshint',
-		'concat',
+	grunt.registerTask('js:build', [
+		'js:dev',
 		'uglify'
 	]);
 
