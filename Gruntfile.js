@@ -9,7 +9,6 @@ module.exports = function (grunt) {
 		watch: {
 			css: {
 				files: [
-					//'<%= pkg.assetsFolder %>/sass/*/*.scss',
 					'<%= pkg.assetsFolder %>/sass/**/**/*.scss'
 				],
 				tasks: [
@@ -23,7 +22,6 @@ module.exports = function (grunt) {
 			},
 			js: {
 				files: [
-					//'<%= pkg.assetsFolder %>/js/*.js',
 					'<%= pkg.assetsFolder %>/js/**/*.js'
 				],
 				tasks: [
