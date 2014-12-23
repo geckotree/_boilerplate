@@ -1,4 +1,6 @@
 define( function() {
+	'use strict';
+
 	var Header = function() {
 		this._$html = document.querySelector( 'html' );
 		this._$body = document.querySelector( 'body' );

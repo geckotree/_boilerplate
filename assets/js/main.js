@@ -1,4 +1,6 @@
 define( function( require ) {
+	'use strict';
+
 	if( 'querySelector' in document &&
 		'localStorage' in window &&
 		'addEventListener' in window ) {
@@ -10,9 +12,11 @@ define( function( require ) {
 		$html.classList.remove( 'no-mustard' );
 		$html.classList.add( 'mustard' );
 
-		for( var i in $toggle ) {
-			if( $toggle[i].nodeType == 1 ) {
-				new Toggle( $toggle[i] );
+		if( $toggle.length ) {
+			for( var i in $toggle ) {
+				if( $toggle[i].nodeType == 1 ) {
+					new Toggle( $toggle[i] );
+				}
 			}
 		}
 
