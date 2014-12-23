@@ -98,7 +98,7 @@ module.exports = function (grunt) {
 				cwd: '<%= pkg.assetsFolder %>/_build/css/',
 				src: '*.css',
 				dest: '<%= pkg.assetsFolder %>/_build/css/',
-				ext: '.min.css'
+				ext: '.css'
 			}
 		},
 
@@ -135,14 +135,14 @@ module.exports = function (grunt) {
 					'<%= pkg.assetsFolder %>/_components/modernizr/modernizr.js',
 					'<%= pkg.assetsFolder %>/_components/picturefill/src/picturefill.js'
 				],
-				dest: '<%= pkg.assetsFolder %>/_build/js/head.min.js'
+				dest: '<%= pkg.assetsFolder %>/_build/js/head.js'
 			}
 		},
 		uglify: {
 			head: {
 				files: {
-					'<%= pkg.assetsFolder %>/_build/js/head.min.js': '<%= pkg.assetsFolder %>/_build/js/head.min.js'
-					//'<%= pkg.assetsFolder %>/_build/js/require.min.js': '<%= pkg.assetsFolder %>/_components/requirejs/require.js'
+					'<%= pkg.assetsFolder %>/_build/js/head.js': '<%= pkg.assetsFolder %>/_build/js/head.js',
+					'<%= pkg.assetsFolder %>/_build/js/require.js': '<%= pkg.assetsFolder %>/_components/requirejs/require.js'
 				}
 			}
 		},
