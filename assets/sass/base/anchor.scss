@@ -7,8 +7,8 @@
 a {
 	border-bottom: $border-width solid transparent;
 	color: $pri;
-	transition: border-color $transition-speed ease,
-				color $transition-speed ease;
+	transition: border-color $speed ease,
+				color $speed ease;
 
 	&:hover,
 	&:focus {
