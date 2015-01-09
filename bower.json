@@ -8,6 +8,7 @@
 	"devDependencies": {
 		"fastclick": "~1.0.3",
 		"html5shiv": "~3.7.2",
+		"lazysizes": "aFarkas/lazysizes#~0.7.1",
 		"modernizr": "~2.8.3",
 		"picturefill": "scottjehl/picturefill#~2.1.0",
 		"requirejs": "~2.1.15"

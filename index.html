@@ -19,7 +19,7 @@
 		<link rel="stylesheet" href="assets/_build/css/style.css">
 	<!--<![endif]-->
 	
-	<script src="assets/_build/js/head.min.js"></script>
+	<script src="assets/_build/js/head.js"></script>
 
 	<!-- FAVICONS -->
 	<link rel="icon" type="image/png" sizes="196x196" href="/assets/img/icons/favicon-196.png">
@@ -103,8 +103,8 @@
 
 			<h2>Nihil hic munitissimus habendi senatus locus, nihil horum?</h2>
 
-			<div class="media media--right video">
-				<iframe width="560" height="315" src="http://www.youtube.com/embed/xUebb6EyqIs" frameborder="0" allowfullscreen></iframe>
+			<div class="media media--right media--video">
+				<iframe width="560" height="315" data-src="http://www.youtube.com/embed/xUebb6EyqIs" class="lazyload" frameborder="0" allowfullscreen></iframe>
 			</div>
 
 			<hr>
@@ -143,13 +143,17 @@
 			</div>
 
 			<div class="media media--large">
-				<img srcset="http://placehold.it/2000x1000 2000w,
+				<img data-srcset="http://placehold.it/2000x1000 2000w,
 			    		http://placehold.it/1000x500 1000w,
 			            http://placehold.it/500x250 500w,
 			            http://placehold.it/250x125 250" 
-			        sizes="100vw"
+			        data-sizes="auto"
 			        src="http://placehold.it/250x125" 
-			        alt="placeholder image">
+			        alt="placeholder image"
+			        class="lazyload">
+			    <noscript>
+			        <img src="http://placehold.it/2000x1000">
+			    </noscript>
 			</div>
 
 			<p>Quae vero auctorem tractata ab fiducia dicuntur. Unam incolunt Belgae, aliam Aquitani, tertiam. Morbi odio eros, volutpat ut pharetra vitae, lobortis sed nibh. Ullamco laboris nisi ut aliquid ex ea commodi consequat. Pellentesque habitant morbi tristique senectus et netus. Idque Caesaris facere voluntate liceret: sese habere. Salutantibus vitae elit libero, a pharetra augue. Quam diu etiam furor iste tuus nos eludet? Magna pars studiorum, prodita quaerimus.</p>
