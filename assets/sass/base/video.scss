@@ -1,0 +1,25 @@
+/* ===========================================================
+
+	# VIDEO
+
+=========================================================== */
+
+.video {
+	position: relative;
+
+	&:before {
+		content: '';
+		display: block;
+		padding-top: 56.25%;
+	}
+
+	iframe,
+	object,
+	embed {
+		height: 100%;
+		left: 0;
+		position: absolute;
+		top: 0;
+		width: 100%;
+	}
+}
