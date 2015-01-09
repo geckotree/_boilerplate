@@ -140,8 +140,7 @@ module.exports = function (grunt) {
 			head: {
 				src: [
 					'<%= pkg.assetsFolder %>/_components/modernizr/modernizr.js',
-					'<%= pkg.assetsFolder %>/_components/picturefill/src/picturefill.js',
-					'<%= pkg.assetsFolder %>/_components/lazysizes/lazysizes.js'
+					'<%= pkg.assetsFolder %>/_components/picturefill/src/picturefill.js'
 				],
 				dest: '<%= pkg.assetsFolder %>/_build/js/head.js'
 			}
