@@ -96,9 +96,16 @@ module.exports = function (grunt) {
 			main: {
 				expand: true,
 				cwd: '<%= pkg.assetsFolder %>/_build/css/',
-				src: '*.css',
+				src: 'style.css',
 				dest: '<%= pkg.assetsFolder %>/_build/css/',
-				ext: '.css'
+				ext: '.min.css'
+			},
+			ie: {
+				expand: true,
+				cwd: '<%= pkg.assetsFolder %>/_build/css/',
+				src: 'ie.css',
+				dest: '<%= pkg.assetsFolder %>/_build/css/',
+				ext: '.min.css'
 			}
 		},
 
