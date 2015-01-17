@@ -3,7 +3,7 @@ module.exports = function( grunt ) {
 	grunt.initConfig({
 		bump: {
 			options: {
-				files: [ 'packages.json', 'root/assets/sass/style.scss' ],
+				files: [ 'packages.json' ],
 				commit: true,
 				commitFiles: [ '-a' ],
 				createTag: true,
