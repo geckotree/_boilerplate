@@ -1,7 +1,7 @@
-module.exports = function (grunt) {
+module.exports = function ( grunt ) {
 
 	grunt.initConfig({
-		pkg: grunt.file.readJSON('package.json'),
+		pkg: grunt.file.readJSON( 'package.json' ),
 
 		/*
 		 * WATCH
@@ -231,42 +231,42 @@ module.exports = function (grunt) {
 	});
 
 
-	grunt.loadNpmTasks('grunt-contrib-sass');
-	grunt.loadNpmTasks('grunt-autoprefixer');
-	grunt.loadNpmTasks('grunt-css-mqpacker');
-	grunt.loadNpmTasks('grunt-stripmq');
-	grunt.loadNpmTasks('grunt-pixrem');
-	grunt.loadNpmTasks('grunt-contrib-cssmin');
+	grunt.loadNpmTasks( 'grunt-contrib-sass' );
+	grunt.loadNpmTasks( 'grunt-autoprefixer' );
+	grunt.loadNpmTasks( 'grunt-css-mqpacker' );
+	grunt.loadNpmTasks( 'grunt-stripmq' );
+	grunt.loadNpmTasks( 'grunt-pixrem' );
+	grunt.loadNpmTasks( 'grunt-contrib-cssmin' );
 
-	grunt.loadNpmTasks('grunt-contrib-requirejs');
-	grunt.loadNpmTasks('grunt-contrib-jshint');
-	grunt.loadNpmTasks('grunt-contrib-concat');
-	grunt.loadNpmTasks('grunt-contrib-uglify');
+	grunt.loadNpmTasks( 'grunt-contrib-requirejs' );
+	grunt.loadNpmTasks( 'grunt-contrib-jshint' );
+	grunt.loadNpmTasks( 'grunt-contrib-concat' );
+	grunt.loadNpmTasks( 'grunt-contrib-uglify' );
 
-	grunt.loadNpmTasks('grunt-svg2png');
-	grunt.loadNpmTasks('grunt-svgmin');
-	grunt.loadNpmTasks('grunt-imageoptim');
+	grunt.loadNpmTasks( 'grunt-svg2png' );
+	grunt.loadNpmTasks( 'grunt-svgmin' );
+	grunt.loadNpmTasks( 'grunt-imageoptim' );
 
-	grunt.loadNpmTasks('grunt-contrib-watch');
-	grunt.loadNpmTasks('grunt-browser-sync');
-	grunt.loadNpmTasks('ftp-deploy');
+	grunt.loadNpmTasks( 'grunt-contrib-watch' );
+	grunt.loadNpmTasks( 'grunt-browser-sync' );
+	grunt.loadNpmTasks( 'ftp-deploy' );
 
 
-	grunt.registerTask('dev', [
+	grunt.registerTask( 'dev', [
 		'css:dev',
 		'js:dev',
 		'browserSync',
 		'watch'
 	]);
 
-	grunt.registerTask('build', [
+	grunt.registerTask( 'build', [
 		'css:build',
 		'js:build',
 		'images'
 	]);
 
 
-	grunt.registerTask('css:dev', [
+	grunt.registerTask( 'css:dev', [
 		'sass',
 		'autoprefixer',
 		'css_mqpacker',
@@ -274,29 +274,29 @@ module.exports = function (grunt) {
 		'pixrem'
 	]);
 
-	grunt.registerTask('js:dev', [
+	grunt.registerTask( 'js:dev', [
 		'requirejs',
 		'jshint',
 		'concat'
 	]);
 
-	grunt.registerTask('css:build', [
+	grunt.registerTask( 'css:build', [
 		'css:dev',
 		'cssmin'
 	]);
 
-	grunt.registerTask('js:build', [
+	grunt.registerTask( 'js:build', [
 		'js:dev',
 		'uglify'
 	]);
 
-	grunt.registerTask('images', [
+	grunt.registerTask( 'images', [
 		'svg2png',
 		'svgmin',
 		'imageoptim'
 	]);
 
-	grunt.registerTask('deploy', [
+	grunt.registerTask( 'deploy', [
 		'ftp-deploy:build'
 	]);
 };

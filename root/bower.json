@@ -1,5 +1,5 @@
 {
-	"name": "geckotree",
+	"name": "{%= name %}",
 	"version": "1.0.0",
 	"authors": [
 		"Rob Simpson <rob@geckotree.co.uk>",
