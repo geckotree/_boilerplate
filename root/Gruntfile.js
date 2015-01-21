@@ -139,6 +139,7 @@ module.exports = function ( grunt ) {
 		concat: {
 			head: {
 				src: [
+					'<%= pkg.assetsFolder %>/_components/lazysizes/lazysizes.js',
 					'<%= pkg.assetsFolder %>/_components/modernizr/modernizr.js',
 					'<%= pkg.assetsFolder %>/_components/picturefill/src/picturefill.js'
 				],
