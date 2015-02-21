@@ -1,3 +1,19 @@
+require.config({
+	paths: {
+		FastClick: '../_components/fastclick/lib/fastclick',
+		Zepto: 'lib/zepto'
+	},
+	modules: [
+		{
+			name: 'main',
+			include: [
+				'FastClick',
+				'Zepto'
+			]
+		}
+	]
+});
+
 define( function( require ) {
 	'use strict';
 
@@ -8,6 +24,7 @@ define( function( require ) {
 		var Toggle = require( 'plugins/toggle' );
 		var Carousel = require( 'plugins/carousel' );
 
+		var i;
 		var $html = document.querySelector( 'html' );
 		var $toggle = document.querySelectorAll( '[data-toggle]' );
 		var $carousel = document.querySelectorAll( '.js-carousel' );
@@ -16,7 +33,7 @@ define( function( require ) {
 		$html.classList.add( 'mustard' );
 
 		if( $toggle.length ) {
-			for( var i in $toggle ) {
+			for( i in $toggle ) {
 				if( $toggle[ i ].nodeType == 1 ) {
 					new Toggle( $toggle[ i ] );
 				}
@@ -24,9 +41,9 @@ define( function( require ) {
 		}
 
 		if( $carousel.length ) {
-			for( var x in $carousel ) {
-				if( $carousel[ x ].nodeType == 1 ) {
-					new Carousel( $carousel[ x ] );
+			for( i in $carousel ) {
+				if( $carousel[ i ].nodeType == 1 ) {
+					new Carousel( $carousel[ i ] );
 				}
 			}
 		}
