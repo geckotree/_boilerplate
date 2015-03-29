@@ -9,14 +9,14 @@ img {
   	vertical-align: top;
 }
 
-.media {
+.o-media {
 	img {
 		border-radius: $border-radius;
 		width: 100%;
 	}
 }
 
-.media--video {
+.o-media--video {
 	position: relative;
 
 	&:before {
@@ -36,29 +36,29 @@ img {
 	}
 }
 
-.media--large {
+.o-media--large {
 	margin: $padding--small 0;
 	position: relative;
 }
 
 @include respond-min( $mq-medium ) {
 
-	.media--large {
+	.o-media--large {
 		margin: $padding--medium 0;
 	}
 
-	.media--left,
-	.media--right {
+	.o-media--left,
+	.o-media--right {
 		margin-bottom: $line-height;
 		width: 40%;
 	}
 
-	.media--left {
+	.o-media--left {
 		float: left;
 		margin-right: $line-height;
 	}
 
-	.media--right {
+	.o-media--right {
 		float: right;
 		margin-left: $line-height;
 	}
@@ -67,7 +67,7 @@ img {
 
 @include respond-min( $mq-large ) {
 
-	.media--large {
+	.o-media--large {
 		margin-left: -7.5%;
 		width: 115%;
 	}
@@ -76,7 +76,7 @@ img {
 
 @include respond-min( $mq-x-large ) {
 
-	.media--large {
+	.o-media--large {
 		margin-left: -15%;
 		width: 130%;
 	}

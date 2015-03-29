@@ -4,7 +4,7 @@
 
 =========================================================== */
 
-.table {
+.c-table {
 	width: 100%;
 
 	table {
@@ -19,7 +19,7 @@
 	}
 }
 
-.table--scroll {
+.c-table--scroll {
 	overflow-y: hidden;
 	overflow-x: auto;
 	position: relative;
@@ -29,7 +29,7 @@
 
 @include respond-max( $mq-medium ) {
 
-	.table--stacked {
+	.c-table--stacked {
 		thead {
 			display: none;
 		}
