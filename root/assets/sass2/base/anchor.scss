@@ -5,11 +5,14 @@
 =========================================================== */
 
 a {
-	color: $link-colour;
-	transition: color $speed ease;
+	border-bottom: $border-width solid transparent;
+	color: $pri;
+	transition: border-color $speed ease,
+				color $speed ease;
 
 	&:hover,
 	&:focus {
-		color: $link-colour-hover;
+		border-color: $sec;
+		color: $sec;
 	}
 }
