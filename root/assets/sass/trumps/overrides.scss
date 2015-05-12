@@ -1,15 +1,9 @@
 /* ===========================================================
 
-	# ANCHOR
+  # OVERRIDES
 
 =========================================================== */
 
-a {
-	color: $link-colour;
-	transition: color $speed ease;
-
-	&:hover,
-	&:focus {
-		color: $link-colour-hover;
-	}
+.no-mustard * {
+	transition: none!important;
 }

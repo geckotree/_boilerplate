@@ -1,0 +1,64 @@
+/* ===========================================================
+
+	# VARIABLES
+
+=========================================================== */
+
+$old-ie: false!default;
+
+
+
+/* ===========================================================
+
+	# COLOURS
+
+=========================================================== */
+
+$pri: #57B275;
+$sec: #F05D71;
+$ter: #F2D044;
+
+
+
+/* ===========================================================
+
+	# BASE VALUES
+
+=========================================================== */
+
+$font-family:			Arial, Helvetica, Geneva, sans-serif;
+$font-size--small:		2rem;
+$font-size--large:		2.2rem;
+$line-height:			1.4em;
+$type-scale--small:		1.100;
+$type-scale--medium:	1.150;
+$type-scale--large:		1.200;
+
+$text-colour:			#000;
+$background-colour:		#fff;
+$border-colour:			#ccc;
+$link-colour:			$pri;
+$link-colour-hover:		$sec;
+$highlight-colour:		lighten( $pri, 20 );
+
+$padding--small:		4rem;
+$padding--medium:		6rem;
+$padding--large:		8rem;
+
+$border-width: 			.1rem;
+$border-radius: 		.4rem;
+$speed: 				.3s;
+
+
+
+/* ===========================================================
+
+	# MEDIA QUERIES
+
+=========================================================== */
+
+$mq-small: 				600px;
+$mq-medium: 			800px;
+$mq-large: 				1000px;
+$mq-x-large: 			1280px;
+$mq-xx-large: 			1500px;
