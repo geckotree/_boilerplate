@@ -5,7 +5,6 @@
 =========================================================== */
 
 .button {
-	border-bottom: none;
 	border-radius: $border-radius;
 	display: inline-block;
 	line-height: 1;
@@ -16,17 +15,17 @@
 
 	&:hover,
 	&:focus {
-		color: #fff;
+		color: $white;
 	}
 
 	&:focus {
-		box-shadow: 0 .3rem 0 0 rgba( 0, 0, 0, .1 );
+		box-shadow: 0 .3rem 0 0 rgba( $black, .1 );
 	}
 }
 
 .button--primary {
 	background: $pri;
-	color: #fff;
+	color: $white;
 
 	&:hover,
 	&:focus {
@@ -36,7 +35,7 @@
 
 .button--secondary {
 	background: $sec;
-	color: #fff;
+	color: $white;
 
 	&:hover,
 	&:focus {
@@ -46,6 +45,6 @@
 
 .button--disabled {
 	background: $border-colour;
-	color: #fff;
+	color: $white;
 	cursor: not-allowed;
 }

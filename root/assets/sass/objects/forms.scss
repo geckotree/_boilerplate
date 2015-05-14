@@ -4,51 +4,21 @@
 
 =========================================================== */
 
-.input,
-select,
-textarea {
-	background: none;
-	border: $border-width solid $border-colour;
-	border-radius: $border-radius;
-	padding: 1rem 1.5rem;
-	resize: none;
-	transition: border $speed ease;
-	width: 100%;
-
+.o-input,
+.o-select select,
+.o-textarea {
 	-webkit-appearance: none;
 	-moz-appearance: none;
 	-ms-appearance: none;
 	-o-appearance: none;
 	appearance: none;
-
-	&:focus {
-		border-color: $pri;
-	}
-}
-
-textarea {
-	overflow: auto; // Hide scrollbar IE
 }
 
 
 
 //= LABEL ====================================================
 
-label {
-	display: block;
-	margin-top: $line-height;
-	padding-bottom: $line-height / 2;
-
-	&:first-child {
-		padding-top: 0;
-	}
-}
-
-label[for] {
-	cursor: pointer;
-}
-
-.label__note {
+.o-label__note {
 	color: $border-colour;
 	float: right;
 	font-size: .8em;
@@ -59,7 +29,7 @@ label[for] {
 
 //= SELECT ===================================================
 
-.select {
+.o-select {
 	position: relative;
 	vertical-align: middle;
 	z-index: 1;
@@ -101,7 +71,7 @@ label[for] {
 }
 
 // FireFox 30 hide native down arrow
-:-moz-any( .select ):after {
+:-moz-any( .o-select ):after {
 	z-index: 1;
 }
 
@@ -109,28 +79,8 @@ label[for] {
 
 //= BUTTON ===================================================
 
-.input + .button,
-.select + .button,
-textarea + .button {
+.o-input + .button,
+.o-select + .button,
+.o-textarea + .button {
 	margin-top: $line-height * 2;
-}
-
-
-
-//= PLACEHOLDER ==============================================
-
-::-webkit-input-placeholder {
-   color: $border-colour;
-}
-
-:-moz-placeholder { // Firefox 18-
-   color: $border-colour;
-}
-
-::-moz-placeholder {  // Firefox 19+
-   color: $border-colour;
-}
-
-:-ms-input-placeholder {
-   color: $border-colour;
 }

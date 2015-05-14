@@ -12,31 +12,6 @@
 * Version: 	1.0.0
 * Authors: 	Rob Simpson & Kev Simpson
 *
-*
-* SETTINGS
-* Global...............Globally-available variables and config.
-*
-* TOOLS
-* Mixins...............Useful mixins.
-*
-* GENERIC
-* Normalize.css........A level playing field.
-* Box-sizing...........Better default `box-sizing`.
-*
-* BASE
-* Headings.............H1–H6 styles.
-*
-* OBJECTS
-* Wrappers.............Wrapping and constraining elements.
-*
-* COMPONENTS
-* Page-head............The main page header.
-* Page-foot............The main page footer.
-* Buttons..............Button elements.
-*
-* TRUMPS
-* Text.................Text helpers.
-*
 =========================================================== */
 
 @import 'settings/global.scss';
@@ -51,12 +26,15 @@
 		'base/anchor.scss',
 		'base/button.scss',
 		'base/lists.scss',
+		'base/table.scss',
 		'base/forms.scss';
 
 @import 'objects/page.scss',
 		'objects/wrap.scss',
-		'objects/section.scss';
+		'objects/section.scss',
+		'objects/buttons.scss',
+		'objects/table.scss',
+		'objects/forms.scss',
+		'objects/media.scss';
 
-@import 'components/buttons.scss',
-		'components/media.scss',
-		'components/table.scss';
+@import 'trumps/overrides.scss';

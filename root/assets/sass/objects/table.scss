@@ -4,22 +4,11 @@
 
 =========================================================== */
 
-.c-table {
+.o-table {
 	width: 100%;
-
-	table {
-		width: 100%;
-		text-align: left;
-	}
-
-	th,
-	td {
-		padding: 1rem 2rem;
-		text-align: left;
-	}
 }
 
-.c-table--scroll {
+.o-table--scroll {
 	overflow-y: hidden;
 	overflow-x: auto;
 	position: relative;
@@ -29,7 +18,7 @@
 
 @include respond-max( $mq-medium ) {
 
-	.c-table--stacked {
+	.o-table--stacked {
 		thead {
 			display: none;
 		}
@@ -39,8 +28,8 @@
 
 			&:before {
 				content: attr( data-label ) ': ';
-				display: inline-block;
-				width: 50%;
+				display: block;
+				width: 100%;
 			}
 		}
 	}

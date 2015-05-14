@@ -61,19 +61,3 @@
     position: absolute;
     width: 1px;
 }
-
-
-
-/* ===========================================================
-
-	# MIXIN CLASSES
-
-=========================================================== */
-
-.clearfix {
-	@include clearfix;
-}
-
-.hide-text {
-	@include hide-text;
-}
