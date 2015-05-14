@@ -53,8 +53,8 @@ module.exports = function ( grunt ) {
 					sourcemap: true
 				},
 				files: {
-					'<%= pkg.assetsFolder %>/_build/css/style.css': '<%= pkg.assetsFolder %>/sass/style.scss',
-					'<%= pkg.assetsFolder %>/_build/css/ie.css': '<%= pkg.assetsFolder %>/sass/ie.scss'
+					'<%= pkg.buildFolder %>/css/style.css': '<%= pkg.assetsFolder %>/sass/style.scss',
+					'<%= pkg.buildFolder %>/css/ie.css': '<%= pkg.assetsFolder %>/sass/ie.scss'
 				}
 			}
 		},
@@ -65,8 +65,8 @@ module.exports = function ( grunt ) {
 			multiple_files: {
 				expand: true,
 				flatten: true,
-				src: '<%= pkg.assetsFolder %>/_build/css/style.css',
-				dest: '<%= pkg.assetsFolder %>/_build/css'
+				src: '<%= pkg.buildFolder %>/css/style.css',
+				dest: '<%= pkg.buildFolder %>/css'
 			}
 		},
 		css_mqpacker: {
@@ -75,9 +75,9 @@ module.exports = function ( grunt ) {
 			},
 			main: {
 				expand: true,
-				cwd: '<%= pkg.assetsFolder %>/_build/css/',
+				cwd: '<%= pkg.buildFolder %>/css/',
 				src: 'style.css',
-				dest: '<%= pkg.assetsFolder %>/_build/css/'
+				dest: '<%= pkg.buildFolder %>/css/'
 			}
 		},
 		stripmq: {
@@ -87,7 +87,7 @@ module.exports = function ( grunt ) {
 			},
 			all: {
 				files: {
-					'<%= pkg.assetsFolder %>/_build/css/ie.css': [ '<%= pkg.assetsFolder %>/_build/css/ie.css' ]
+					'<%= pkg.buildFolder %>/css/ie.css': [ '<%= pkg.buildFolder %>/css/ie.css' ]
 				}
 			}
 		},
@@ -97,23 +97,23 @@ module.exports = function ( grunt ) {
 				replace: true
 			},
 			dist: {
-				src: '<%= pkg.assetsFolder %>/_build/css/ie.css',
-				dest: '<%= pkg.assetsFolder %>/_build/css/ie.css'
+				src: '<%= pkg.buildFolder %>/css/ie.css',
+				dest: '<%= pkg.buildFolder %>/css/ie.css'
 			}
 		},
 		cssmin: {
 			main: {
 				expand: true,
-				cwd: '<%= pkg.assetsFolder %>/_build/css/',
+				cwd: '<%= pkg.buildFolder %>/css/',
 				src: 'style.css',
-				dest: '<%= pkg.assetsFolder %>/_build/css/',
+				dest: '<%= pkg.buildFolder %>/css/',
 				ext: '.min.css'
 			},
 			ie: {
 				expand: true,
-				cwd: '<%= pkg.assetsFolder %>/_build/css/',
+				cwd: '<%= pkg.buildFolder %>/css/',
 				src: 'ie.css',
-				dest: '<%= pkg.assetsFolder %>/_build/css/',
+				dest: '<%= pkg.buildFolder %>/css/',
 				ext: '.min.css'
 			}
 		},
@@ -127,7 +127,7 @@ module.exports = function ( grunt ) {
 				options: {
 					mainConfigFile: '<%= pkg.assetsFolder %>/js/main.js',
 					baseUrl: '<%= pkg.assetsFolder %>/js',
-					dir: '<%= pkg.assetsFolder %>/_build/js',
+					dir: '<%= pkg.buildFolder %>/js',
 					preserveLicenseComments: false,
 					removeCombined: true,
 					optimize: 'uglify2'
@@ -150,35 +150,22 @@ module.exports = function ( grunt ) {
 				}
 			}
 		},
-		modernizr: {
-			dist: {
-				'devFile': '<%= pkg.assetsFolder %>/_components/modernizr/modernizr.js',
-				'outputFile': '<%= pkg.assetsFolder %>/_build/js/lib/modernizr.js',
-				'extra': {
-					'shiv': true,
-					'printshiv': false,
-					'load': true,
-					'mq': false,
-					'cssclasses': true
-				}
-			}
-		},
 		concat: {
 			head: {
 				src: [
 					'<%= pkg.assetsFolder %>/_components/lazysizes/lazysizes.js',
 					'<%= pkg.assetsFolder %>/js/lib/modernizr.js',
-					'<%= pkg.assetsFolder %>/_build/img/icons/grunticon.js',
+					'<%= pkg.buildFolder %>/img/icons/grunticon.js',
 					'<%= pkg.assetsFolder %>/js/lib/grunticon.js'
 				],
-				dest: '<%= pkg.assetsFolder %>/_build/js/head.js'
+				dest: '<%= pkg.buildFolder %>/js/head.js'
 			}
 		},
 		uglify: {
 			head: {
 				files: {
-					'<%= pkg.assetsFolder %>/_build/js/head.js': '<%= pkg.assetsFolder %>/_build/js/head.js',
-					'<%= pkg.assetsFolder %>/_build/js/require.js': '<%= pkg.assetsFolder %>/_components/requirejs/require.js'
+					'<%= pkg.buildFolder %>/js/head.js': '<%= pkg.buildFolder %>/js/head.js',
+					'<%= pkg.buildFolder %>/js/require.js': '<%= pkg.assetsFolder %>/_components/requirejs/require.js'
 				}
 			}
 		},
@@ -200,7 +187,7 @@ module.exports = function ( grunt ) {
 					expand: true,
 					cwd: '<%= pkg.assetsFolder %>/img/svg',
 					src: '*.svg',
-					dest: '<%= pkg.assetsFolder %>/_build/img/svg',
+					dest: '<%= pkg.buildFolder %>/img/svg',
 					ext: '.svg'
 				}]
 			},
@@ -209,7 +196,7 @@ module.exports = function ( grunt ) {
 					expand: true,
 					cwd: '<%= pkg.assetsFolder %>/img/icons',
 					src: '*.svg',
-					dest: '<%= pkg.assetsFolder %>/_build/img/icons/svg',
+					dest: '<%= pkg.buildFolder %>/img/icons/svg',
 					ext: '.svg'
 				}]
 			}
@@ -217,9 +204,9 @@ module.exports = function ( grunt ) {
 		svg2png: {
 			all: {
 				files: [{
-					cwd: '<%= pkg.assetsFolder %>/_build/img/svg',
+					cwd: '<%= pkg.buildFolder %>/img/svg',
 					src: [ '*.svg' ],
-					dest: '<%= pkg.assetsFolder %>/_build/img/png'
+					dest: '<%= pkg.buildFolder %>/img/png'
 				}]
 			}
 		},
@@ -231,10 +218,10 @@ module.exports = function ( grunt ) {
 					quitAfter: false
 				},
 				src: [
-					'<%= pkg.assetsFolder %>/_build/img/brand-icons/*.{png,gif,jpg}',
-					'<%= pkg.assetsFolder %>/_build/img/bitmap/*.{png,gif,jpg}',
-					'<%= pkg.assetsFolder %>/_build/img/svg/*.png',
-					'<%= pkg.assetsFolder %>/_build/img/icons/png/*.png'
+					'<%= pkg.buildFolder %>/img/brand-icons/*.{png,gif,jpg}',
+					'<%= pkg.buildFolder %>/img/bitmap/*.{png,gif,jpg}',
+					'<%= pkg.buildFolder %>/img/svg/*.png',
+					'<%= pkg.buildFolder %>/img/icons/png/*.png'
 				]
 			}
 		},
@@ -242,9 +229,9 @@ module.exports = function ( grunt ) {
 			icons: {
 				files: [{
 					expand: true,
-					cwd: '<%= pkg.assetsFolder %>/_build/img/icons/svg',
+					cwd: '<%= pkg.buildFolder %>/img/icons/svg',
 					src: [ '*.svg' ],
-					dest: '<%= pkg.assetsFolder %>/_build/img/icons'
+					dest: '<%= pkg.buildFolder %>/img/icons'
 				}],
 				options: {
 					cssprefix: '.icon--',
@@ -298,7 +285,7 @@ module.exports = function ( grunt ) {
 						expand: true,
 						cwd: '<%= pkg.assetsFolder %>/img/brand-icons/',
 						src: [ '*' ],
-						dest: '<%= pkg.assetsFolder %>/_build/img/brand-icons'
+						dest: '<%= pkg.buildFolder %>/img/brand-icons'
 					}
 				]
 			},
@@ -308,7 +295,7 @@ module.exports = function ( grunt ) {
 						expand: true,
 						cwd: '<%= pkg.assetsFolder %>/img/bitmap/',
 						src: [ '*' ],
-						dest: '<%= pkg.assetsFolder %>/_build/img/bitmap'
+						dest: '<%= pkg.buildFolder %>/img/bitmap'
 					}
 				]
 			}
@@ -317,8 +304,8 @@ module.exports = function ( grunt ) {
 			dev: {
 				bsFiles: {
 					src: [
-						'<%= pkg.assetsFolder %>/_build/css/*.css',
-						'<%= pkg.assetsFolder %>/_build/js/*.js',
+						'<%= pkg.buildFolder %>/css/*.css',
+						'<%= pkg.buildFolder %>/js/*.js',
 						'*.html'
 					]
 				},
