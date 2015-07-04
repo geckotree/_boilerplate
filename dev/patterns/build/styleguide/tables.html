@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
     <head>
-        <title>Styleguide - Geckotree Pattern Library</title>
+        <title>Tables - Geckotree Pattern Library</title>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -149,70 +149,125 @@
 		</header>
 
 		<aside class="gko-ptrnlab-side-content" role="complementary">
-			<h1>Styleguide</h1>
-			
+			<h1>Tables</h1>
+			<p>Mauris convallis hendrerit ipsum quis ultricies. Aliquam ornare tincidunt ultrices. Sed tincidunt lacus et diam gravida ultricies. Suspendisse eu nunc a turpis molestie mollis eget in ligula. Vestibulum ultrices lacinia erat et tristique. Suspendisse orci magna, tincidunt ut velit sed, elementum maximus lacus.</p><p>Suspendisse ut erat vitae neque facilisis tempor. Donec pellentesque, turpis at semper mollis, justo nisl pharetra risus, consequat ornare turpis enim at odio.</p>
 		</aside>
 
 		<main class="gko-ptrnlab-main-content">
 			
 
-<ul class="gko-ptrnlab-list">
-	<li class="gko-ptrnlab-list__item">
-		<h2>Styleguide</h2>
-		<ul class="gko-ptrnlab-list">
-			
-				
-			
-				
-					<li class="gko-ptrnlab-list__item" data-status="">
-						<a href="colour.html" class="gko-ptrnlab-list__link">
-							Colours
-							<span class="gko-ptrnlab-status gko-ptrnlab-status--in-progress" title="in-progress"></span>
-						</a>
-					</li>
-				
-			
-				
-					<li class="gko-ptrnlab-list__item" data-status="">
-						<a href="forms.html" class="gko-ptrnlab-list__link">
-							Forms
-							<span class="gko-ptrnlab-status gko-ptrnlab-status--in-progress" title="in-progress"></span>
-						</a>
-					</li>
-				
-			
-				
-					<li class="gko-ptrnlab-list__item" data-status="">
-						<a href="icons.html" class="gko-ptrnlab-list__link">
-							Icons
-							<span class="gko-ptrnlab-status gko-ptrnlab-status--not-started" title="not-started"></span>
-						</a>
-					</li>
-				
-			
-				
-			
-				
-					<li class="gko-ptrnlab-list__item" data-status="">
-						<a href="tables.html" class="gko-ptrnlab-list__link">
-							Tables
-							<span class="gko-ptrnlab-status gko-ptrnlab-status--not-started" title="not-started"></span>
-						</a>
-					</li>
-				
-			
-				
-					<li class="gko-ptrnlab-list__item" data-status="">
-						<a href="typography.html" class="gko-ptrnlab-list__link">
-							Typography
-							<span class="gko-ptrnlab-status gko-ptrnlab-status--in-progress" title="in-progress"></span>
-						</a>
-					</li>
-				
-			
-		</ul>
-	</li>
-</ul>
+<section class="gko-ptrnlab-colours">
+	<header class="gko-ptrnlab-doc-header">
+		<h1 class="gko-ptrnlab-doc-header__heading"><span style="font-weight:normal;">Scroll</span> table</h1>
+	</header>
+
+	<div class="table-responsive table-responsive--scroll">
+    <table summary="Table Summary">
+        <caption>Table Caption</caption>
+        <thead>
+            <tr>
+                
+                    <th scope="col">Column Heading 1</th>
+                
+                    <th scope="col">Column Heading 2</th>
+                
+                    <th scope="col">Column Heading 3</th>
+                
+            </tr>
+        </thead>
+        <tbody>
+            
+                <tr>
+                    
+                        <td>Quisque placerat facilisis egestas cillum dolore.</td>
+                    
+                        <td>At nos hinc posthac, sitientis piros Afros.</td>
+                    
+                        <td>Integer legentibus erat a ante historiarum dapibus.</td>
+                    
+                </tr>
+            
+                <tr>
+                    
+                        <td>Salutantibus vitae elit libero, a pharetra augue.</td>
+                    
+                        <td>Quo usque tandem abutere, Catilina, patientia nostra?</td>
+                    
+                        <td>Qui ipsorum lingua Celtae, nostra Galli appellantur.</td>
+                    
+                </tr>
+            
+                <tr>
+                    
+                        <td>Quo usque tandem abutere, Catilina, patientia nostra?</td>
+                    
+                        <td>Quid securi etiam tamquam eu fugiat nulla pariatur.</td>
+                    
+                        <td>Quid securi etiam tamquam eu fugiat nulla pariatur.</td>
+                    
+                </tr>
+            
+        </tbody>
+    </table>
+</div>
+</section>
+
+<section class="gko-ptrnlab-colours">
+	<header class="gko-ptrnlab-doc-header">
+		<h1 class="gko-ptrnlab-doc-header__heading"><span style="font-weight:normal;">Stacked</span> table</h1>
+	</header>
+
+	<div class="table-responsive table-responsive--stacked">
+    <table summary="Table Summary">
+        <caption>Table Caption</caption>
+        <thead>
+            <tr>
+                
+                    <th scope="col">Column Heading 1</th>
+                
+                    <th scope="col">Column Heading 2</th>
+                
+                    <th scope="col">Column Heading 3</th>
+                
+            </tr>
+        </thead>
+        <tbody>
+            
+                <tr>
+                    
+                        <td data-label="Column Heading 1">Quisque placerat facilisis egestas cillum dolore.</td>
+                    
+                        <td data-label="Column Heading 2">At nos hinc posthac, sitientis piros Afros.</td>
+                    
+                        <td data-label="Column Heading 3">Integer legentibus erat a ante historiarum dapibus.</td>
+                    
+                </tr>
+            
+                <tr>
+                    
+                        <td data-label="Column Heading 1">Salutantibus vitae elit libero, a pharetra augue.</td>
+                    
+                        <td data-label="Column Heading 2">Quo usque tandem abutere, Catilina, patientia nostra?</td>
+                    
+                        <td data-label="Column Heading 3">Qui ipsorum lingua Celtae, nostra Galli appellantur.</td>
+                    
+                </tr>
+            
+                <tr>
+                    
+                        <td data-label="Column Heading 1">Quo usque tandem abutere, Catilina, patientia nostra?</td>
+                    
+                        <td data-label="Column Heading 2">Quid securi etiam tamquam eu fugiat nulla pariatur.</td>
+                    
+                        <td data-label="Column Heading 3">Quid securi etiam tamquam eu fugiat nulla pariatur.</td>
+                    
+                </tr>
+            
+        </tbody>
+    </table>
+</div>
+</section>
+
 
 		</main>
 	</body>

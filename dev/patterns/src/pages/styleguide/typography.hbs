@@ -1,40 +1,74 @@
 ---
 title: Typography
 category: styleguide
+status: in-progress
+description: "<p>Mauris convallis hendrerit ipsum quis ultricies. Aliquam ornare tincidunt ultrices. Sed tincidunt lacus et diam gravida ultricies. Suspendisse eu nunc a turpis molestie mollis eget in ligula. Vestibulum ultrices lacinia erat et tristique. Suspendisse orci magna, tincidunt ut velit sed, elementum maximus lacus.</p><p>Suspendisse ut erat vitae neque facilisis tempor. Donec pellentesque, turpis at semper mollis, justo nisl pharetra risus, consequat ornare turpis enim at odio.</p>"
 ---
 
-{{#each typography.headings}}
-	{{{heading}}}
-{{/each}}
+<section class="gko-ptrnlab-colours">
+	<header class="gko-ptrnlab-doc-header">
+		<h1 class="gko-ptrnlab-doc-header__heading"><span style="font-weight:normal;">Heading</span> elements</h1>
+	</header>
 
-{{{typography.paragraph}}}
-
-<ul>
-	{{#each typography.unordered-list}}
-		<li>
-			{{item}}
-			{{#if child-unordered-list}}
-				<ul>
-					{{#each child-unordered-list}}
-						<li>{{item}}</li>
-					{{/each}}
-				</ul>
-			{{/if}}
-		</li>
+	{{#each typography.headings}}
+		{{{heading}}}
 	{{/each}}
-</ul>
+</section>
 
-<ol>
-	{{#each typography.ordered-list}}
-		<li>
-			{{item}}
-			{{#if child-ordered-list}}
-				<ol>
-					{{#each child-ordered-list}}
-						<li>{{item}}</li>
-					{{/each}}
-				</ol>
-			{{/if}}
-		</li>
-	{{/each}}
-</ol>
+<section class="gko-ptrnlab-colours">
+	<header class="gko-ptrnlab-doc-header">
+		<h1 class="gko-ptrnlab-doc-header__heading"><span style="font-weight:normal;">Intro</span> text</h1>
+	</header>
+
+	{{{typography.intro}}}
+</section>
+
+<section class="gko-ptrnlab-colours">
+	<header class="gko-ptrnlab-doc-header">
+		<h1 class="gko-ptrnlab-doc-header__heading"><span style="font-weight:normal;">Paragraph</span> text</h1>
+	</header>
+
+	{{{typography.paragraph}}}
+</section>
+
+<section class="gko-ptrnlab-colours">
+	<header class="gko-ptrnlab-doc-header">
+		<h1 class="gko-ptrnlab-doc-header__heading"><span style="font-weight:normal;">Unordered</span> list</h1>
+	</header>
+
+	<ul>
+		{{#each typography.unordered-list}}
+			<li>
+				{{item}}
+				{{#if child-unordered-list}}
+					<ul>
+						{{#each child-unordered-list}}
+							<li>{{item}}</li>
+						{{/each}}
+					</ul>
+				{{/if}}
+			</li>
+		{{/each}}
+	</ul>
+</section>
+
+<section class="gko-ptrnlab-colours">
+	<header class="gko-ptrnlab-doc-header">
+		<h1 class="gko-ptrnlab-doc-header__heading"><span style="font-weight:normal;">Ordered</span> list</h1>
+	</header>
+
+	<ol>
+		{{#each typography.ordered-list}}
+			<li>
+				{{item}}
+				{{#if child-ordered-list}}
+					<ol>
+						{{#each child-ordered-list}}
+							<li>{{item}}</li>
+						{{/each}}
+					</ol>
+				{{/if}}
+			</li>
+		{{/each}}
+	</ol>
+</section>

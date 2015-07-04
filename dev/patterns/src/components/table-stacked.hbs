@@ -1,0 +1,21 @@
+<div class="table-responsive table-responsive--stacked">
+    <table summary="Table Summary">
+        <caption>{{caption}}</caption>
+        <thead>
+            <tr>
+                {{#each headings}}
+                    <th scope="col">{{heading}}</th>
+                {{/each}}
+            </tr>
+        </thead>
+        <tbody>
+            {{#each rows}}
+                <tr>
+                    {{#each row}}
+                        <td data-label="{{heading}}">{{data}}</td>
+                    {{/each}}
+                </tr>
+            {{/each}}
+        </tbody>
+    </table>
+</div>
