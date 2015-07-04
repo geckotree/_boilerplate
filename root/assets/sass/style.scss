@@ -32,9 +32,10 @@
 @import 'objects/page.scss',
 		'objects/wrap.scss',
 		'objects/section.scss',
-		'objects/buttons.scss',
 		'objects/table.scss',
 		'objects/forms.scss',
 		'objects/media.scss';
+
+@import 'components/buttons.scss';
 
 @import 'trumps/overrides.scss';

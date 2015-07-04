@@ -41,7 +41,6 @@ img {
 }
 
 @include respond-min( $mq-medium ) {
-
 	.o-media--large {
 		margin: $padding--medium 0;
 	}
@@ -66,23 +65,18 @@ img {
 		float: right;
 		margin-left: $line-height;
 	}
-
 }
 
 @include respond-min( $mq-large ) {
-
 	.o-media--large {
 		margin-left: -7.5%;
 		width: 115%;
 	}
-
 }
 
 @include respond-min( $mq-x-large ) {
-
 	.o-media--large {
 		margin-left: -15%;
 		width: 130%;
 	}
-
 }

@@ -1,7 +1,4 @@
 .sass-cache
-.ftppass
-
-assets/_components
-assets/_build
 node_modules
-sitespeed-result
+assets/bower_components
+assets/build

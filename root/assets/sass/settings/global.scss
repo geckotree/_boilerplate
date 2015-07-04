@@ -6,6 +6,9 @@
 
 $old-ie: false!default;
 
+$base-dir: '/assets';
+$fonts: '#{$base-dir}/fonts';
+$images: '#{$base-dir}/build/img';
 
 
 /* ===========================================================
@@ -37,6 +40,7 @@ $type-scale--small:		1.125;
 $type-scale--medium:	1.150;
 $type-scale--large:		1.175;
 
+$heading-colour:		$black;
 $text-colour:			$black;
 $background-colour:		$white;
 $border-colour:			#ccc;
@@ -53,6 +57,13 @@ $border-width: 			.2rem;
 $border-radius: 		.4rem;
 $speed: 				.3s;
 
+$wrap--medium:			75rem;
+$wrap--large:			92rem;
+$wrap--x-large:			140rem;
+
+$active-scale-small:	scale( .98 );
+$active-scale-medium:	scale( .95 );
+
 
 
 /* ===========================================================
@@ -61,7 +72,7 @@ $speed: 				.3s;
 
 =========================================================== */
 
-$mq-small: 				600px;
+$mq-small: 				500px;
 $mq-medium: 			800px;
 $mq-large: 				1000px;
 $mq-x-large: 			1280px;

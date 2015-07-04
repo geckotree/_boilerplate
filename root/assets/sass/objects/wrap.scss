@@ -7,8 +7,13 @@
 .o-wrap {
 	margin-left: auto;
 	margin-right: auto;
-	padding-left: 1.5rem;
-	padding-right: 1.5rem;
+	padding-left: 2rem;
+	padding-right: 2rem;
+
+	.o-wrap {
+		padding-left: 0;
+		padding-right: 0;
+	}
 }
 
 .o-wrap--center {
@@ -17,31 +22,20 @@
 }
 
 .o-wrap--medium {
-	max-width: 75rem;
+	max-width: $wrap--medium;
 }
 
 .o-wrap--large {
-	max-width: 92rem;
+	max-width: $wrap--large;
 }
 
 .o-wrap--x-large {
-	max-width: 140rem;
+	max-width: $wrap--x-large;
 }
 
 @include respond-min( $mq-small ) {
-
-	.o-wrap {
-		padding-left: 2rem;
-		padding-right: 2rem;
-	}
-
-}
-
-@include respond-min( $mq-medium ) {
-
 	.o-wrap {
 		padding-left: 4rem;
 		padding-right: 4rem;
 	}
-
 }
