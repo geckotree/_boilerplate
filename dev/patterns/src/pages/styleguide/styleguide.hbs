@@ -1,0 +1,22 @@
+---
+title: Styleguide
+category: none
+---
+
+<ul class="gko-ptrnlab-list">
+	<li class="gko-ptrnlab-list__item">
+		<h2>Styleguide</h2>
+		<ul class="gko-ptrnlab-list">
+			{{#each pages}}
+				{{#is data.category "styleguide"}}
+					<li class="gko-ptrnlab-list__item" data-status="">
+						<a href="{{basename}}.html" class="gko-ptrnlab-list__link">
+							{{default data.title basename}}
+							<span class="gko-ptrnlab-status gko-ptrnlab-status--{{default data.status "not-started"}}" title="{{default data.status "not-started"}}"></span>
+						</a>
+					</li>
+				{{/is}}
+			{{/each}}
+		</ul>
+	</li>
+</ul>

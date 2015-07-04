@@ -4,6 +4,12 @@
 
 =========================================================== */
 
+.o-form__field {
+	& + & {
+		margin-top: 2rem;
+	}
+}
+
 .o-input,
 .o-select select,
 .o-textarea {
@@ -75,6 +81,30 @@
 	z-index: 1;
 }
 
+
+//= FIELDSET =================================================
+
+.o-fieldset__legend {
+	margin-bottom: $line-height / 2;
+	width: 100%;
+
+	.o-label__note {
+		float: none;
+	}
+}
+
+.o-fieldset__list {
+	list-style: none;
+}
+
+.o-fieldset__item {
+	margin: 0;
+
+	input {
+		margin: 0 .5rem 0 0;
+		width: auto;
+	}
+}
 
 
 //= BUTTON ===================================================

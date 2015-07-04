@@ -1,0 +1,827 @@
+/* ===========================================================
+*
+*                      ,--.            ,--.
+*   ,---.  ,---.  ,---.|  |,-. ,---. ,-'  '-.,--.--. ,---.  ,---.
+*  | .-. || .-. :| .--'|     /| .-. |'-.  .-'|  .--'| .-. :| .-. :
+*  ' '-' '\   --.\ `--.|  \  \' '-' '  |  |  |  |   \   --.\   --.
+*  .`-  /  `----' `---'`--'`--'`---'   `--'  `--'    `----' `----'
+*  `---'
+*
+* Version: 	1.0.0
+* Authors: 	Rob Simpson & Kev Simpson
+*
+=========================================================== */
+/* ===========================================================
+
+	# VARIABLES
+
+=========================================================== */
+/* ===========================================================
+
+	# COLOURS
+
+=========================================================== */
+/* ===========================================================
+
+	# BASE VALUES
+
+=========================================================== */
+/* ===========================================================
+
+	# MEDIA QUERIES
+
+=========================================================== */
+/* ===========================================================
+
+	# MIXINS
+
+=========================================================== */
+/* ===========================================================
+
+  # RESET
+
+=========================================================== */
+@-ms-viewport {
+  width: device-width;
+}
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strike, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video, button {
+  border: none;
+  font: inherit;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+* {
+  box-sizing: border-box;
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* ===========================================================
+
+  # JS access to breakpoints:
+  https://github.com/JoshBarr/js-media-queries
+
+=========================================================== */
+/* ===========================================================
+
+	# TEXT
+
+=========================================================== */
+html {
+  font-size: 62.5%;
+}
+
+body,
+input,
+textarea,
+select,
+button {
+  color: black;
+  font-family: Arial, Helvetica, Geneva, sans-serif;
+  font-size: 1.8rem;
+  -webkit-font-feature-settings: 'liga', 'kern';
+  font-feature-settings: 'liga', 'kern';
+  -webkit-font-kerning: normal;
+  font-kerning: normal;
+  line-height: 1.4em;
+}
+
+p + p,
+p + ul,
+p + ol,
+ul + p,
+ol + p {
+  margin-top: 1.4em;
+}
+
+p + h1,
+p + h2,
+p + h3,
+p + h4,
+p + h5,
+p + h6,
+ul + h1,
+ul + h2,
+ul + h3,
+ul + h4,
+ul + h5,
+ul + h6 {
+  padding-top: 1.4em;
+}
+
+em {
+  font-style: italic;
+}
+
+::-moz-selection {
+  background: #9dd2ae;
+}
+
+::selection {
+  background: #9dd2ae;
+}
+
+::-moz-selection {
+  background: #9dd2ae;
+}
+/* ===========================================================
+
+	# HEADINGS
+
+=========================================================== */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.tera,
+.giga,
+.mega,
+.alpha,
+.beta,
+.gamma,
+.delta,
+.epsilon,
+.zeta {
+  font-weight: bold;
+  line-height: 1;
+}
+
+.tera {
+  font-size: 4.61841rem;
+  padding-bottom: 2.30921rem;
+}
+
+.giga {
+  font-size: 4.10526rem;
+  padding-bottom: 2.05263rem;
+}
+
+.mega {
+  font-size: 3.64912rem;
+  padding-bottom: 1.82456rem;
+}
+
+h1,
+.alpha {
+  font-size: 3.24366rem;
+  padding-bottom: 1.62183rem;
+}
+
+h2,
+.beta {
+  font-size: 2.88325rem;
+  padding-bottom: 1.44163rem;
+}
+
+h3,
+.gamma {
+  font-size: 2.56289rem;
+  padding-bottom: 1.28145rem;
+}
+
+h4,
+.delta {
+  font-size: 2.27812rem;
+  padding-bottom: 1.13906rem;
+}
+
+h5,
+.epsilon {
+  font-size: 2.025rem;
+  padding-bottom: 1.0125rem;
+}
+
+h6,
+.zeta {
+  font-size: 1.8rem;
+  padding-bottom: 0.9rem;
+}
+
+.intro {
+  font-size: 2.27812rem;
+  line-height: 1.3;
+}
+/* ===========================================================
+
+	# ANCHOR
+
+=========================================================== */
+a {
+  color: #57b275;
+  transition: color 0.3s ease;
+}
+a:hover, a:focus {
+  color: #f05d71;
+}
+a:active {
+  -webkit-transform: scale(0.95);
+  -ms-transform: scale(0.95);
+  transform: scale(0.95);
+}
+
+/* ===========================================================
+
+	# BUTTON
+
+=========================================================== */
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* ===========================================================
+
+	# LISTS
+
+=========================================================== */
+li {
+  margin: 0.35em 3rem;
+}
+li:first-child {
+  margin-top: 0;
+}
+li:last-child {
+  margin-bottom: 0;
+}
+li > ul,
+li > ol {
+  margin-top: 0.35em;
+}
+
+/* ===========================================================
+
+	# TABLE
+
+=========================================================== */
+table {
+  border: 0.2rem solid #cccccc;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th,
+td {
+  border-bottom: 0.2rem solid #cccccc;
+  padding: 1rem 2rem;
+  text-align: left;
+}
+
+/* ===========================================================
+
+	# FORMS
+
+=========================================================== */
+input,
+select,
+textarea {
+  background: none;
+  border: 0.2rem solid #cccccc;
+  border-radius: 0.4rem;
+  padding: 1rem 1.5rem;
+  transition: border 0.3s ease;
+  width: 100%;
+}
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: #57b275;
+}
+
+textarea {
+  overflow: auto;
+  resize: none;
+}
+
+label {
+  display: block;
+  padding-bottom: 1rem;
+}
+
+label[for] {
+  cursor: pointer;
+}
+
+::-webkit-input-placeholder {
+  color: #cccccc;
+}
+
+:-moz-placeholder {
+  color: #cccccc;
+}
+
+::-moz-placeholder {
+  color: #cccccc;
+}
+
+:-ms-input-placeholder {
+  color: #cccccc;
+}
+
+/* ===========================================================
+
+	# PAGE
+
+=========================================================== */
+html {
+  height: 100%;
+}
+
+.o-page {
+  background: white;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+.o-page__content {
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  width: 100%;
+}
+
+/* ===========================================================
+
+	# WRAP
+
+=========================================================== */
+.o-wrap {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+.o-wrap .o-wrap {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.o-wrap--center {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.o-wrap--medium {
+  max-width: 75rem;
+}
+
+.o-wrap--large {
+  max-width: 92rem;
+}
+
+.o-wrap--x-large {
+  max-width: 140rem;
+}
+/* ===========================================================
+
+	# SECTION
+
+=========================================================== */
+.o-section {
+  padding-bottom: 4rem;
+  padding-top: 4rem;
+}
+/* ===========================================================
+
+  # TABLES
+
+=========================================================== */
+.o-table {
+  width: 100%;
+}
+
+.o-table--scroll {
+  overflow-y: hidden;
+  overflow-x: auto;
+  position: relative;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+  -webkit-overflow-scrolling: touch;
+}
+/* ===========================================================
+
+	# FORMS
+
+=========================================================== */
+.o-form__field + .o-form__field {
+  margin-top: 2rem;
+}
+
+.o-input,
+.o-select select,
+.o-textarea {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+}
+
+.o-label__note {
+  color: #cccccc;
+  float: right;
+  font-size: .8em;
+  font-style: italic;
+}
+
+.o-select {
+  position: relative;
+  vertical-align: middle;
+  z-index: 1;
+}
+.o-select select {
+  position: relative;
+  text-indent: .01px;
+  text-overflow: '';
+  z-index: 1;
+}
+.o-select select::-ms-expand {
+  display: none;
+}
+.lt-ie10 .o-select select {
+  padding-right: 1rem;
+}
+.o-select:after {
+  background: white;
+  border-radius: 0 0.2rem 0.2rem 0;
+  box-sizing: border-box;
+  color: #cccccc;
+  content: '\25BE';
+  display: block;
+  height: calc(100% - .2rem );
+  padding: 1rem 1.5rem;
+  position: absolute;
+  pointer-events: none;
+  right: 0.2rem;
+  top: 0.2rem;
+  z-index: 0;
+}
+.lt-ie10 .o-select:after {
+  display: none;
+}
+
+:-moz-any(.o-select):after {
+  z-index: 1;
+}
+
+.o-fieldset__legend {
+  margin-bottom: 0.7em;
+  width: 100%;
+}
+.o-fieldset__legend .o-label__note {
+  float: none;
+}
+
+.o-fieldset__list {
+  list-style: none;
+}
+
+.o-fieldset__item {
+  margin: 0;
+}
+.o-fieldset__item input {
+  margin: 0 .5rem 0 0;
+  width: auto;
+}
+
+.o-input + .button,
+.o-select + .button,
+.o-textarea + .button {
+  margin-top: 2.8em;
+}
+
+/* ===========================================================
+
+	# MEDIA
+
+=========================================================== */
+img {
+  max-width: 100%;
+  vertical-align: top;
+}
+
+.o-media img {
+  width: 100%;
+}
+
+.o-media--video {
+  position: relative;
+}
+.o-media--video:before {
+  content: '';
+  display: block;
+  padding-top: 56.25%;
+}
+.o-media--video iframe,
+.o-media--video object,
+.o-media--video embed {
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.o-media--large {
+  margin: 4rem 0;
+  position: relative;
+}
+/* ===========================================================
+
+	# BUTTONS
+
+=========================================================== */
+.c-button {
+  border-radius: 0.4rem;
+  display: inline-block;
+  line-height: 1;
+  padding: 1.5rem 2rem;
+  transition: background 0.3s ease, box-shadow 0.3s ease, color 0.3s ease, -webkit-transform 0.3s ease;
+  transition: background 0.3s ease, box-shadow 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+.c-button:hover, .c-button:focus {
+  color: white;
+}
+.c-button:active {
+  -webkit-transform: scale(0.98);
+  -ms-transform: scale(0.98);
+  transform: scale(0.98);
+}
+
+.c-button--primary {
+  background: #57b275;
+  color: white;
+}
+.c-button--primary:hover, .c-button--primary:focus {
+  background: #f05d71;
+}
+
+.c-button--secondary {
+  background: #f05d71;
+  color: white;
+}
+.c-button--secondary:hover, .c-button--secondary:focus {
+  background: #f2d044;
+}
+
+.c-button--disabled {
+  background: #cccccc;
+  color: white;
+  cursor: not-allowed;
+}
+
+/* ===========================================================
+
+  # OVERRIDES
+
+=========================================================== */
+.clearfix:before, .clearfix:after {
+  content: "";
+  display: table;
+}
+.clearfix:after {
+  clear: both;
+}
+
+.hide-text {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+/*# sourceMappingURL=style.css.map */
+@media only screen and (min-width: 500px) {
+  html {
+    font-family: 'small';
+  }
+  .tera {
+    font-size: 6.11805rem;
+    padding-bottom: 3.05902rem;
+  }
+
+  .giga {
+    font-size: 5.32004rem;
+    padding-bottom: 2.66002rem;
+  }
+
+  .mega {
+    font-size: 4.62612rem;
+    padding-bottom: 2.31306rem;
+  }
+
+  h1,
+  .alpha {
+    font-size: 4.02271rem;
+    padding-bottom: 2.01136rem;
+  }
+
+  h2,
+  .beta {
+    font-size: 3.49801rem;
+    padding-bottom: 1.74901rem;
+  }
+
+  h3,
+  .gamma {
+    font-size: 3.04175rem;
+    padding-bottom: 1.52087rem;
+  }
+
+  h4,
+  .delta {
+    font-size: 2.645rem;
+    padding-bottom: 1.3225rem;
+  }
+
+  h5,
+  .epsilon {
+    font-size: 2.3rem;
+    padding-bottom: 1.15rem;
+  }
+
+  h6,
+  .zeta {
+    font-size: 2rem;
+    padding-bottom: 1rem;
+  }
+
+  .intro {
+    font-size: 2.645rem;
+  }
+  .o-wrap {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+  .o-section {
+    padding-bottom: 6rem;
+    padding-top: 6rem;
+  }
+}
+@media only screen and (min-width: 800px) {
+  html {
+    font-family: 'medium';
+  }
+  body,
+  input,
+  textarea,
+  select,
+  button {
+    font-size: 2rem;
+  }
+  .tera {
+    font-size: 7.26663rem;
+    padding-bottom: 3.63331rem;
+  }
+
+  .giga {
+    font-size: 6.18436rem;
+    padding-bottom: 3.09218rem;
+  }
+
+  .mega {
+    font-size: 5.26329rem;
+    padding-bottom: 2.63164rem;
+  }
+
+  h1,
+  .alpha {
+    font-size: 4.47939rem;
+    padding-bottom: 2.2397rem;
+  }
+
+  h2,
+  .beta {
+    font-size: 3.81225rem;
+    padding-bottom: 1.90613rem;
+  }
+
+  h3,
+  .gamma {
+    font-size: 3.24447rem;
+    padding-bottom: 1.62223rem;
+  }
+
+  h4,
+  .delta {
+    font-size: 2.76125rem;
+    padding-bottom: 1.38063rem;
+  }
+
+  h5,
+  .epsilon {
+    font-size: 2.35rem;
+    padding-bottom: 1.175rem;
+  }
+
+  h6,
+  .zeta {
+    font-size: 2rem;
+    padding-bottom: 1rem;
+  }
+
+  .intro {
+    font-size: 2.76125rem;
+  }
+  .o-section {
+    padding-bottom: 8rem;
+    padding-top: 8rem;
+  }
+  .o-media--large {
+    margin: 6rem 0;
+  }
+
+  .o-media--left,
+  .o-media--right {
+    margin-bottom: 1.4em;
+    margin-top: 1.4em;
+    width: 40%;
+  }
+  .o-media--left + *,
+  .o-media--right + * {
+    margin-top: 1.4em;
+  }
+
+  .o-media--left {
+    float: left;
+    margin-right: 1.4em;
+  }
+
+  .o-media--right {
+    float: right;
+    margin-left: 1.4em;
+  }
+}
+@media only screen and (min-width: 1000px) {
+  html {
+    font-family: 'large';
+  }
+  .o-media--large {
+    margin-left: -7.5%;
+    width: 115%;
+  }
+}
+@media only screen and (min-width: 1280px) {
+  html {
+    font-family: 'x-large';
+  }
+  .o-media--large {
+    margin-left: -15%;
+    width: 130%;
+  }
+}
+@media only screen and (min-width: 1500px) {
+  html {
+    font-family: 'xx-large';
+  }
+}
+@media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dppx) {
+  p {
+    letter-spacing: 0.01em;
+    word-spacing: 0.01em;
+  }
+}
+
+@media only screen and (max-width: 799px) {
+  .o-table--stacked thead {
+    display: none;
+  }
+  .o-table--stacked td {
+    display: block;
+  }
+  .o-table--stacked td:before {
+    content: attr(data-label) ": ";
+    display: block;
+    width: 100%;
+  }
+}

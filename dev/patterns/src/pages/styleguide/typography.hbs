@@ -1,0 +1,40 @@
+---
+title: Typography
+category: styleguide
+---
+
+{{#each typography.headings}}
+	{{{heading}}}
+{{/each}}
+
+{{{typography.paragraph}}}
+
+<ul>
+	{{#each typography.unordered-list}}
+		<li>
+			{{item}}
+			{{#if child-unordered-list}}
+				<ul>
+					{{#each child-unordered-list}}
+						<li>{{item}}</li>
+					{{/each}}
+				</ul>
+			{{/if}}
+		</li>
+	{{/each}}
+</ul>
+
+<ol>
+	{{#each typography.ordered-list}}
+		<li>
+			{{item}}
+			{{#if child-ordered-list}}
+				<ol>
+					{{#each child-ordered-list}}
+						<li>{{item}}</li>
+					{{/each}}
+				</ol>
+			{{/if}}
+		</li>
+	{{/each}}
+</ol>

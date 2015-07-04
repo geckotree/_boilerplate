@@ -1,0 +1,135 @@
+---
+title: Forms
+category: styleguide
+status: in-progress
+description: "<p>Mauris convallis hendrerit ipsum quis ultricies. Aliquam ornare tincidunt ultrices. Sed tincidunt lacus et diam gravida ultricies. Suspendisse eu nunc a turpis molestie mollis eget in ligula. Vestibulum ultrices lacinia erat et tristique. Suspendisse orci magna, tincidunt ut velit sed, elementum maximus lacus.</p><p>Suspendisse ut erat vitae neque facilisis tempor. Donec pellentesque, turpis at semper mollis, justo nisl pharetra risus, consequat ornare turpis enim at odio.</p>"
+---
+
+<section class="gko-ptrnlab-colours">
+	<header class="gko-ptrnlab-doc-header">
+		<h1 class="gko-ptrnlab-doc-header__heading"><span style="font-weight:normal;">Input</span> fields</h1>
+	</header>
+
+	<div class="o-form__field">
+		<label class="o-label" for="textInput">Text input <span class="o-label__note">Optional</span></label>
+		<input class="o-input" id="textInput" type="text" placeholder="Placeholder">
+	</div>
+
+	<div class="o-form__field">
+		<label class="o-label" for="passwordInput">Password</label>
+		<input class="o-input" id="passwordInput" type="password" placeholder="&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;">
+	</div>
+
+	<div class="o-form__field">
+		<label class="o-label" for="websiteInput">Website</label>
+		<input class="o-input" id="websiteInput" type="url" placeholder="http://website.co.uk">
+	</div>
+
+	<div class="o-form__field">
+		<label class="o-label" for="emailInput">Email</label>
+		<input class="o-input" id="emailInput" type="email" placeholder="name@company.co.uk">
+	</div>
+
+	<div class="o-form__field">
+		<label class="o-label" for="searchInput">Search</label>
+		<input class="o-input" id="searchInput" type="search" placeholder="Search...">
+	</div>
+
+	<div class="o-form__field">
+		<label class="o-label" for="textarea">Message <span class="o-label__note">Optional</span></label>
+		<textarea class="o-textarea" id="textarea" cols="30" rows="10" placeholder="Enter your message here..."></textarea>
+	</div>
+</section>
+
+<section class="gko-ptrnlab-colours">
+	<header class="gko-ptrnlab-doc-header">
+		<h1 class="gko-ptrnlab-doc-header__heading"><span style="font-weight:normal;">Select</span> field</h1>
+	</header>
+
+	<div class="o-form__field">
+		<label class="o-label" for="select">Select</label>
+		<div class="o-select">
+			<select id="select" name="select">
+				<option value="n/a" selected>Please select...</option>
+				<option value="Option one">Option one</option>
+				<option value="Option two">Option two</option>
+			</select>
+		</div>
+	</div>
+</section>
+
+<section class="gko-ptrnlab-colours">
+	<header class="gko-ptrnlab-doc-header">
+		<h1 class="gko-ptrnlab-doc-header__heading"><span style="font-weight:normal;">Check</span>box</h1>
+	</header>
+
+	<div class="o-form__field">
+		<fieldset class="o-fieldset">
+			<legend class="o-fieldset__legend">Checkbox <span class="o-label__note">Optional</span></legend>
+			<ul class="o-fieldset__list">
+				<li class="o-fieldset__item">
+					<label class="o-label" for="checkbox1">
+						<input id="checkbox1" type="checkbox"> Choice A
+					</label>
+				</li>
+				<li class="o-fieldset__item">
+					<label class="o-label" for="checkbox2">
+						<input id="checkbox2" type="checkbox"> Choice B
+					</label>
+				</li>
+				<li class="o-fieldset__item">
+					<label class="o-label" for="checkbox3">
+						<input id="checkbox3" type="checkbox"> Choice C
+					</label>
+				</li>
+			</ul>
+		</fieldset>
+	</div>
+</section>
+
+<section class="gko-ptrnlab-colours">
+	<header class="gko-ptrnlab-doc-header">
+		<h1 class="gko-ptrnlab-doc-header__heading"><span style="font-weight:normal;">Radio</span> buttons</h1>
+	</header>
+
+	<div class="o-form__field">
+		<fieldset class="o-fieldset">
+			<legend class="o-fieldset__legend">Radio buttons</legend>
+			<ul class="o-fieldset__list">
+				<li class="o-fieldset__item">
+					<label class="o-label" for="radio1">
+						<input id="radio1" name="radio" type="radio"> Option 1
+					</label>
+				</li>
+				<li class="o-fieldset__item">
+					<label class="o-label" for="radio2">
+						<input id="radio2" name="radio" type="radio"> Option 2
+					</label>
+				</li>
+				<li class="o-fieldset__item">
+					<label class="o-label" for="radio3">
+						<input id="radio3" name="radio" type="radio"> Option 3
+					</label>
+				</li>
+			</ul>
+		</fieldset>
+	</div>
+</section>
+
+<section class="gko-ptrnlab-colours">
+	<header class="gko-ptrnlab-doc-header">
+		<h1 class="gko-ptrnlab-doc-header__heading"><span style="font-weight:normal;">Buttons</span></h1>
+	</header>
+
+	<div class="o-form__field">
+		<button class="c-button c-button--primary">Primary Button</button>
+	</div>
+
+	<div class="o-form__field">
+		<button class="c-button c-button--secondary">Secondary Button</button>
+	</div>
+
+	<div class="o-form__field">
+		<button class="c-button c-button--disabled" disabled="disabled">Disabled Button</button>
+	</div>
+</section>

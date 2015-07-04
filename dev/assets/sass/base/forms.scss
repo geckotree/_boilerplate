@@ -26,12 +26,7 @@ textarea {
 
 label {
 	display: block;
-	margin-top: $line-height;
-	padding-bottom: $line-height / 2;
-
-	&:first-child {
-		margin-top: 0;
-	}
+	padding-bottom: 1rem;
 }
 
 label[for] {

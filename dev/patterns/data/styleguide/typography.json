@@ -1,0 +1,66 @@
+{
+	"headings": [
+		{
+			"heading": "<h1>Heading Level 1</h1>"
+		},
+		{
+			"heading": "<h2>Heading Level 2</h2>"
+		},
+		{
+			"heading": "<h3>Heading Level 3</h3>"
+		},
+		{
+			"heading": "<h4>Heading Level 4</h4>"
+		},
+		{
+			"heading": "<h5>Heading Level 5</h5>"
+		},
+		{
+			"heading": "<h6>Heading Level 6</h6>"
+		}
+	],
+
+	"paragraph": "<p>A <strong>paragraph</strong> (from the Greek paragraphos, <em>to write beside</em> or <em>written beside</em>) is a <a href=''>self-contained</a> unit of a discourse in writing dealing with a particular point or idea. A paragraph consists of one or more sentences. Though not required by the syntax of any language, paragraphs are usually an expected part of formal writing, used to organize longer prose.</p>",
+
+	"unordered-list": [
+		{
+			"item": "This is a list item in an unordered list"
+		},
+		{
+			"item": "An unordered list is a list in which the sequence of items is not important. Sometimes, an unordered list is a bulleted list. And this is a long list item in an unordered list that can wrap onto a new line."
+		},
+		{
+			"item": "Lists can be nested inside of each other",
+			"child-unordered-list": [
+				{
+					"item": "This is a nested list item"
+				},
+				{
+					"item": "This is another nested list item in an unordered list"
+				}
+			]
+		}
+	],
+
+	"ordered-list": [
+		{
+			"item": "This is a list item in an ordered list"
+		},
+		{
+			"item": "An ordered list is a list in which the sequence of items is important. An ordered list does not necessarily contain sequence characters."
+		},
+		{
+			"item": "Lists can be nested inside of each other",
+			"child-ordered-list": [
+				{
+					"item": "This is a nested list item"
+				},
+				{
+					"item": "This is another nested list item in an ordered list"
+				}
+			]
+		}
+	],
+
+	"blockquote": ""
+}

@@ -1,0 +1,66 @@
+{
+	"core-colours": [
+		{
+			"colour": "green",
+			"cmyk": "68 6 72 0",
+			"rgb": "87 178 117",
+			"hex": "57B275"
+		},
+		{
+			"colour": "pink",
+			"cmyk": "0 79 42 0",
+			"rgb": "240 93 113",
+			"hex": "F05D71"
+		},
+		{
+			"colour": "yellow",
+			"cmyk": "6 15 85 0",
+			"rgb": "242 208 68",
+			"hex": "F2D044"
+		},
+		{
+			"colour": "dark",
+			"cmyk": "70 64 63 64",
+			"rgb": "45 45 45",
+			"hex": "2D2D2D"
+		}
+	],
+	"extended-colours": [
+		{
+			"colour": "orange",
+			"cmyk": "244 158 57",
+			"rgb": "87 178 117",
+			"hex": "F49E39"
+		},
+		{
+			"colour": "red",
+			"cmyk": "1 85 67 0",
+			"rgb": "236 78 80",
+			"hex": "EC4E50"
+		},
+		{
+			"colour": "purple",
+			"cmyk": "50 50 0 0",
+			"rgb": "134 130 215",
+			"hex": "8682D7"
+		},
+		{
+			"colour": "blue",
+			"cmyk": "75 11 16 0",
+			"rgb": "7 171 202",
+			"hex": "07ABCA"
+		},
+		{
+			"colour": "dark 2",
+			"cmyk": "71 65 64 71",
+			"rgb": "36 36 36",
+			"hex": "242424"
+		},
+		{
+			"colour": "grey",
+			"cmyk": "47 39 39 3",
+			"rgb": "142 142 142",
+			"hex": "8E8E8E"
+		}
+	]
+}
