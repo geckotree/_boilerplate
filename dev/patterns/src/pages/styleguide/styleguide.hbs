@@ -7,16 +7,21 @@ category: none
 	<li class="gko-ptrnlab-list__item">
 		<h2>Styleguide</h2>
 		<ul class="gko-ptrnlab-list">
-			{{#each pages}}
-				{{#is data.category "styleguide"}}
-					<li class="gko-ptrnlab-list__item" data-status="">
-						<a href="{{basename}}.html" class="gko-ptrnlab-list__link">
-							{{default data.title basename}}
-							<span class="gko-ptrnlab-status gko-ptrnlab-status--{{default data.status "not-started"}}" title="{{default data.status "not-started"}}"></span>
-						</a>
-					</li>
-				{{/is}}
-			{{/each}}
+			<li class="gko-ptrnlab-list__item" data-status="">
+				<a href="typography.html" class="gko-ptrnlab-list__link">Typography</a>
+			</li>
+			<li class="gko-ptrnlab-list__item" data-status="">
+				<a href="colours.html" class="gko-ptrnlab-list__link">Colours</a>
+			</li>
+			<li class="gko-ptrnlab-list__item" data-status="">
+				<a href="icons.html" class="gko-ptrnlab-list__link">Icons</a>
+			</li>
+			<li class="gko-ptrnlab-list__item" data-status="">
+				<a href="forms.html" class="gko-ptrnlab-list__link">Forms</a>
+			</li>
+			<li class="gko-ptrnlab-list__item" data-status="">
+				<a href="tables.html" class="gko-ptrnlab-list__link">Tables</a>
+			</li>
 		</ul>
 	</li>
 </ul>

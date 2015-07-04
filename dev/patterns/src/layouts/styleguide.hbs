@@ -34,16 +34,21 @@
 							<li class="gko-ptrnlab-nav__item__item">
 								<span class="gko-ptrnlab-nav__item__item__heading gamma">Styleguide</span>
 								<ul class="gko-ptrnlab-nav__item__item__list">
-									{{#each pages}}
-										{{#is data.category "styleguide"}}
-											<li class="gko-ptrnlab-nav__item__item__item">
-												<a href="{{basename}}.html" class="gko-ptrnlab-nav__item__item__link">
-													{{default data.title basename}}
-													<span class="gko-ptrnlab-status gko-ptrnlab-status--{{default data.status "not-started"}}" title="{{default data.status "not-started"}}"></span>
-												</a>
-											</li>
-										{{/is}}
-									{{/each}}
+									<li class="gko-ptrnlab-nav__item__item__item">
+										<a href="typography.html" class="gko-ptrnlab-nav__item__item__link">Typography</a>
+									</li>
+									<li class="gko-ptrnlab-nav__item__item__item">
+										<a href="colours.html" class="gko-ptrnlab-nav__item__item__link">Colours</a>
+									</li>
+									<li class="gko-ptrnlab-nav__item__item__item">
+										<a href="icons.html" class="gko-ptrnlab-nav__item__item__link">Icons</a>
+									</li>
+									<li class="gko-ptrnlab-nav__item__item__item">
+										<a href="forms.html" class="gko-ptrnlab-nav__item__item__link">Forms</a>
+									</li>
+									<li class="gko-ptrnlab-nav__item__item__item">
+										<a href="tables.html" class="gko-ptrnlab-nav__item__item__link">Tables</a>
+									</li>
 								</ul>
 							</li>
 						</ul>
