@@ -3,15 +3,39 @@ module.exports = {
 	options: {
 		data: 'patterns/**/*.{json,yml}',
 		helpers: 'patterns/helpers/helper-*.js',
-		layout: 'patterns/src/layouts/styleguide.hbs',
+		layoutdir: 'patterns/src/layouts',
 		partials: [ 'patterns/src/components/**/*.hbs' ]
 	},
-	pages: {
+	styleguide: {
+		options: {
+			layout: 'styleguide.hbs',
+		},
 		files: [{
 			expand: true,
 			cwd: 'patterns/src/pages',
-			src: [ '**/*.hbs' ],
+			src: [
+				'styleguide/colours.hbs',
+				'styleguide/forms.hbs',
+				'styleguide/icons.hbs',
+				'styleguide/tables.hbs',
+				'styleguide/typography.hbs'
+			],
 			dest: 'patterns/build/'
 		}]
-	}
+	},
+	pages: {
+		options: {
+			layout: 'default.hbs',
+		},
+		files: [{
+			expand: true,
+			cwd: 'patterns/src/pages',
+			src: [
+				'styleguide/styleguide.hbs',
+				'components/*.hbs',
+				'pages/*.hbs'
+			],
+			dest: 'patterns/build/'
+		}]
+	},
 };
