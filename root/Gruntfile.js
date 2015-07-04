@@ -61,6 +61,7 @@ module.exports = function( grunt ) {
 	]);
 
 	grunt.registerTask( 'js:dev', [
+		'modernizr',
 		'jshint',
 		'concat'
 	]);

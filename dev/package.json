@@ -33,6 +33,7 @@
     "grunt-humans-txt": "~0.2.1",
     "grunt-imageoptim": "~1.4.1",
     "grunt-inline": "~0.3.4",
+    "grunt-modernizr": "^0.6.0",
     "grunt-pixrem": "~0.1.2",
     "grunt-responsive-images": "~0.1.6",
     "grunt-stripmq": "0.0.5",
