@@ -7,7 +7,7 @@ module.exports = {
 	prefix: {
 		expand: true,
 		flatten: true,
-		src: '<%= pkg.buildFolder %>/css/style.css',
-		dest: '<%= pkg.buildFolder %>/css'
+		src: '<%= buildFolder %>/css/style.css',
+		dest: '<%= buildFolder %>/css'
 	}
 };

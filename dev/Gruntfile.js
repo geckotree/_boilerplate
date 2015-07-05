@@ -13,7 +13,9 @@ module.exports = function( grunt ) {
 	 */
 
 	var vars = {
-		pkg: grunt.file.readJSON( 'package.json' )
+		pkg: grunt.file.readJSON( 'package.json' ),
+		assetsFolder: 'assets',
+		buildFolder: 'assets/build'
 	};
 
 

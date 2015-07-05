@@ -4,9 +4,9 @@ module.exports = {
 		files: [
 			{
 				expand: true,
-				cwd: '<%= pkg.assetsFolder %>/img/brand-icons/',
+				cwd: '<%= assetsFolder %>/img/brand-icons/',
 				src: [ '*' ],
-				dest: '<%= pkg.buildFolder %>/img/brand-icons'
+				dest: '<%= buildFolder %>/img/brand-icons'
 			}
 		]
 	},
@@ -14,9 +14,9 @@ module.exports = {
 		files: [
 			{
 				expand: true,
-				cwd: '<%= pkg.assetsFolder %>/img/bitmap/',
+				cwd: '<%= assetsFolder %>/img/bitmap/',
 				src: [ '*' ],
-				dest: '<%= pkg.buildFolder %>/img/bitmap'
+				dest: '<%= buildFolder %>/img/bitmap'
 			}
 		]
 	}

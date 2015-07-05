@@ -2,7 +2,7 @@
 module.exports = {
 	css: {
 		files: [
-			'<%= pkg.assetsFolder %>/sass/**/**/*.scss'
+			'<%= assetsFolder %>/sass/**/**/*.scss'
 		],
 		tasks: [
 			'sass',
@@ -14,7 +14,7 @@ module.exports = {
 	},
 	js: {
 		files: [
-			'<%= pkg.assetsFolder %>/js/**/*.js'
+			'<%= assetsFolder %>/js/**/*.js'
 		],
 		tasks: [
 			'jshint',
