@@ -43,6 +43,7 @@ module.exports = function( grunt ) {
 		'concurrent:cssDev',
 		'concurrent:jsDev',
 		'concurrent:patterns',
+		'todo',
 		'watch'
 	]);
 
@@ -51,6 +52,8 @@ module.exports = function( grunt ) {
 		'concurrent:jsBuild',
 		'concurrent:images',
 		'concurrent:patterns',
-		'humans_txt'
+		'todo',
+		'humans_txt',
+		'robotstxt'
 	]);
 };

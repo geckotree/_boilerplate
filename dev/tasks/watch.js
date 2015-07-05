@@ -23,5 +23,12 @@ module.exports = {
 	patterns: {
 		files: [ '<%= patternsFolder %>/**/**/*.{hbs,json}' ],
 		tasks: [ 'newer:assemble' ]
+	},
+	todo: {
+		files: [
+			'<%= assetsFolder %>/js/**/*.js',
+			'<%= assetsFolder %>/sass/**/*.scss'
+		],
+		tasks: [ 'todo' ]
 	}
 };
