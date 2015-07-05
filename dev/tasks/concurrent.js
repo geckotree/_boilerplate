@@ -1,13 +1,13 @@
 'use strict';
 module.exports = {
 	cssDev: [
-		'sass',
+		'sass:all',
 		'autoprefixer',
 		'stripmq',
 		'pixrem'
 	],
 	cssBuild: [
-		'sass',
+		'sass:all',
 		'autoprefixer',
 		'stripmq',
 		'pixrem',
@@ -33,7 +33,7 @@ module.exports = {
 		'imageoptim'
 	],
 	patterns: [
-		'assemble',
-		'clean:patterns'
+		'clean:patterns',
+		'assemble:patterns'
 	]
 };

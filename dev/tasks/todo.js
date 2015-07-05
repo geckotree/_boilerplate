@@ -7,12 +7,12 @@ module.exports = {
 			pattern: /@(todo)/,
 			color: 'blue'
 		}],
-		title: '<%= pkg.name %> TODO list:',
+		title: 'TODO list:',
 		usePackage: true
 	},
 	src: [
 		'<%= assetsFolder %>/js/**/*.js',
-		'<%= assetsFolder %>/sass/**/*.scss'
+		'<%= assetsFolder %>/sass/**/**/*.scss'
 	]
 };
 

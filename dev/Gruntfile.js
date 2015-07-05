@@ -20,7 +20,9 @@ module.exports = function( grunt ) {
 		assetsFolder: 'assets',
 		assetsBuildFolder: 'assets/build',
 		patternsFolder: 'patterns',
-		patternsBuildFolder: 'patterns/build'
+		patternsBuildFolder: 'patterns/build',
+		emailsFolder: 'emails',
+		emailsBuildFolder: 'emails/build'
 	};
 
 
@@ -55,5 +57,24 @@ module.exports = function( grunt ) {
 		'todo',
 		'humans_txt',
 		'robotstxt'
+	]);
+
+	grunt.registerTask( 'emails', [
+		'clean:emails',
+		'sass:emails',
+		'assemble:emails',
+		'premailer',
+		'clean:emailsTmp',
+		'copy:emailImages'
+	]);
+
+	grunt.registerTask( 'emailsDev', [
+		'emails',
+		'watch:emails'
+	]);
+
+	grunt.registerTask( 'emailsBuild', [
+		'emails',
+		'imageoptim:emails'
 	]);
 };

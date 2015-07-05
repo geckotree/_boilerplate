@@ -1,17 +1,4 @@
 /* ===========================================================
-*
-*                      ,--.            ,--.
-*   ,---.  ,---.  ,---.|  |,-. ,---. ,-'  '-.,--.--. ,---.  ,---.
-*  | .-. || .-. :| .--'|     /| .-. |'-.  .-'|  .--'| .-. :| .-. :
-*  ' '-' '\   --.\ `--.|  \  \' '-' '  |  |  |  |   \   --.\   --.
-*  .`-  /  `----' `---'`--'`--'`---'   `--'  `--'    `----' `----'
-*  `---'
-*
-* Version: 	1.0.0
-* Authors: 	Rob Simpson & Kev Simpson
-*
-=========================================================== */
-/* ===========================================================
 
 	# VARIABLES
 
@@ -82,6 +69,31 @@ footer, header, hgroup, menu, nav, section {
   https://github.com/JoshBarr/js-media-queries
 
 =========================================================== */
+@media only screen and (min-width: 500px) {
+  html {
+    font-family: 'small';
+  }
+}
+@media only screen and (min-width: 800px) {
+  html {
+    font-family: 'medium';
+  }
+}
+@media only screen and (min-width: 1000px) {
+  html {
+    font-family: 'large';
+  }
+}
+@media only screen and (min-width: 1280px) {
+  html {
+    font-family: 'x-large';
+  }
+}
+@media only screen and (min-width: 1500px) {
+  html {
+    font-family: 'xx-large';
+  }
+}
 /* ===========================================================
 
 	# TEXT
@@ -99,11 +111,13 @@ button {
   color: black;
   font-family: Arial, Helvetica, Geneva, sans-serif;
   font-size: 1.8rem;
-  -webkit-font-feature-settings: 'liga', 'kern';
   font-feature-settings: 'liga', 'kern';
-  -webkit-font-kerning: normal;
   font-kerning: normal;
   line-height: 1.4em;
+}
+
+body {
+  font-size: 1.8em;
 }
 
 p + p,
@@ -133,16 +147,32 @@ em {
   font-style: italic;
 }
 
-::-moz-selection {
-  background: #9dd2ae;
-}
-
 ::selection {
   background: #9dd2ae;
 }
 
 ::-moz-selection {
   background: #9dd2ae;
+}
+
+@media only screen and (min-width: 800px) {
+  body,
+  input,
+  textarea,
+  select,
+  button {
+    font-size: 2rem;
+  }
+
+  body {
+    font-size: 2em;
+  }
+}
+@media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dppx) {
+  p {
+    letter-spacing: 0.01em;
+    word-spacing: 0.01em;
+  }
 }
 /* ===========================================================
 
@@ -223,6 +253,119 @@ h6,
   font-size: 2.27812rem;
   line-height: 1.3;
 }
+
+@media only screen and (min-width: 500px) {
+  .tera {
+    font-size: 6.11805rem;
+    padding-bottom: 3.05902rem;
+  }
+
+  .giga {
+    font-size: 5.32004rem;
+    padding-bottom: 2.66002rem;
+  }
+
+  .mega {
+    font-size: 4.62612rem;
+    padding-bottom: 2.31306rem;
+  }
+
+  h1,
+  .alpha {
+    font-size: 4.02271rem;
+    padding-bottom: 2.01136rem;
+  }
+
+  h2,
+  .beta {
+    font-size: 3.49801rem;
+    padding-bottom: 1.74901rem;
+  }
+
+  h3,
+  .gamma {
+    font-size: 3.04175rem;
+    padding-bottom: 1.52087rem;
+  }
+
+  h4,
+  .delta {
+    font-size: 2.645rem;
+    padding-bottom: 1.3225rem;
+  }
+
+  h5,
+  .epsilon {
+    font-size: 2.3rem;
+    padding-bottom: 1.15rem;
+  }
+
+  h6,
+  .zeta {
+    font-size: 2rem;
+    padding-bottom: 1rem;
+  }
+
+  .intro {
+    font-size: 2.645rem;
+  }
+}
+@media only screen and (min-width: 800px) {
+  .tera {
+    font-size: 7.26663rem;
+    padding-bottom: 3.63331rem;
+  }
+
+  .giga {
+    font-size: 6.18436rem;
+    padding-bottom: 3.09218rem;
+  }
+
+  .mega {
+    font-size: 5.26329rem;
+    padding-bottom: 2.63164rem;
+  }
+
+  h1,
+  .alpha {
+    font-size: 4.47939rem;
+    padding-bottom: 2.2397rem;
+  }
+
+  h2,
+  .beta {
+    font-size: 3.81225rem;
+    padding-bottom: 1.90613rem;
+  }
+
+  h3,
+  .gamma {
+    font-size: 3.24447rem;
+    padding-bottom: 1.62223rem;
+  }
+
+  h4,
+  .delta {
+    font-size: 2.76125rem;
+    padding-bottom: 1.38063rem;
+  }
+
+  h5,
+  .epsilon {
+    font-size: 2.35rem;
+    padding-bottom: 1.175rem;
+  }
+
+  h6,
+  .zeta {
+    font-size: 2rem;
+    padding-bottom: 1rem;
+  }
+
+  .intro {
+    font-size: 2.76125rem;
+  }
+}
 /* ===========================================================
 
 	# ANCHOR
@@ -236,8 +379,6 @@ a:hover, a:focus {
   color: #f05d71;
 }
 a:active {
-  -webkit-transform: scale(0.95);
-  -ms-transform: scale(0.95);
   transform: scale(0.95);
 }
 
@@ -351,18 +492,12 @@ html {
 
 .o-page {
   background: white;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
   flex-direction: column;
   min-height: 100%;
 }
 
 .o-page__content {
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
   flex: 1 1 auto;
   width: 100%;
 }
@@ -399,6 +534,13 @@ html {
 .o-wrap--x-large {
   max-width: 140rem;
 }
+
+@media only screen and (min-width: 500px) {
+  .o-wrap {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+}
 /* ===========================================================
 
 	# SECTION
@@ -407,6 +549,19 @@ html {
 .o-section {
   padding-bottom: 4rem;
   padding-top: 4rem;
+}
+
+@media only screen and (min-width: 500px) {
+  .o-section {
+    padding-bottom: 6rem;
+    padding-top: 6rem;
+  }
+}
+@media only screen and (min-width: 800px) {
+  .o-section {
+    padding-bottom: 8rem;
+    padding-top: 8rem;
+  }
 }
 /* ===========================================================
 
@@ -423,6 +578,20 @@ html {
   position: relative;
   -ms-overflow-style: -ms-autohiding-scrollbar;
   -webkit-overflow-scrolling: touch;
+}
+
+@media only screen and (max-width: 799px) {
+  .o-table--stacked thead {
+    display: none;
+  }
+  .o-table--stacked td {
+    display: block;
+  }
+  .o-table--stacked td:before {
+    content: attr(data-label) ": ";
+    display: block;
+    width: 100%;
+  }
 }
 /* ===========================================================
 
@@ -552,6 +721,45 @@ img {
   margin: 4rem 0;
   position: relative;
 }
+
+@media only screen and (min-width: 800px) {
+  .o-media--large {
+    margin: 6rem 0;
+  }
+
+  .o-media--left,
+  .o-media--right {
+    margin-bottom: 1.4em;
+    margin-top: 1.4em;
+    width: 40%;
+  }
+  .o-media--left + *,
+  .o-media--right + * {
+    margin-top: 1.4em;
+  }
+
+  .o-media--left {
+    float: left;
+    margin-right: 1.4em;
+  }
+
+  .o-media--right {
+    float: right;
+    margin-left: 1.4em;
+  }
+}
+@media only screen and (min-width: 1000px) {
+  .o-media--large {
+    margin-left: -7.5%;
+    width: 115%;
+  }
+}
+@media only screen and (min-width: 1280px) {
+  .o-media--large {
+    margin-left: -15%;
+    width: 130%;
+  }
+}
 /* ===========================================================
 
 	# BUTTONS
@@ -562,15 +770,12 @@ img {
   display: inline-block;
   line-height: 1;
   padding: 1.5rem 2rem;
-  transition: background 0.3s ease, box-shadow 0.3s ease, color 0.3s ease, -webkit-transform 0.3s ease;
   transition: background 0.3s ease, box-shadow 0.3s ease, color 0.3s ease, transform 0.3s ease;
 }
 .c-button:hover, .c-button:focus {
   color: white;
 }
 .c-button:active {
-  -webkit-transform: scale(0.98);
-  -ms-transform: scale(0.98);
   transform: scale(0.98);
 }
 
@@ -621,207 +826,3 @@ img {
 }
 
 /*# sourceMappingURL=style.css.map */
-@media only screen and (min-width: 500px) {
-  html {
-    font-family: 'small';
-  }
-  .tera {
-    font-size: 6.11805rem;
-    padding-bottom: 3.05902rem;
-  }
-
-  .giga {
-    font-size: 5.32004rem;
-    padding-bottom: 2.66002rem;
-  }
-
-  .mega {
-    font-size: 4.62612rem;
-    padding-bottom: 2.31306rem;
-  }
-
-  h1,
-  .alpha {
-    font-size: 4.02271rem;
-    padding-bottom: 2.01136rem;
-  }
-
-  h2,
-  .beta {
-    font-size: 3.49801rem;
-    padding-bottom: 1.74901rem;
-  }
-
-  h3,
-  .gamma {
-    font-size: 3.04175rem;
-    padding-bottom: 1.52087rem;
-  }
-
-  h4,
-  .delta {
-    font-size: 2.645rem;
-    padding-bottom: 1.3225rem;
-  }
-
-  h5,
-  .epsilon {
-    font-size: 2.3rem;
-    padding-bottom: 1.15rem;
-  }
-
-  h6,
-  .zeta {
-    font-size: 2rem;
-    padding-bottom: 1rem;
-  }
-
-  .intro {
-    font-size: 2.645rem;
-  }
-  .o-wrap {
-    padding-left: 4rem;
-    padding-right: 4rem;
-  }
-  .o-section {
-    padding-bottom: 6rem;
-    padding-top: 6rem;
-  }
-}
-@media only screen and (min-width: 800px) {
-  html {
-    font-family: 'medium';
-  }
-  body,
-  input,
-  textarea,
-  select,
-  button {
-    font-size: 2rem;
-  }
-  .tera {
-    font-size: 7.26663rem;
-    padding-bottom: 3.63331rem;
-  }
-
-  .giga {
-    font-size: 6.18436rem;
-    padding-bottom: 3.09218rem;
-  }
-
-  .mega {
-    font-size: 5.26329rem;
-    padding-bottom: 2.63164rem;
-  }
-
-  h1,
-  .alpha {
-    font-size: 4.47939rem;
-    padding-bottom: 2.2397rem;
-  }
-
-  h2,
-  .beta {
-    font-size: 3.81225rem;
-    padding-bottom: 1.90613rem;
-  }
-
-  h3,
-  .gamma {
-    font-size: 3.24447rem;
-    padding-bottom: 1.62223rem;
-  }
-
-  h4,
-  .delta {
-    font-size: 2.76125rem;
-    padding-bottom: 1.38063rem;
-  }
-
-  h5,
-  .epsilon {
-    font-size: 2.35rem;
-    padding-bottom: 1.175rem;
-  }
-
-  h6,
-  .zeta {
-    font-size: 2rem;
-    padding-bottom: 1rem;
-  }
-
-  .intro {
-    font-size: 2.76125rem;
-  }
-  .o-section {
-    padding-bottom: 8rem;
-    padding-top: 8rem;
-  }
-  .o-media--large {
-    margin: 6rem 0;
-  }
-
-  .o-media--left,
-  .o-media--right {
-    margin-bottom: 1.4em;
-    margin-top: 1.4em;
-    width: 40%;
-  }
-  .o-media--left + *,
-  .o-media--right + * {
-    margin-top: 1.4em;
-  }
-
-  .o-media--left {
-    float: left;
-    margin-right: 1.4em;
-  }
-
-  .o-media--right {
-    float: right;
-    margin-left: 1.4em;
-  }
-}
-@media only screen and (min-width: 1000px) {
-  html {
-    font-family: 'large';
-  }
-  .o-media--large {
-    margin-left: -7.5%;
-    width: 115%;
-  }
-}
-@media only screen and (min-width: 1280px) {
-  html {
-    font-family: 'x-large';
-  }
-  .o-media--large {
-    margin-left: -15%;
-    width: 130%;
-  }
-}
-@media only screen and (min-width: 1500px) {
-  html {
-    font-family: 'xx-large';
-  }
-}
-@media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dppx) {
-  p {
-    letter-spacing: 0.01em;
-    word-spacing: 0.01em;
-  }
-}
-
-@media only screen and (max-width: 799px) {
-  .o-table--stacked thead {
-    display: none;
-  }
-  .o-table--stacked td {
-    display: block;
-  }
-  .o-table--stacked td:before {
-    content: attr(data-label) ": ";
-    display: block;
-    width: 100%;
-  }
-}

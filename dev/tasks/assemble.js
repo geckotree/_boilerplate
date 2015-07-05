@@ -1,41 +1,51 @@
 'use strict';
 module.exports = {
-	options: {
-		data: '<%= patternsFolder %>/**/*.{json,yml}',
-		helpers: '<%= patternsFolder %>/helpers/helper-*.js',
-		layoutdir: '<%= patternsFolder %>/src/layouts',
-		partials: [ '<%= patternsFolder %>/src/components/**/*.hbs' ]
-	},
-	styleguide: {
+	patterns: {
 		options: {
-			layout: 'styleguide.hbs',
+			data: '<%= patternsFolder %>/**/*.{json,yml}',
+			helpers: '<%= patternsFolder %>/helpers/helper-*.js',
+			layoutdir: '<%= patternsFolder %>/src/layouts',
+			partials: [ '<%= patternsFolder %>/src/components/**/*.hbs' ]
 		},
-		files: [{
-			expand: true,
-			cwd: '<%= patternsFolder %>/src/pages',
-			src: [
-				'styleguide/colours.hbs',
-				'styleguide/forms.hbs',
-				'styleguide/icons.hbs',
-				'styleguide/tables.hbs',
-				'styleguide/typography.hbs'
-			],
-			dest: '<%= patternsBuildFolder %>/'
-		}]
+		styleguide: {
+			options: {
+				layout: 'styleguide.hbs',
+			},
+			files: [{
+				expand: true,
+				cwd: '<%= patternsFolder %>/src/pages',
+				src: [
+					'styleguide/colours.hbs',
+					'styleguide/forms.hbs',
+					'styleguide/icons.hbs',
+					'styleguide/tables.hbs',
+					'styleguide/typography.hbs'
+				],
+				dest: '<%= patternsBuildFolder %>/'
+			}]
+		},
+		pages: {
+			options: {
+				layout: 'default.hbs',
+			},
+			files: [{
+				expand: true,
+				cwd: '<%= patternsFolder %>/src/pages',
+				src: [
+					'styleguide/styleguide.hbs',
+					'components/*.hbs',
+					'pages/*.hbs'
+				],
+				dest: '<%= patternsBuildFolder %>/'
+			}]
+		},
 	},
-	pages: {
+	emails: {
 		options: {
-			layout: 'default.hbs',
+			layoutdir: '<%= emailsFolder %>/src/layouts',
+			flatten: true
 		},
-		files: [{
-			expand: true,
-			cwd: '<%= patternsFolder %>/src/pages',
-			src: [
-				'styleguide/styleguide.hbs',
-				'components/*.hbs',
-				'pages/*.hbs'
-			],
-			dest: '<%= patternsBuildFolder %>/'
-		}]
-	},
+		src: '<%= emailsFolder %>/src/pages/*.hbs',
+		dest: '<%= emailsFolder %>/tmp/'
+	}
 };

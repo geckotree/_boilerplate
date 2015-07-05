@@ -9,5 +9,10 @@ module.exports = {
 			'<%= assetsBuildFolder %>/css/style.css': '<%= assetsFolder %>/sass/style.scss',
 			'<%= assetsBuildFolder %>/css/ie.css': '<%= assetsFolder %>/sass/ie.scss'
 		}
+	},
+	emails: {
+		files: {
+			'<%= emailsBuildFolder %>/css/style.css': '<%= emailsFolder %>/sass/style.scss'
+		}
 	}
 };

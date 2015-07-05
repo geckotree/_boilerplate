@@ -21,6 +21,10 @@ button {
 	line-height: $line-height;
 }
 
+body {
+	font-size: $font-size-body-small;
+}
+
 p + p,
 p + ul,
 p + ol,
@@ -64,6 +68,10 @@ em {
 	select,
 	button {
 		font-size: $font-size--large;
+	}
+
+	body {
+		font-size: $font-size-body-large;
 	}
 
 }

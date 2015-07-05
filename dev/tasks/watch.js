@@ -30,5 +30,16 @@ module.exports = {
 			'<%= assetsFolder %>/sass/**/*.scss'
 		],
 		tasks: [ 'todo' ]
+	},
+	emails: {
+		files: [ '<%= emailsFolder %>/src/**/*' ],
+		tasks: [
+			'clean:emails',
+			'sass:emails',
+			'assemble:emails',
+			'premailer',
+			'clean:emailsTmp',
+			'copy:emailImages'
+		]
 	}
 };
