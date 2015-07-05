@@ -5,11 +5,10 @@ module.exports = {
 			'<%= assetsFolder %>/sass/**/**/*.scss'
 		],
 		tasks: [
-			'sass',
-			'autoprefixer',
-			'css_mqpacker',
-			'stripmq',
-			'pixrem'
+			'newer:sass',
+			'newer:autoprefixer',
+			'newer:stripmq',
+			'newer:pixrem'
 		]
 	},
 	js: {
@@ -17,21 +16,12 @@ module.exports = {
 			'<%= assetsFolder %>/js/**/*.js'
 		],
 		tasks: [
-			'jshint',
-			'concat'
+			'newer:jshint',
+			'newer:concat'
 		]
 	},
-	// icons: {
-	// 	files: [
-	// 		'<%= pkg.assetsFolder %>/img/icons/*.svg'
-	// 	],
-	// 	tasks: [
-	// 		'svgmin:icons',
-	// 		'grunticon'
-	// 	]
-	// },
 	patterns: {
-		files: [ 'patterns/**/**/*.{hbs,json}' ],
-		tasks: [ 'assemble' ]
+		files: [ '<%= patternsFolder %>/**/**/*.{hbs,json}' ],
+		tasks: [ 'newer:assemble' ]
 	}
 };

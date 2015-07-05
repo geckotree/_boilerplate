@@ -1,4 +1,8 @@
 module.exports = function( grunt ) {
+	/*
+	 * Report on time taken for grunt tasks
+	 */
+	require( 'time-grunt' )( grunt );
 
 	/*
 	 * Load all Grunt tasks
@@ -15,7 +19,9 @@ module.exports = function( grunt ) {
 	var vars = {
 		pkg: grunt.file.readJSON( 'package.json' ),
 		assetsFolder: 'assets',
-		buildFolder: 'assets/build'
+		assetsBuildFolder: 'assets/build',
+		patternsFolder: 'patterns',
+		patternsBuildFolder: 'patterns/build'
 	};
 
 
@@ -37,60 +43,17 @@ module.exports = function( grunt ) {
 	 */
 
 	grunt.registerTask( 'dev', [
-		'css:dev',
-		// 'icons',
-		'js:dev',
-		'patterns',
+		'concurrent:cssDev',
+		'concurrent:jsDev',
+		'concurrent:patterns',
 		'watch'
 	]);
 
 	grunt.registerTask( 'build', [
-		'css:build',
-		// 'icons',
-		'js:build',
-		'images',
-		'patterns',
+		'concurrent:cssBuild',
+		'concurrent:jsBuild',
+		'concurrent:images',
+		'concurrent:patterns',
 		'humans_txt'
-	]);
-
-
-	grunt.registerTask( 'css:dev', [
-		'sass',
-		'autoprefixer',
-		'css_mqpacker',
-		'stripmq',
-		'pixrem'
-	]);
-
-	grunt.registerTask( 'js:dev', [
-		'modernizr',
-		'jshint',
-		'concat'
-	]);
-
-	grunt.registerTask( 'css:build', [
-		'css:dev',
-		'cssmin'
-	]);
-
-	grunt.registerTask( 'js:build', [
-		'js:dev',
-		'uglify'
-	]);
-
-	grunt.registerTask( 'patterns', [
-		'assemble'
-	]);
-
-	// grunt.registerTask( 'icons', [
-	// 	'svgmin:icons',
-	// ]);
-
-	grunt.registerTask( 'images', [
-		'svgmin:svg',
-		'svg2png',
-		'copy:brandIcons',
-		'copy:bitmapImages',
-		'imageoptim'
 	]);
 };

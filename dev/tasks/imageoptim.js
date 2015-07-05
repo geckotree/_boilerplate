@@ -7,10 +7,7 @@ module.exports = {
 			quitAfter: false
 		},
 		src: [
-			'<%= buildFolder %>/img/brand-icons/*.{png,gif,jpg}',
-			'<%= buildFolder %>/img/bitmap/*.{png,gif,jpg}',
-			'<%= buildFolder %>/img/svg/*.png',
-			'<%= buildFolder %>/img/icons/png/*.png'
+			'<%= assetsBuildFolder %>/img/**/*.{png,gif,jpg}'
 		]
 	}
 };

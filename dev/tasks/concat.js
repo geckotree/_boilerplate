@@ -6,7 +6,7 @@ module.exports = {
 			'<%= assetsFolder %>/js/components/*.js',
 			'<%= assetsFolder %>/js/main.js'
 		],
-		dest: '<%= buildFolder %>/js/main.js'
+		dest: '<%= assetsBuildFolder %>/js/main.js'
 	},
 	head: {
 		src: [
@@ -14,6 +14,6 @@ module.exports = {
 			// add priority JS like picturefill/lazysizes
 			// keep this file smaller so it parses and runs sooner than main
 		],
-		dest: '<%= buildFolder %>/js/head.js'
+		dest: '<%= assetsBuildFolder %>/js/head.js'
 	}
 };

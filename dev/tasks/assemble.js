@@ -1,10 +1,10 @@
 'use strict';
 module.exports = {
 	options: {
-		data: 'patterns/**/*.{json,yml}',
-		helpers: 'patterns/helpers/helper-*.js',
-		layoutdir: 'patterns/src/layouts',
-		partials: [ 'patterns/src/components/**/*.hbs' ]
+		data: '<%= patternsFolder %>/**/*.{json,yml}',
+		helpers: '<%= patternsFolder %>/helpers/helper-*.js',
+		layoutdir: '<%= patternsFolder %>/src/layouts',
+		partials: [ '<%= patternsFolder %>/src/components/**/*.hbs' ]
 	},
 	styleguide: {
 		options: {
@@ -12,7 +12,7 @@ module.exports = {
 		},
 		files: [{
 			expand: true,
-			cwd: 'patterns/src/pages',
+			cwd: '<%= patternsFolder %>/src/pages',
 			src: [
 				'styleguide/colours.hbs',
 				'styleguide/forms.hbs',
@@ -20,7 +20,7 @@ module.exports = {
 				'styleguide/tables.hbs',
 				'styleguide/typography.hbs'
 			],
-			dest: 'patterns/build/'
+			dest: '<%= patternsBuildFolder %>/'
 		}]
 	},
 	pages: {
@@ -29,13 +29,13 @@ module.exports = {
 		},
 		files: [{
 			expand: true,
-			cwd: 'patterns/src/pages',
+			cwd: '<%= patternsFolder %>/src/pages',
 			src: [
 				'styleguide/styleguide.hbs',
 				'components/*.hbs',
 				'pages/*.hbs'
 			],
-			dest: 'patterns/build/'
+			dest: '<%= patternsBuildFolder %>/'
 		}]
 	},
 };

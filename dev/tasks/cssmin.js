@@ -2,16 +2,16 @@
 module.exports = {
 	style: {
 		expand: true,
-		cwd: '<%= buildFolder %>/css/',
+		cwd: '<%= assetsBuildFolder %>/css/',
 		src: 'style.css',
-		dest: '<%= buildFolder %>/css/',
-		ext: '.min.css'
+		dest: '<%= assetsBuildFolder %>/css/',
+		ext: '.css'
 	},
 	ie: {
 		expand: true,
-		cwd: '<%= buildFolder %>/css/',
+		cwd: '<%= assetsBuildFolder %>/css/',
 		src: 'ie.css',
-		dest: '<%= buildFolder %>/css/',
-		ext: '.min.css'
+		dest: '<%= assetsBuildFolder %>/css/',
+		ext: '.css'
 	}
 };

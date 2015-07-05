@@ -10,19 +10,10 @@ module.exports = {
 	svgImages: {
 		files: [{
 			expand: true,
-			cwd: '<%= assetsFolder %>/img/svg',
-			src: '*.svg',
-			dest: '<%= buildFolder %>/img/svg',
+			cwd: '<%= assetsFolder %>/img',
+			src: '**/*.svg',
+			dest: '<%= assetsBuildFolder %>/img',
 			ext: '.svg'
 		}]
-	},
-	// icons: {
-	// 	files: [{
-	// 		expand: true,
-	// 		cwd: '<%= pkg.assetsFolder %>/img/icons',
-	// 		src: '*.svg',
-	// 		dest: '<%= pkg.buildFolder %>/img/icons/svg',
-	// 		ext: '.svg'
-	// 	}]
-	// }
+	}
 };

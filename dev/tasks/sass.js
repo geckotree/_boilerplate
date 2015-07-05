@@ -6,8 +6,8 @@ module.exports = {
 			sourcemap: true
 		},
 		files: {
-			'<%= buildFolder %>/css/style.css': '<%= assetsFolder %>/sass/style.scss',
-			'<%= buildFolder %>/css/ie.css': '<%= assetsFolder %>/sass/ie.scss'
+			'<%= assetsBuildFolder %>/css/style.css': '<%= assetsFolder %>/sass/style.scss',
+			'<%= assetsBuildFolder %>/css/ie.css': '<%= assetsFolder %>/sass/ie.scss'
 		}
 	}
 };
