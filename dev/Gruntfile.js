@@ -1,13 +1,13 @@
 module.exports = function( grunt ) {
 	/*
-	 * Report on time taken for grunt tasks
+	 * Time taken for grunt tasks
 	 */
 	require( 'time-grunt' )( grunt );
+
 
 	/*
 	 * Load all Grunt tasks
 	 */
-
 	require( 'load-grunt-tasks' )( grunt );
 	grunt.loadNpmTasks( 'assemble' );
 
@@ -15,7 +15,6 @@ module.exports = function( grunt ) {
 	/*
 	 * Define variables for tasks
 	 */
-
 	var vars = {
 		pkg: grunt.file.readJSON( 'package.json' ),
 		assetsFolder: 'assets',
@@ -28,7 +27,6 @@ module.exports = function( grunt ) {
 	/*
 	 * Set location to load grunt tasks form
 	 */
-
 	vars.config = {
 		src: 'tasks/*.js'
 	};
@@ -41,7 +39,6 @@ module.exports = function( grunt ) {
 	/*
 	 * Define tasks
 	 */
-
 	grunt.registerTask( 'dev', [
 		'concurrent:cssDev',
 		'concurrent:jsDev',
