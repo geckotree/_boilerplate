@@ -32,7 +32,10 @@ module.exports = {
 		tasks: [ 'todo' ]
 	},
 	emails: {
-		files: [ '<%= emailsFolder %>/src/**/*' ],
+		files: [
+			'<%= emailsFolder %>/src/**/*',
+			'<%= emailsFolder %>/sass/*',
+		],
 		tasks: [
 			'clean:emails',
 			'sass:emails',
