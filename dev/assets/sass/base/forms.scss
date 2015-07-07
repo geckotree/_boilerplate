@@ -21,7 +21,7 @@ textarea {
 
 textarea {
 	overflow: auto; // Hide scrollbar IE
-	resize: none;
+	resize: vertical;
 }
 
 label {
