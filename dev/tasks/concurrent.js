@@ -26,7 +26,7 @@ module.exports = {
 		'uglify'
 	],
 	images: [
-		'svgmin:svg',
+		'svgmin:svgImages',
 		'svg2png',
 		'copy:brandIcons',
 		'copy:bitmapImages',
