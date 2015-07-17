@@ -4,11 +4,10 @@
 
 =========================================================== */
 
-$old-ie: false!default;
-
-$base-dir: '/assets';
-$fonts: '#{$base-dir}/fonts';
-$images: '#{$base-dir}/build/img';
+$old-ie: 	false!default;
+$base-dir: 	'/assets';
+$fonts: 	'#{$base-dir}/fonts';
+$images: 	'#{$base-dir}/build/img';
 
 
 /* ===========================================================
@@ -17,12 +16,12 @@ $images: '#{$base-dir}/build/img';
 
 =========================================================== */
 
-$white: #FFFFFF;
-$black: #000000;
+$white: 	#FFFFFF;
+$black: 	#000000;
 
-$pri: #57B275;
-$sec: #F05D71;
-$ter: #F2D044;
+$pri: 		#57B275;
+$sec: 		#F05D71;
+$ter: 		#F2D044;
 
 
 

@@ -56,9 +56,7 @@ module.exports = function( grunt ) {
 		'concurrent:icons',
 		'concurrent:images',
 		'concurrent:patterns',
-		'todo',
-		'humans_txt',
-		'robotstxt'
+		'todo'
 	]);
 
 	grunt.registerTask( 'emails', [
