@@ -4,6 +4,6 @@
 
 ## TODO
 
-## assets/js/main.js
+## assets/sass/style.scss
 
--  **todo** `(line 7)`  add in fastclick functionality
+-  **todo** `(line 26)`  include print styles

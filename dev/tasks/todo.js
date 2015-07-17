@@ -1,7 +1,7 @@
 'use strict';
 module.exports = {
 	options: {
-		file: 'TODO.md',
+		file: 'todo.md',
 		marks: [{
 			name: 'todo',
 			pattern: /@(todo)/,

@@ -4,13 +4,11 @@ module.exports = function( grunt ) {
 	 */
 	require( 'time-grunt' )( grunt );
 
-
 	/*
 	 * Load all Grunt tasks
 	 */
 	require( 'load-grunt-tasks' )( grunt );
 	grunt.loadNpmTasks( 'assemble' );
-
 
 	/*
 	 * Define variables for tasks
@@ -25,7 +23,6 @@ module.exports = function( grunt ) {
 		emailsBuildFolder: 'emails/build'
 	};
 
-
 	/*
 	 * Set location to load grunt tasks form
 	 */
@@ -36,7 +33,6 @@ module.exports = function( grunt ) {
 	var configs = require( 'load-grunt-configs' )( grunt, vars );
 
 	grunt.initConfig( configs );
-
 
 	/*
 	 * Define tasks

@@ -2,8 +2,7 @@
 
 @import 'tools/mixins.scss';
 
-@import 'generic/reset.scss',
-		'generic/js-breakpoints.scss';
+@import 'generic/reset.scss';
 
 @import 'base/text.scss',
 		'base/headings.scss',
@@ -23,3 +22,5 @@
 @import 'components/buttons.scss';
 
 @import 'trumps/overrides.scss';
+
+// @todo include print styles

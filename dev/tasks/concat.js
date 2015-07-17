@@ -2,6 +2,8 @@
 module.exports = {
 	main: {
 		src: [
+			'<%= assetsFolder %>/js/lib/modernizr-build.js',
+			'<%= assetsFolder %>/bower_components/fastclick/lib/fastclick.js',
 			'<%= assetsFolder %>/js/utils/*.js',
 			'<%= assetsFolder %>/js/components/*.js',
 			'<%= assetsFolder %>/js/main.js'
@@ -10,7 +12,7 @@ module.exports = {
 	},
 	head: {
 		src: [
-			'<%= assetsFolder %>/js/lib/*.js'
+			// '<%= assetsFolder %>/js/lib/*.js'
 			// add priority JS like picturefill/lazysizes
 			// keep this file smaller so it parses and runs sooner than main
 		],
