@@ -44,6 +44,7 @@ module.exports = function( grunt ) {
 	grunt.registerTask( 'dev', [
 		'concurrent:cssDev',
 		'concurrent:jsDev',
+		'concurrent:icons',
 		'concurrent:patterns',
 		'todo',
 		'watch'
@@ -52,6 +53,7 @@ module.exports = function( grunt ) {
 	grunt.registerTask( 'build', [
 		'concurrent:cssBuild',
 		'concurrent:jsBuild',
+		'concurrent:icons',
 		'concurrent:images',
 		'concurrent:patterns',
 		'todo',

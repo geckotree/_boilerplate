@@ -25,6 +25,9 @@ module.exports = {
 		'concat',
 		'uglify'
 	],
+	icons: [
+		'svgstore'
+	],
 	images: [
 		'svgmin:svgImages',
 		'svg2png',

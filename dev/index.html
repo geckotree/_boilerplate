@@ -10,16 +10,18 @@
   	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<meta name="author" href="" />
 
+	<script>function loadFont(a,b,c,d){function e(){if(!window.FontFace)return!1;var a=new FontFace("t",'url("data:application/font-woff2,") format("woff2")',{}),b=a.load();try{b.then(null,function(){})}catch(c){}return"loading"===a.status}var f=navigator.userAgent,g=!window.addEventListener||f.match(/(Android (2|3|4.0|4.1|4.2|4.3))|(Opera (Mini|Mobi))/)&&!f.match(/Chrome/);if(!g){var h={};try{h=localStorage||{}}catch(i){}var j="x-font-"+a,k=j+"url",l=j+"css",m=h[k],n=h[l],o=document.createElement("style");if(o.rel="stylesheet",document.head.appendChild(o),!n||m!==b&&m!==c){var p=c&&e()?c:b,q=new XMLHttpRequest;q.open("GET",p),q.onload=function(){q.status>=200&&q.status<400&&(h[k]=p,h[l]=q.responseText,d||(o.textContent=q.responseText))},q.send()}else o.textContent=n}}loadFont('fontname', 'assets/build/css/fonts-woff.css', 'assets/build/css/fonts-woff2.css')</script>
+
 	<!--[if lt IE 9]>
 		<script src="assets/_components/html5shiv/dist/html5shiv.min.js"></script>
-		<link rel="stylesheet" href="assets/_build/css/ie.css">
+		<link rel="stylesheet" href="assets/build/css/ie.css">
 	<![endif]-->
 
 	<!--[if gt IE 8]><!-->
-		<link rel="stylesheet" href="assets/_build/css/style.css">
+		<link rel="stylesheet" href="assets/build/css/style.css">
 	<!--<![endif]-->
 	
-	<script src="assets/_build/js/head.js"></script>
+	<script src="assets/build/js/head.js"></script>
 
 	<!-- FAVICONS -->
 	<link rel="icon" type="image/png" sizes="196x196" href="/assets/img/icons/favicon-196.png">
@@ -69,7 +71,7 @@
 			<h1>Morbi odio eros, volutpat.</h1>
 			<h2>Pellentesque habitant morbi tristique senectus et netus.</h2>
 
-			<p><strong>Idque Caesaris facere</strong> voluntate liceret: sese habere. <em>Fictum,  deserunt mollit anim</em> laborum astutumque! Tu quoque, Brute, fili mi, <s>nihil timor populi</s>, nihil! Hi omnes lingua, institutis, <sup>legibus inter</sup> se differunt. Quam temere in vitiis, legem sancimus haerentia. Tityre, tu patulae recubans sub tegmine fagi  dolor. Me non paenitet nullum festiviorem <sub>excogitasse ad hoc</sub>. Idque Caesaris facere voluntate liceret: <a href="#">sese habere</a>.</p>
+			<p><strong>Idque Caesaris facere</strong> voluntate liceret: sese habere. <em>Fictum,  deserunt mollit anim</em> laborum astutumque! Tu quoque, Brute, fili mi, <s>nihil timor populi</s>, nihil! Hi omnes lingua, institutis, <sup>legibus inter</sup> se differunt. Quam temere in vitiis, legem sancimus haerentia. Tityre, tu patulae recubans sub tegmine fagi  dolor. Me non paenitet nullum festiviorem <sub>excogitasse ad hoc</sub>. Idque Caesaris facere voluntate liceret: <a href="#" data-module="Toggle">sese habere</a>.</p>
 
 			<p><strong><em>Morbi leo risus, porta ac consectetur ac, vestibulum at eros:</em></strong></p>
 			<ol>
@@ -223,6 +225,6 @@
 		
 	</footer>
 	
-	<script data-main="assets/js/main" src="assets/_components/requirejs/require.js"></script>
+	<script src="assets/build/js/main.js"></script>
 </body>
 </html>

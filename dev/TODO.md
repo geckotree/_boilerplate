@@ -6,4 +6,4 @@
 
 ## assets/js/main.js
 
--  **todo** `(line 4)`  add in fastclick functionality
+-  **todo** `(line 7)`  add in fastclick functionality
