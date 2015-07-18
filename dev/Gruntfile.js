@@ -72,7 +72,8 @@ module.exports = function( grunt ) {
 	grunt.registerTask( 'js:dev', [
 		'modernizr',
 		'jshint',
-		'concat'
+		'concat',
+		'uglify:inline'
 	]);
 
 	grunt.registerTask( 'js:build', [

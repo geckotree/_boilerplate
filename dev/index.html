@@ -41,7 +41,7 @@
 		<meta name="twitter:creator" content="@" />
 
 	    <!-- Font loading -->
-		<script>function loadFont(a,b,c,d){function e(){if(!window.FontFace)return!1;var a=new FontFace("t",'url("data:application/font-woff2,") format("woff2")',{}),b=a.load();try{b.then(null,function(){})}catch(c){}return"loading"===a.status}var f=navigator.userAgent,g=!window.addEventListener||f.match(/(Android (2|3|4.0|4.1|4.2|4.3))|(Opera (Mini|Mobi))/)&&!f.match(/Chrome/);if(!g){var h={};try{h=localStorage||{}}catch(i){}var j="x-font-"+a,k=j+"url",l=j+"css",m=h[k],n=h[l],o=document.createElement("style");if(o.rel="stylesheet",document.head.appendChild(o),!n||m!==b&&m!==c){var p=c&&e()?c:b,q=new XMLHttpRequest;q.open("GET",p),q.onload=function(){q.status>=200&&q.status<400&&(h[k]=p,h[l]=q.responseText,d||(o.textContent=q.responseText))},q.send()}else o.textContent=n}}loadFont('fontname', 'assets/build/css/fonts-woff.css', 'assets/build/css/fonts-woff2.css')</script>
+		<script>function loadFont(a,b,c){function d(){if(!window.FontFace)return!1;var a=new FontFace("t",'url("data:application/font-woff2,") format("woff2")',{});return a.load(),"loading"===a.status}var e=navigator.userAgent,f=!window.addEventListener||e.match(/(Android (2|3|4.0|4.1|4.2|4.3))|(Opera (Mini|Mobi))/)&&!e.match(/Chrome/);if(!f){var g={};try{g=localStorage||{}}catch(h){}var i="x-font-"+a,j=i+"url",k=i+"css",l=g[j],m=g[k],n=document.createElement("style");if(n.rel="stylesheet",document.head.appendChild(n),!m||l!==b&&l!==c){var o=c&&d()?c:b,p=new XMLHttpRequest;p.open("GET",o),p.onload=function(){p.status>=200&&p.status<400&&(g[j]=o,g[k]=n.textContent=p.responseText)},p.send()}else n.textContent=m}}loadFont("fontname","assets/build/css/fonts-woff.css","assets/build/css/fonts-woff2.css");</script>
 
 	    <!--[if gt IE 8]><!-->
 			<link rel="stylesheet" href="assets/build/css/style.css">
@@ -69,5 +69,6 @@
 		
 		<svg xmlns="http://www.w3.org/2000/svg"/>
 		<script src="assets/build/js/main.js"></script>
+		<script>!function(a,b,c,d,e,f,g){a.GoogleAnalyticsObject=e,a[e]=a[e]||function(){(a[e].q=a[e].q||[]).push(arguments)},a[e].l=1*new Date,f=b.createElement(c),g=b.getElementsByTagName(c)[0],f.async=1,f.src=d,g.parentNode.insertBefore(f,g)}(window,document,"script","//www.google-analytics.com/analytics.js","ga"),ga("create","UA-XXXXX-X","auto"),ga("send","pageview");</script>
 	</body>
 </html>
