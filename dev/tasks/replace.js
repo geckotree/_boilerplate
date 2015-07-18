@@ -21,7 +21,7 @@ module.exports = {
             ]
         },
         files: {
-            'index.html': 'index.html.src'
+            'index.html': 'src/index.html.src'
         }
     },
 };

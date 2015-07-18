@@ -20,9 +20,13 @@ module.exports = {
 			'newer:concat'
 		]
 	},
-	patterns: {
-		files: [ '<%= patternsFolder %>/**/**/*.{hbs,json}' ],
-		tasks: [ 'newer:assemble' ]
+	html: {
+		files: [
+			'src/*.html.src',
+		],
+		tasks: [
+			'replace'
+		]
 	},
 	todo: {
 		files: [
@@ -31,18 +35,18 @@ module.exports = {
 		],
 		tasks: [ 'todo' ]
 	},
-	emails: {
-		files: [
-			'<%= emailsFolder %>/src/**/*',
-			'<%= emailsFolder %>/sass/*',
-		],
-		tasks: [
-			'clean:emails',
-			'sass:emails',
-			'assemble:emails',
-			'premailer',
-			'clean:emailsTmp',
-			'copy:emailImages'
-		]
-	}
+	// emails: {
+	// 	files: [
+	// 		'<%= emailsFolder %>/src/**/*',
+	// 		'<%= emailsFolder %>/sass/*',
+	// 	],
+	// 	tasks: [
+	// 		'clean:emails',
+	// 		'sass:emails',
+	// 		'assemble:emails',
+	// 		'premailer',
+	// 		'clean:emailsTmp',
+	// 		'copy:emailImages'
+	// 	]
+	// }
 };

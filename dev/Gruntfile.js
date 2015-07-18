@@ -17,8 +17,8 @@ module.exports = function( grunt ) {
 		pkg: grunt.file.readJSON( 'package.json' ),
 		assetsFolder: 'assets',
 		assetsBuildFolder: 'assets/build',
-		patternsFolder: 'patterns',
-		patternsBuildFolder: 'patterns/build',
+		styleguideFolder: 'styleguide',
+		styleguideBuildFolder: 'styleguide/build',
 		emailsFolder: 'emails',
 		emailsBuildFolder: 'emails/build'
 	};
@@ -41,7 +41,7 @@ module.exports = function( grunt ) {
 		'css:dev',
 		'js:dev',
 		'icons',
-		'patterns',
+		'styleguide',
 		'todo',
 		'watch'
 	]);
@@ -52,7 +52,7 @@ module.exports = function( grunt ) {
 		'icons',
 		'critical',
 		'images',
-		'patterns',
+		'styleguide',
 		'todo'
 	]);
 
@@ -96,9 +96,8 @@ module.exports = function( grunt ) {
 		'imageoptim'
 	]);
 
-	grunt.registerTask( 'patterns', [
-		'clean:patterns',
-		'assemble:patterns'
+	grunt.registerTask( 'styleguide', [
+		'assemble'
 	]);
 
 	//@todo check this over
