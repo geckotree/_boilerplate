@@ -67,7 +67,7 @@
 			<!-- @note footer content -->
 		</footer>
 		
-		<svg xmlns="http://www.w3.org/2000/svg"/>
+		@@icons
 		<script src="assets/build/js/main.js"></script>
 	</body>
 </html>

@@ -38,23 +38,68 @@ module.exports = function( grunt ) {
 	 * Define tasks
 	 */
 	grunt.registerTask( 'dev', [
-		'concurrent:cssDev',
-		'concurrent:jsDev',
-		'concurrent:icons',
-		'concurrent:patterns',
+		'css:dev',
+		'js:dev',
+		'icons',
+		'patterns',
 		'todo',
 		'watch'
 	]);
 
 	grunt.registerTask( 'build', [
-		'concurrent:cssBuild',
-		'concurrent:jsBuild',
-		'concurrent:icons',
-		'concurrent:images',
-		'concurrent:patterns',
+		'css:build',
+		'js:build',
+		'icons',
+		'images',
+		'patterns',
 		'todo'
 	]);
 
+
+	grunt.registerTask( 'css:dev', [
+		'sass:all',
+		'autoprefixer',
+		'stripmq',
+		'pixrem'
+	]);
+
+	grunt.registerTask( 'css:build', [
+		'css:dev',
+		'css_mqpacker',
+		'cssmin'
+	]);
+
+	grunt.registerTask( 'js:dev', [
+		'modernizr',
+		'jshint',
+		'concat'
+	]);
+
+	grunt.registerTask( 'js:build', [
+		'js:dev',
+		'uglify'
+	]);
+
+	grunt.registerTask( 'icons', [
+		'svgstore',
+		'replace'
+	]);
+
+	//@todo check this over
+	grunt.registerTask( 'images', [
+		'svgmin:svgImages',
+		'svg2png',
+		'copy:brandIcons',
+		'copy:bitmapImages',
+		'imageoptim'
+	]);
+
+	grunt.registerTask( 'patterns', [
+		'clean:patterns',
+		'assemble:patterns'
+	]);
+
+	//@todo check this over
 	grunt.registerTask( 'emails', [
 		'clean:emails',
 		'sass:emails',
