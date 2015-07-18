@@ -50,6 +50,7 @@ module.exports = function( grunt ) {
 		'css:build',
 		'js:build',
 		'icons',
+		'critical',
 		'images',
 		'patterns',
 		'todo'

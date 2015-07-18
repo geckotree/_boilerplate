@@ -5,7 +5,7 @@ module.exports = {
             patterns: [
             	{
                     match: 'loadFont',
-                    replacement: '<%= grunt.file.read( "assets/build/js/lib/loadFont.js" )%>',
+                    replacement: '<%= grunt.file.read( "assets/build/js/libs/loadFont.js" )%>',
                     expression: false
                 },
                 {
@@ -15,7 +15,7 @@ module.exports = {
                 },
                 {
                     match: 'googleAnalytics',
-                    replacement: '<%= grunt.file.read( "assets/build/js/lib/googleAnalytics.js" )%>',
+                    replacement: '<%= grunt.file.read( "assets/build/js/libs/googleAnalytics.js" )%>',
                     expression: false
                 }
             ]

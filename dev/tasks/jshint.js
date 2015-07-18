@@ -3,7 +3,7 @@ module.exports = {
 	options: {
 		jshintrc: '.jshintrc',
 		ignores: [
-			'<%= assetsFolder %>/js/lib/*.js'
+			'<%= assetsFolder %>/js/libs/*.js'
 		]
 	},
 	all: {

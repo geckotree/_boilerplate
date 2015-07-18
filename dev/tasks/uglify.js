@@ -7,8 +7,8 @@ module.exports = {
 	},
 	inline: {
 		files: {
-			'<%= assetsBuildFolder %>/js/lib/loadFont.js': '<%= assetsFolder %>/js/lib/loadFont.js',
-			'<%= assetsBuildFolder %>/js/lib/googleAnalytics.js': '<%= assetsFolder %>/js/lib/googleAnalytics.js'
+			'<%= assetsBuildFolder %>/js/libs/loadFont.js': '<%= assetsFolder %>/js/libs/loadFont.js',
+			'<%= assetsBuildFolder %>/js/libs/googleAnalytics.js': '<%= assetsFolder %>/js/libs/googleAnalytics.js'
 		}
 	}
 };
