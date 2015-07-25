@@ -5,8 +5,8 @@ module.exports = {
 	},
 	style: {
 		expand: true,
-		cwd: '<%= pkg.buildFolder %>/css/',
+		cwd: '<%= assetsBuildFolder %>/css/',
 		src: 'style.css',
-		dest: '<%= pkg.buildFolder %>/css/'
+		dest: '<%= assetsBuildFolder %>/css/'
 	}
 };

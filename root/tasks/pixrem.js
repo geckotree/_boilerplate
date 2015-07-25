@@ -5,7 +5,7 @@ module.exports = {
 		replace: true
 	},
 	ie: {
-		src: '<%= pkg.buildFolder %>/css/ie.css',
-		dest: '<%= pkg.buildFolder %>/css/ie.css'
+		src: '<%= assetsBuildFolder %>/css/ie.css',
+		dest: '<%= assetsBuildFolder %>/css/ie.css'
 	}
 };

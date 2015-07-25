@@ -6,6 +6,8 @@
 
 html {
 	font-size: 62.5%;
+	-ms-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
 }
 
 body,
@@ -19,6 +21,10 @@ button {
 	font-feature-settings: 'liga', 'kern'; // http://elliotjaystocks.com/blog/kerning/
 	font-kerning: normal;
 	line-height: $line-height;
+}
+
+body {
+	font-size: $font-size-body-small;
 }
 
 p + p,
@@ -64,6 +70,10 @@ em {
 	select,
 	button {
 		font-size: $font-size--large;
+	}
+
+	body {
+		font-size: $font-size-body-large;
 	}
 
 }

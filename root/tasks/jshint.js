@@ -3,14 +3,14 @@ module.exports = {
 	options: {
 		jshintrc: '.jshintrc',
 		ignores: [
-			'<%= pkg.assetsFolder %>/js/lib/*.js'
+			'<%= assetsFolder %>/js/libs/*.js'
 		]
 	},
 	all: {
 		files: {
 			src: [
 				'Gruntfile.js',
-				'<%= pkg.assetsFolder %>/js/**/*.js'
+				'<%= assetsFolder %>/js/**/*.js'
 			]
 		}
 	}

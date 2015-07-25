@@ -1,11 +1,11 @@
 'use strict';
 module.exports = {
 	main: {
-        'devFile' : '<%= pkg.assetsFolder %>/bower_components/modernizr/modernizr.js',
-        'outputFile' : '<%= pkg.assetsFolder %>/js/lib/modernizr.js',
+        'devFile' : '<%= assetsFolder %>/bower_components/modernizr/modernizr.js',
+        'outputFile' : '<%= assetsFolder %>/js/libs/modernizr.js',
         'extra' : {
             'printshiv' : false,
-            'shiv' : true,
+            'shiv' : false,
             'load' : false,
             'mq' : false,
             'cssclasses' : true
@@ -25,7 +25,7 @@ module.exports = {
         'tests' : [],
         'parseFiles' : true,
         'files' : {
-        	'src' : ['<%= pkg.assetsFolder %>/js/**/*.js','<%= pkg.assetsFolder %>/sass/**/*.scss']
+			'src' : ['<%= assetsFolder %>/js/**/*.js','<%= assetsFolder %>/sass/**/*.scss']
         },
         'matchCommunityTests' : false,
         'customTests' : []

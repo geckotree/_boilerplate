@@ -1,1 +1,1 @@
-Add brand/favicons in here
+Add SVG icons here

@@ -6,7 +6,7 @@ module.exports = {
 	},
 	ie: {
 		files: {
-			'<%= pkg.buildFolder %>/css/ie.css': [ '<%= pkg.buildFolder %>/css/ie.css' ]
+			'<%= assetsBuildFolder %>/css/ie.css': [ '<%= assetsBuildFolder %>/css/ie.css' ]
 		}
 	}
 };

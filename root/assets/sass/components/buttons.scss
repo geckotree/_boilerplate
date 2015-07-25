@@ -10,7 +10,6 @@
 	line-height: 1;
 	padding: 1.5rem 2rem;
 	transition: background $speed ease,
-				box-shadow $speed ease,
 				color $speed ease,
 				transform $speed ease;
 
@@ -46,6 +45,11 @@
 
 .c-button--disabled {
 	background: $border-colour;
-	color: $white;
+	color: $black;
 	cursor: not-allowed;
+
+	&:hover,
+	&:focus {
+		color: $black;
+	}
 }
