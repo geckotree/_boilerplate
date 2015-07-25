@@ -20,6 +20,19 @@
 	appearance: none;
 }
 
+.o-validation {
+	display: block;
+	margin-top: $line-height / 4;
+
+	.is-valid & {
+		color: $success;
+	}
+
+	.is-invalid & {
+		color: $error;
+	}
+}
+
 
 
 //= LABEL ====================================================

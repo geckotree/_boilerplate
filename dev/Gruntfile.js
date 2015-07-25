@@ -18,9 +18,7 @@ module.exports = function( grunt ) {
 		assetsFolder: 'assets',
 		assetsBuildFolder: 'assets/build',
 		styleguideFolder: 'styleguide',
-		styleguideBuildFolder: 'styleguide/build',
-		emailsFolder: 'emails',
-		emailsBuildFolder: 'emails/build'
+		styleguideBuildFolder: 'styleguide/build'
 	};
 
 	/*
@@ -87,7 +85,6 @@ module.exports = function( grunt ) {
 		'replace'
 	]);
 
-	//@todo check this over
 	grunt.registerTask( 'images', [
 		'svgmin:svgImages',
 		'svg2png',
@@ -97,26 +94,8 @@ module.exports = function( grunt ) {
 	]);
 
 	grunt.registerTask( 'styleguide', [
-		'assemble'
-	]);
-
-	//@todo check this over
-	grunt.registerTask( 'emails', [
-		'clean:emails',
-		'sass:emails',
-		'assemble:emails',
-		'premailer',
-		'clean:emailsTmp',
-		'copy:emailImages'
-	]);
-
-	grunt.registerTask( 'emailsDev', [
-		'emails',
-		'watch:emails'
-	]);
-
-	grunt.registerTask( 'emailsBuild', [
-		'emails',
-		'imageoptim:emails'
+		'clean:styleguide',
+		'sass:styleguide',
+		'assemble:styleguide'
 	]);
 };

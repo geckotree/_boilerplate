@@ -9,15 +9,5 @@ module.exports = {
 		src: [
 			'<%= assetsBuildFolder %>/img/**/*.{png,gif,jpg}'
 		]
-	},
-	emails: {
-		options: {
-			jpegMini: false,
-			imageAlpha: false,
-			quitAfter: false
-		},
-		src: [
-			'<%= emailsBuildFolder %>/img/**/*.{png,gif,jpg}'
-		]
 	}
 };

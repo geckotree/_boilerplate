@@ -45,6 +45,11 @@
 
 .c-button--disabled {
 	background: $border-colour;
-	color: $white;
+	color: $black;
 	cursor: not-allowed;
+
+	&:hover,
+	&:focus {
+		color: $black;
+	}
 }

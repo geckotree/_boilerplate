@@ -5,7 +5,7 @@ module.exports = {
         'outputFile' : '<%= assetsFolder %>/js/libs/modernizr.js',
         'extra' : {
             'printshiv' : false,
-            'shiv' : true,
+            'shiv' : false,
             'load' : false,
             'mq' : false,
             'cssclasses' : true

@@ -19,15 +19,5 @@ module.exports = {
 				dest: '<%= assetsBuildFolder %>/img/bitmap'
 			}
 		]
-	},
-	emailImages: {
-		files: [
-		{
-			expand: true,
-			cwd: '<%= assetsFolder %>/img/emails/',
-			src: [ '*' ],
-			dest: '<%= emailsBuildFolder %>/img'
-		}
-		]
 	}
 };

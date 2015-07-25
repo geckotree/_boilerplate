@@ -12,9 +12,9 @@ module.exports = {
 			'<%= assetsBuildFolder %>/css/ie.css': '<%= assetsFolder %>/sass/ie.scss'
 		}
 	},
-	emails: {
+	styleguide: {
 		files: {
-			'<%= emailsBuildFolder %>/css/style.css': '<%= emailsFolder %>/sass/style.scss'
+			'<%= styleguideBuildFolder %>/css/style.css': '<%= styleguideFolder %>/sass/style.scss'
 		}
 	}
 };

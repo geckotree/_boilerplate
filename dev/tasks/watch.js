@@ -28,25 +28,18 @@ module.exports = {
 			'replace'
 		]
 	},
+	styleguide: {
+		files: [
+			'<%= styleguideFolder %>/src/**/*.hbs',
+			'<%= styleguideFolder %>/**/*.json'
+		],
+		tasks: [ 'assemble:styleguide' ]
+	},
 	todo: {
 		files: [
 			'<%= assetsFolder %>/js/**/*.js',
 			'<%= assetsFolder %>/sass/**/*.scss'
 		],
 		tasks: [ 'todo' ]
-	},
-	// emails: {
-	// 	files: [
-	// 		'<%= emailsFolder %>/src/**/*',
-	// 		'<%= emailsFolder %>/sass/*',
-	// 	],
-	// 	tasks: [
-	// 		'clean:emails',
-	// 		'sass:emails',
-	// 		'assemble:emails',
-	// 		'premailer',
-	// 		'clean:emailsTmp',
-	// 		'copy:emailImages'
-	// 	]
-	// }
+	}
 };

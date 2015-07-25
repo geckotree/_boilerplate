@@ -18,6 +18,9 @@ $images: 	'#{$base-dir}/build/img';
 
 $white: 	#FFFFFF;
 $black: 	#000000;
+$red:		red;
+$green:		green;
+$grey:		#CCCCCC;
 
 $pri: 		#57B275;
 $sec: 		#F05D71;
@@ -34,21 +37,25 @@ $ter: 		#F2D044;
 $font-family:			Arial, Helvetica, Geneva, sans-serif;
 $font-size-body-small:	1.8em;
 $font-size-body-large:	2em;
-$font-size--small:		1.8rem;
+$font-size--small:		1.6rem;
 $font-size--large:		2rem;
 $line-height:			1.4em;
-$type-scale--small:		1.125;
+$type-scale--small:		1.100;
 $type-scale--medium:	1.150;
-$type-scale--large:		1.175;
+$type-scale--large:		1.200;
 
 $heading-colour:		$black;
 $text-colour:			$black;
 $background-colour:		$white;
-$border-colour:			#ccc;
+$border-colour:			$grey;
 $link-colour:			$pri;
 $link-colour-hover:		$sec;
-$placeholder-colour:	#ccc;
+$placeholder-colour:	$grey;
 $highlight-colour:		lighten( $pri, 20 );
+
+$error:					$red;
+$success:				$green;
+$disabled:				$grey;
 
 $padding--small:		4rem;
 $padding--medium:		6rem;

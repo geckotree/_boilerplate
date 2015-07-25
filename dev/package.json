@@ -34,7 +34,6 @@
     "grunt-modernizr": "^0.6.0",
     "grunt-newer": "~1.1.1",
     "grunt-pixrem": "~0.1.2",
-    "grunt-premailer": "~0.2.13",
     "grunt-responsive-images": "~0.1.6",
     "grunt-stripmq": "0.0.5",
     "grunt-svg2png": "~0.2.5",
