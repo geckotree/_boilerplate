@@ -1,3 +1,19 @@
 # Geckotree Boilerplate
 
-[Grunt Init] (http://gruntjs.com/project-scaffolding) generator for front-end projects.
+Generator for front-end projects.
+
+## Overview
+Opinionated boilerplate
+
+## Browesr support principles
+- Cut the mustard
+
+## Technology
+- Bower
+- Grunt
+- JavaScript
+- SASS
+
+### Naming conventions
+- BEM
+- ITCSS
